@@ -342,7 +342,7 @@ function UpdateFunction() {
         var rotationDiff;
     :
         Quaternion = newGlobalRotation * Quaternion.Inverse(movingPlatform.activeGlobalRotation);
-
+        
         var yRotation = rotationDiff.eulerAngles.y;
         if (yRotation != 0) {
             // Prevent rotation of the local up vector
