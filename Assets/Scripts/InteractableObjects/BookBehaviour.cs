@@ -7,7 +7,6 @@ namespace InteractableObjects
 {
     public class BookBehaviour : MonoBehaviour, IGazable, IPressable
     {
-        
         [SerializeField] private KeyCode _activationButton = KeyCode.F;
         [SerializeField] private GUISkin _skin;
         private bool _isLookingAtFlashLight;
@@ -26,7 +25,7 @@ namespace InteractableObjects
             return new Rect(
                 Screen.width / 2 - Screen.width / 6,
                 Screen.height / 2 + Screen.height / 4,
-                Screen.width / 3,
+                Screen.width / 3f,
                 Screen.width / 2 - 2 * Screen.width / 5);
         }
 
