@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using DefaultNamespace;
 using EventManagement;
 using JetBrains.Annotations;
 using UnityEngine;
@@ -10,7 +9,7 @@ using UnityEngine.Assertions;
 
 namespace Player
 {
-    public class PlayerEventProducer : MonoBehaviour
+    public class PlayerBehaviour : MonoBehaviour
     {
         [SerializeField] private float _interactionDistance;
         private IEnumerable<IGazable> _previousGazeable = new HashSet<IGazable>();
