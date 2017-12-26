@@ -36,9 +36,7 @@ namespace InteractableObjects
             Screen.width / 2 - 2 * Screen.width / 5);
 
         public void OnGazeEnter() => _isLookingAtDoor = true;
-
         public void OnGazeExit() => _isLookingAtDoor = false;
-
         public KeyCode ActivationKeyCode() => _activationButton;
 
         public void OnPress()

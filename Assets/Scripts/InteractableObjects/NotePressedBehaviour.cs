@@ -14,10 +14,7 @@ namespace InteractableObjects
         private bool _isReadingNote = false;
         private bool _isLockingNote = false;
 
-        private void Start()
-        {
-            _readingNoteAudioSource = GetComponent<AudioSource>();
-        }
+        private void Start() => _readingNoteAudioSource = GetComponent<AudioSource>();
 
         private void OnGUI()
         {
@@ -29,6 +26,7 @@ namespace InteractableObjects
                 GUI.Box(NoteRectangle(), _noteText);
                 _isLockingNote = false;
             }
+            
             if (_isLockingNote)
             {
                 GUI.skin = _skin;
@@ -36,33 +34,20 @@ namespace InteractableObjects
             }
         }
 
-        private static Rect NoteRectangle()
-        {
-            return new Rect(
-                Screen.width / 2 - Screen.width / 6,
-                Screen.height / 24.0f,
-                Screen.width / 3.0f,
-                Screen.height - Screen.height / 18);
-        }
+        private static Rect NoteRectangle() => new Rect(
+            Screen.width / 2 - Screen.width / 6,
+            Screen.height / 24f,
+            Screen.width / 3f,
+            Screen.height - Screen.height / 18);
 
-        private static Rect TipToInteractReactangle()
-        {
-            return new Rect(
-                Screen.width / 2 - Screen.width / 6,
-                Screen.height / 2 + Screen.height / 4,
-                Screen.width / 3.0f,
-                Screen.width / 2 - 2 * Screen.width / 5);
-        }
+        private static Rect TipToInteractReactangle() => new Rect(
+            Screen.width / 2 - Screen.width / 6,
+            Screen.height / 2 + Screen.height / 4,
+            Screen.width / 3f,
+            Screen.width / 2 - 2 * Screen.width / 5);
 
-        private void PlaySound()
-        {
-            _readingNoteAudioSource.Play();
-        }
-
-        public KeyCode ActivationKeyCode()
-        {
-            return _activationButton;
-        }
+        private void PlaySound() => _readingNoteAudioSource.Play();
+        public KeyCode ActivationKeyCode() => _activationButton;
 
         public void OnPress()
         {
@@ -71,15 +56,8 @@ namespace InteractableObjects
             PlaySound();
         }
 
-        public void OnGazeEnter()
-        {
-            _isLockingNote = true;
-        }
-
-        public void OnGazeExit()
-        {
-            _isLockingNote = false;
-        }
+        public void OnGazeEnter() => _isLockingNote = true;
+        public void OnGazeExit() => _isLockingNote = false;
 
         private void OnValidate()
         {
