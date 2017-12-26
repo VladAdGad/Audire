@@ -1,7 +1,7 @@
 ﻿
 namespace EventManagement
 {
-    public interface IGazable : IIteractable
+    public interface IGazable : IInteractable
     {
         void OnGazeEnter();
 

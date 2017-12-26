@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using DefaultNamespace;
 using EventManagement;
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -10,58 +13,57 @@ namespace Player
     public class PlayerEventProducer : MonoBehaviour
     {
         [SerializeField] private float _interactionDistance;
-        private GameObject _currentGameObject;
-        private GameObject _previousGameObject;
+        private IEnumerable<IGazable> _previousGazeable = new HashSet<IGazable>();
         private readonly Vector2 _position = new Vector2(Screen.width / 2f, Screen.height / 2f);
         private Camera _camera;
 
-        private void Start()
-        {
-            _camera = Camera.main;
-        }
+        private void Start() => _camera = Camera.main;
 
-        private void FixedUpdate()
+        private void FixedUpdate() => GazeCast()
+            .Map(raycastHit => raycastHit.collider)
+            .Map(raycastHitCollider => raycastHitCollider.GetComponents<IInteractable>())
+            .Do(interactables => MoveEyesightOn(CurrentGazeablesOf(interactables)))
+            .Do(Press);
+
+        private Optional<RaycastHit> GazeCast()
         {
-            Ray ray = _camera.ScreenPointToRay(_position);
             RaycastHit raycastHit;
-
-            if (Physics.Raycast(ray, out raycastHit, _interactionDistance))
+            
+            if (!Physics.Raycast(_camera.ScreenPointToRay(_position), out raycastHit, _interactionDistance))
             {
-                Interact<IPressable>(TryPress);
-                if (raycastHit.collider.gameObject.CompareTag("Interactable"))
-                {
-                    _currentGameObject = raycastHit.collider.gameObject;
-                    Interact<IGazable>(gazeable => gazeable.OnGazeEnter());
-                }
+                MoveEyesightOn(new List<IGazable>());
             }
-            else
-            {
-                Interact<IGazable>(gazeable => gazeable.OnGazeExit());
-            }
+            
+            return Optional<RaycastHit>.Of(raycastHit);
         }
 
-        private static void TryPress(IPressable pressable)
+        private static void Press(IEnumerable<IInteractable> interactables) => interactables
+            .Where(it => it is IPressable)
+            .Cast<IPressable>()
+            .Where(pressable => Input.GetKeyDown(pressable.ActivationKeyCode()))
+            .ToList()
+            .ForEach(pressable => pressable.OnPress());
+
+        private static IList<IGazable> CurrentGazeablesOf(IEnumerable<IInteractable> interactables) => interactables
+            .Where(it => it is IGazable)
+            .Cast<IGazable>()
+            .ToList();
+
+        private void MoveEyesightOn(IList<IGazable> gazables)
         {
-            if (Input.GetKeyDown(pressable.ActivationKeyCode()))
-            {
-                pressable.OnPress();
-            }
+            LookAt(gazables);
+            StopLookingAt(gazables);
+            _previousGazeable = gazables;
         }
 
-        private void Interact<T>(Action<T> action) where T : IIteractable
-        {
-            if (_currentGameObject != null)
-                _currentGameObject
-                    .GetComponents<IIteractable>()
-                    .Where(interactable => interactable is T)
-                    .Cast<T>()
-                    .ToList()
-                    .ForEach(action);
-        }
+        private void StopLookingAt(IEnumerable<IGazable> gazables) => InvokeOn(_previousGazeable.Except(gazables), gazeable => gazeable.OnGazeExit());
 
-        private void OnValidate()
-        {
-            Assert.AreNotEqual(_interactionDistance, 0);
-        }
+        private void LookAt(IEnumerable<IGazable> gazables) => InvokeOn(gazables.Except(_previousGazeable), gazeable => gazeable.OnGazeEnter());
+
+        private static void InvokeOn<T>(IEnumerable<T> enumerable, Action<T> action) => enumerable
+            .ToList()
+            .ForEach(action.Invoke);
+
+        private void OnValidate() => Assert.AreNotEqual(_interactionDistance, 0);
     }
 }

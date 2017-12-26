@@ -9,11 +9,11 @@ namespace InteractableObjects
     {
         [SerializeField] private KeyCode _activationButton = KeyCode.F;
         [SerializeField] private GUISkin _skin;
-        private bool _isLookingAtFlashLight;
+        private bool _isLookingAtBook;
 
         private void OnGUI()
         {
-            if (_isLookingAtFlashLight)
+            if (_isLookingAtBook)
             {
                 GUI.skin = _skin;
                 GUI.TextArea(TipToInteractReactangle(), "TO PICK UP PRESS " + _activationButton);
@@ -31,12 +31,12 @@ namespace InteractableObjects
 
         public void OnGazeEnter()
         {
-            _isLookingAtFlashLight = true;
+            _isLookingAtBook = true;
         }
 
         public void OnGazeExit()
         {
-            _isLookingAtFlashLight = false;
+            _isLookingAtBook = false;
         }
 
         public KeyCode ActivationKeyCode()

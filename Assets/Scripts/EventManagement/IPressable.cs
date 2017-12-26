@@ -2,7 +2,7 @@
 
 namespace EventManagement
 {
-    public interface IPressable : IIteractable
+    public interface IPressable : IInteractable
     {
         KeyCode ActivationKeyCode();
         

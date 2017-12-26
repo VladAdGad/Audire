@@ -26,6 +26,13 @@ namespace DefaultNamespace
         public IEnumerable<V> FlatMap<V>(Func<T, IEnumerable<V>> function) => _value == null ? new List<V>() : function.Invoke(_value);  
         public T OrElse(T secondary) => IsPresent ? secondary : _value;
         public Optional<V> Cast<V>() where V : class => new Optional<V>(_value as V);
+        
+        public Optional<T> Do(Action<T> action) 
+        {
+            IfPresent(action);
+            
+            return this;
+        }
 
         private bool IsPresent => _value == null;
     }

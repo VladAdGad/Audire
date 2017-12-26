@@ -1,6 +1,6 @@
 ﻿namespace EventManagement
 {
-    public interface IIteractable
+    public interface IInteractable
     {
         
     }
