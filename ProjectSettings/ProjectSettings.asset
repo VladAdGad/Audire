@@ -612,7 +612,7 @@ PlayerSettings:
     Collab: 1
     UNet: 1
   facebookSdkVersion: 7.9.4
-  apiCompatibilityLevel: 2
+  apiCompatibilityLevel: 3
   cloudProjectId: 265fd122-62c5-4ac5-b14b-48fb8d2f47e7
   projectName: Audire
   organizationId: boneyard_vd

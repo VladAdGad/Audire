@@ -9,7 +9,7 @@ using UnityEngine.Assertions;
 
 namespace Player
 {
-    public class PlayerBehaviour : MonoBehaviour
+    public class PlayerEventBehaviour : MonoBehaviour
     {
         [SerializeField] private float _interactionDistance;
         private IEnumerable<IGazable> _previousGazeable = new HashSet<IGazable>();
@@ -18,7 +18,7 @@ namespace Player
 
         private void Start() => _camera = Camera.main;
 
-        private void FixedUpdate() => GazeCast()
+        private void Update() => GazeCast()
             .Map(raycastHit => raycastHit.collider)
             .Map(raycastHitCollider => raycastHitCollider.GetComponents<IInteractable>())
             .Do(interactables => MoveEyesightOn(CurrentGazeablesOf(interactables)))
