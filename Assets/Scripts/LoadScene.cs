@@ -7,7 +7,7 @@ public class LoadScene : MonoBehaviour
     {
         string nameCurrentScene = currentScene.name;
         int index = (nameCurrentScene[nameCurrentScene.Length-1] - '0') + 1;
-        if (index == 5)
+        if (index != 5)
         {
             SceneManager.LoadScene("lvl" + index, LoadSceneMode.Single);
         }
