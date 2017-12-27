@@ -272,6 +272,21 @@ Prefab:
       propertyPath: m_Name
       value: Note 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114204651120938258, guid: d989ad5707cdb4148b79eac98d22a8b3,
+        type: 2}
+      propertyPath: _skin
+      value: 
+      objectReference: {fileID: 11400000, guid: 5bbd79b061937ba4bb9ce4ffe1526dee,
+        type: 2}
+    - target: {fileID: 114204651120938258, guid: d989ad5707cdb4148b79eac98d22a8b3,
+        type: 2}
+      propertyPath: _noteText
+      value: "                                              October 14, 1972\r\n\r\r\n\r\n\r\n\r\n\r\nDear
+        Sir,\r\n\r\n\tAs you asked, I am attaching your prescription to this letter.
+        But, please, control the dosage. Overdosing by anti-anxiety and sleeping pills
+        can be fatal. \r\n\nWrite to me whenever you will have seizures again.   \r\n\r\n\r\n\r\n\r\n
+        \                             Charles Danton, the doctor\r\n"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
   m_IsPrefabParent: 0
@@ -1143,6 +1158,19 @@ Prefab:
       propertyPath: m_Name
       value: Note 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114204651120938258, guid: d989ad5707cdb4148b79eac98d22a8b3,
+        type: 2}
+      propertyPath: _noteText
+      value: "\u2026 I feel so inspired here! I am glad that I made this decision
+        to move here. In the last weeks, I wrote a few new melodies, that I am sure
+        Academy will like! Now they will have to admit my talent!.."
+      objectReference: {fileID: 0}
+    - target: {fileID: 114204651120938258, guid: d989ad5707cdb4148b79eac98d22a8b3,
+        type: 2}
+      propertyPath: _skin
+      value: 
+      objectReference: {fileID: 11400000, guid: 5bbd79b061937ba4bb9ce4ffe1526dee,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
   m_IsPrefabParent: 0
