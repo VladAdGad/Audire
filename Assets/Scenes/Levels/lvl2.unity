@@ -3991,6 +3991,20 @@ Prefab:
       propertyPath: m_Center.z
       value: 0.04075728
       objectReference: {fileID: 0}
+    - target: {fileID: 114204651120938258, guid: d989ad5707cdb4148b79eac98d22a8b3,
+        type: 2}
+      propertyPath: _skin
+      value: 
+      objectReference: {fileID: 11400000, guid: 5bbd79b061937ba4bb9ce4ffe1526dee,
+        type: 2}
+    - target: {fileID: 114204651120938258, guid: d989ad5707cdb4148b79eac98d22a8b3,
+        type: 2}
+      propertyPath: _noteText
+      value: "\u2026 This house is full of old things, that, apparently, were left
+        by its old owners. Some ancient books, vases, paintings\u2026  Paintings are
+        looking really old and expensive. I am totally not an expert, but I wonder
+        if they are veritable and why owners left such a pricey things here\u2026"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
   m_IsPrefabParent: 0
