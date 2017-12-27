@@ -6420,7 +6420,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cba00f75539bc564fabb9136fccfac6c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.3201823
+      value: 1.897
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cba00f75539bc564fabb9136fccfac6c, type: 2}
       propertyPath: m_LocalPosition.z
@@ -6500,6 +6500,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.1241101, y: 0.18037716, z: 0.15226656}
   m_Center: {x: -0.05329457, y: 0.089948244, z: 0.037252925}
+--- !u!114 &1303143548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1303143543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcc5b3dad07f4806b84f3c69cb1d8040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _activationButton: 102
+  _skin: {fileID: 11400000, guid: f23f0eb554c061e4fa6c95c57cb3d888, type: 2}
+  _bookText: "\u201CI came out this way years ago and spent three days in Stamboul
+    then.\u201D\r\n\n\u201COh! I see. Well, I may say I\u2019m very glad you are going
+    right through, because I am.\u201D\r\n\nHe made a kind of clumsy little bow, flushing
+    a little as he did so.\r\n\n\u201CHe is susceptible, our Colonel,\u201D thought
+    Hercule Poirot to himself with some amusement. \u201CThe train, it is as dangerous
+    as a sea voyage!\u201D\r\n"
 --- !u!4 &1307031304 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4722188757057764, guid: 9026b644ebff51b4a888464cc3b704fc,
@@ -8024,6 +8043,36 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 888ce82c0af2ab0499d39c93fb0f4ce4, type: 2}
   m_PrefabInternal: {fileID: 1698111814}
+--- !u!114 &1764402929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1764402926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcc5b3dad07f4806b84f3c69cb1d8040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _activationButton: 102
+  _skin: {fileID: 11400000, guid: f23f0eb554c061e4fa6c95c57cb3d888, type: 2}
+  _bookText: 'Miss Virginia E. Otis was a little girl of fifteen, lithe and lovely
+    as a fawn, and with a fine freedom in her large blue eyes. She was a wonderful
+    amazon, and had once raced old Lord Bilton on her pony twice round the park, winning
+    by a length and a half, just in front of the Achilles statue, to the huge delight
+    of the young Duke of Cheshire, who proposed for her on the spot, and was sent
+    back to Eton that very night by his guardians, in floods of tears. After Virginia
+    came the twins, who were usually called ''The Stars and Stripes,'' as they were
+    always getting swished. They were delightful boys, and with the exception of the
+    worthy Minister the only true republicans of the family. As Canterville Chase
+    is seven miles from Ascot, the nearest railway station, Mr. Otis had telegraphed
+    for a waggonette to meet them, and they started on their drive in high spirits.
+    It was a lovely July evening, and the air was delicate with the scent of the pinewoods.
+    Now and then they heard a wood pigeon brooding over its own sweet voice, or saw,
+    deep in the rustling fern, the burnished breast of the pheasant. Little squirrels
+    peered at them from the beech-trees as they went by, and the rabbits scudded away
+    through the brushwood and over the mossy knolls, with their white tails in the
+    air. '
 --- !u!65 &1764402931
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8132,12 +8181,64 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _activationButton: 102
   _skin: {fileID: 11400000, guid: f23f0eb554c061e4fa6c95c57cb3d888, type: 2}
-  _bookText: 
+  _bookText: " \"I will read you their names directly; here they are, in my pocketbook.
+    \ Castle of Wolfenbach, Clermont, Mysterious Warnings, Necromancer of the Black
+    Forest, Midnight Bell, Orphan of the Rhine, and Horrid Mysteries. Those will last
+    us some time.\"\r\n\r\n     \"Yes, pretty well; but are they all horrid, are you
+    sure they are all horrid?\"\r\n\r\n     \"Yes, quite sure; for a particular friend
+    of mine, a Miss Andrews, a sweet girl, one of the sweetest creatures in the world,
+    has read every one of them.  I wish you knew Miss Andrews, you would be delighted
+    with her. She is netting herself the sweetest cloak you can conceive. I think
+    her as beautiful as an angel, and I am so vexed with the men for not admiring
+    her! I scold them all amazingly about it.\""
 --- !u!4 &1791700151 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4820049658638922, guid: dbc9169e6312d48459c14640fe1c8b01,
     type: 2}
   m_PrefabInternal: {fileID: 1560752938}
+--- !u!1 &1796197593 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: cba00f75539bc564fabb9136fccfac6c, type: 2}
+  m_PrefabInternal: {fileID: 1262113409}
+--- !u!114 &1796197596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1796197593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcc5b3dad07f4806b84f3c69cb1d8040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _activationButton: 102
+  _skin: {fileID: 11400000, guid: f23f0eb554c061e4fa6c95c57cb3d888, type: 2}
+  _bookText: "\"Are you mad, my friend?\" said he; \"or whither does your senseless
+    curiosity lead you? Would you also create for yourself and the world a demoniacal
+    enemy? Peace, peace! learn my miseries, and do not seek to increase your own.\"\r\nFrankenstein
+    discovered that I made notes concerning his history: he asked to see them, and
+    then himself corrected and augmented them in many places; but principally in giving
+    the life and spirit to the conversations he held with his enemy. \"Since you have
+    preserved my narration,\" said he, \"I would not that a mutilated one should go
+    down to posterity.\" Thus has a week passed away, while I have listened to the
+    strangest tale that ever imagination formed. My thoughts, and every feeling of
+    my soul, have been drunk up by the interest for my guest, which this tale, and
+    his own elevated and gentle manners, have created. I wish to soothe him; yet can
+    I counsel one so infinitely miserable, so destitute of every hope of consolation,
+    to live? Oh, no! the only joy that he can now know will be when he composes his
+    shattered spirit to peace and death.\r\n"
+--- !u!65 &1796197597
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1796197593}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.016223356, y: 0.25279224, z: 0.16615078}
+  m_Center: {x: 0.000000057689537, y: 0.12639624, z: 0.047075663}
 --- !u!1 &1816177681
 GameObject:
   m_ObjectHideFlags: 0
@@ -8971,11 +9072,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4734684047787276, guid: ccc64212044e0e34f84a6312e28e7025, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 19.806307
+      value: 19.197
       objectReference: {fileID: 0}
     - target: {fileID: 4734684047787276, guid: ccc64212044e0e34f84a6312e28e7025, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 4.3831997
+      value: 4.072
       objectReference: {fileID: 0}
     - target: {fileID: 4734684047787276, guid: ccc64212044e0e34f84a6312e28e7025, type: 2}
       propertyPath: m_LocalRotation.x
