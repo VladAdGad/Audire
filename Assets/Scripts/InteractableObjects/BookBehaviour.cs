@@ -11,7 +11,10 @@ namespace InteractableObjects
         [SerializeField] private GUISkin _skin;
         [SerializeField][TextArea]private string _bookText;
         private bool _isLookingAtBook;
+        private AudioSource _readingBookAudioSource;
         private bool _isReadingBook = false;
+
+        private void Start() => _readingBookAudioSource = GetComponent<AudioSource>();
 
         private void OnGUI()
         {
@@ -54,6 +57,7 @@ namespace InteractableObjects
         {
             _isLookingAtBook = false;
         }
+        private void PlaySound() => _readingBookAudioSource.Play();
 
         public KeyCode ActivationKeyCode()
         {
@@ -64,7 +68,7 @@ namespace InteractableObjects
         {
             _isReadingBook = !_isReadingBook;
             PlayerBehaviour.SetFirstControllerInteract(!_isReadingBook);
-            //PlaySound();
+            PlaySound();
         }
 
         private void OnValidate()
