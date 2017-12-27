@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 24dc0e104f576374d95134869c298905
+timeCreated: 1513111448
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: SANTOS DUMONT
+  fontNames:
+  - SANTOS DUMONT
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -140,6 +140,7 @@ Camera:
   m_TargetEye: 3
   m_HDR: 0
   m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -175,7 +176,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: cde2df83fe584a04082a4589c6695f50, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c5b2f0c7900bbdc40a7a3b917b56109a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
