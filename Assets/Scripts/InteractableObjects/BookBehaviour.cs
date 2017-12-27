@@ -9,17 +9,33 @@ namespace InteractableObjects
     {
         [SerializeField] private KeyCode _activationButton = KeyCode.F;
         [SerializeField] private GUISkin _skin;
+        [SerializeField][TextArea]private string _bookText;
         private bool _isLookingAtBook;
+        private bool _isReadingBook = false;
 
         private void OnGUI()
         {
+            if (_isReadingBook)
+            {
+                GUI.skin = _skin;
+                //Draw the note on screen, Set And Change the GUI Style To Make the Text Appear The Way you Like (Even on an image background like paper)
+                GUI.Box(BookRectangle(), _bookText);
+                _isLookingAtBook = false;
+            }
+
             if (_isLookingAtBook)
             {
                 GUI.skin = _skin;
                 GUI.TextArea(TipToInteractReactangle(), "TO PICK UP PRESS " + _activationButton);
             }
         }
-        
+
+        private static Rect BookRectangle() => new Rect(
+            Screen.width / 6,
+            Screen.height / 24f,
+            Screen.width / 2f + Screen.width / 6,
+            Screen.height - Screen.height / 18);
+
         private static Rect TipToInteractReactangle()
         {
             return new Rect(
@@ -46,7 +62,9 @@ namespace InteractableObjects
 
         public void OnPress()
         {
-            throw new NotImplementedException();
+            _isReadingBook = !_isReadingBook;
+            PlayerBehaviour.SetFirstControllerInteract(!_isReadingBook);
+            //PlaySound();
         }
 
         private void OnValidate()

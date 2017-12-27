@@ -8131,7 +8131,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _activationButton: 102
-  _skin: {fileID: 11400000, guid: 77d68fcc06fea3f40853ae3f92acb13a, type: 2}
+  _skin: {fileID: 11400000, guid: f23f0eb554c061e4fa6c95c57cb3d888, type: 2}
+  _bookText: 
 --- !u!4 &1791700151 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4820049658638922, guid: dbc9169e6312d48459c14640fe1c8b01,
