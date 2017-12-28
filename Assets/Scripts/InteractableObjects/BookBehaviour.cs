@@ -21,7 +21,6 @@ namespace InteractableObjects
             if (_isReadingBook)
             {
                 GUI.skin = _skin;
-                //Draw the note on screen, Set And Change the GUI Style To Make the Text Appear The Way you Like (Even on an image background like paper)
                 GUI.Box(BookRectangle(), _bookText);
                 _isLookingAtBook = false;
             }
@@ -34,19 +33,16 @@ namespace InteractableObjects
         }
 
         private static Rect BookRectangle() => new Rect(
-            Screen.width / 6,
+            Screen.width / 6f,
             Screen.height / 24f,
             Screen.width / 2f + Screen.width / 6,
             Screen.height - Screen.height / 18);
 
-        private static Rect TipToInteractReactangle()
-        {
-            return new Rect(
-                Screen.width / 2 - Screen.width / 6,
-                Screen.height / 2 + Screen.height / 4,
-                Screen.width / 3f,
-                Screen.width / 2 - 2 * Screen.width / 5);
-        }
+        private static Rect TipToInteractReactangle() => new Rect(
+            Screen.width / 2 - Screen.width / 6,
+            Screen.height / 2 + Screen.height / 4,
+            Screen.width / 3f,
+            Screen.width / 2 - 2 * Screen.width / 5);
 
         public void OnGazeEnter()
         {
