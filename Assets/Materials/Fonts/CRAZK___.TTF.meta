@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: f0e4918ec61ab408eb20cf5139f817bc
+timeCreated: 1514668975
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Crazy Killer
+  fontNames:
+  - Crazy Killer
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
