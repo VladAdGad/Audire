@@ -11,7 +11,7 @@ namespace SceneMenager
         {
             float fadeTime = GameObject.Find("FPSController").GetComponent<Fading>().BeginFade(1);
             yield return new WaitForSeconds(fadeTime);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
