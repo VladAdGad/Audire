@@ -1,5 +1,4 @@
-﻿
-namespace EventManagement
+﻿namespace EventManagement
 {
     public interface IGazable : IInteractable
     {

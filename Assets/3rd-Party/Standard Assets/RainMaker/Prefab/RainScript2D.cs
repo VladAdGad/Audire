@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 namespace DigitalRuby.RainMaker
 {
@@ -23,29 +22,25 @@ namespace DigitalRuby.RainMaker
         [Tooltip("The starting y offset for rain and mist. This will be offset as a percentage of visible height from the top of the visible world.")]
         public float RainHeightMultiplier = 0.15f;
 
-        [Tooltip("The total width of the rain and mist as a percentage of visible width")]
-        public float RainWidthMultiplier = 1.5f;
+        [Tooltip("The total width of the rain and mist as a percentage of visible width")] public float RainWidthMultiplier = 1.5f;
 
-        [Tooltip("Collision mask for the rain particles")]
-        public LayerMask CollisionMask = -1;
+        [Tooltip("Collision mask for the rain particles")] public LayerMask CollisionMask = -1;
 
-        [Tooltip("Lifetime to assign to rain particles that have collided. 0 for instant death. This can allow the rain to penetrate a little bit beyond the collision point.")]
-        [Range(0.0f, 0.5f)]
-        public float CollisionLifeTimeRain = 0.02f;
+        [Tooltip(
+            "Lifetime to assign to rain particles that have collided. 0 for instant death. This can allow the rain to penetrate a little bit beyond the collision point.")]
+        [Range(0.0f, 0.5f)] public float CollisionLifeTimeRain = 0.02f;
 
-        [Tooltip("Multiply the velocity of any mist colliding by this amount")]
-        [Range(0.0f, 0.99f)]
-        public float RainMistCollisionMultiplier = 0.75f;
+        [Tooltip("Multiply the velocity of any mist colliding by this amount")] [Range(0.0f, 0.99f)] public float RainMistCollisionMultiplier = 0.75f;
 
         private void EmitExplosion(ref Vector3 pos)
         {
-            int count = UnityEngine.Random.Range(2, 5);
+            int count = Random.Range(2, 5);
             while (count != 0)
             {
-                float xVelocity = UnityEngine.Random.Range(-2.0f, 2.0f) * cameraMultiplier;
-                float yVelocity = UnityEngine.Random.Range(1.0f, 3.0f) * cameraMultiplier;
-                float lifetime = UnityEngine.Random.Range(0.1f, 0.2f);
-                float size = UnityEngine.Random.Range(0.05f, 0.1f) * cameraMultiplier;
+                float xVelocity = Random.Range(-2.0f, 2.0f) * cameraMultiplier;
+                float yVelocity = Random.Range(1.0f, 3.0f) * cameraMultiplier;
+                float lifetime = Random.Range(0.1f, 0.2f);
+                float size = Random.Range(0.05f, 0.1f) * cameraMultiplier;
                 ParticleSystem.EmitParams param = new ParticleSystem.EmitParams();
                 param.position = pos;
                 param.velocity = new Vector3(xVelocity, yVelocity, 0.0f);
@@ -105,7 +100,8 @@ namespace DigitalRuby.RainMaker
                         }
                         else
                         {
-                            particles[i].remainingLifetime = Mathf.Min(particles[i].remainingLifetime, UnityEngine.Random.Range(CollisionLifeTimeRain * 0.5f, CollisionLifeTimeRain * 2.0f));
+                            particles[i].remainingLifetime = Mathf.Min(particles[i].remainingLifetime,
+                                Random.Range(CollisionLifeTimeRain * 0.5f, CollisionLifeTimeRain * 2.0f));
                             pos += (particles[i].velocity * Time.deltaTime);
                         }
                         changes = true;
@@ -148,7 +144,7 @@ namespace DigitalRuby.RainMaker
             for (int i = 0; i < count; i++)
             {
                 Vector3 pos = particles[i].position + RainMistParticleSystem.transform.position;
-                hit = Physics2D.Raycast(pos, particles[i].velocity.normalized, particles[i].velocity.magnitude* Time.deltaTime, CollisionMask);
+                hit = Physics2D.Raycast(pos, particles[i].velocity.normalized, particles[i].velocity.magnitude * Time.deltaTime, CollisionMask);
                 if (hit.collider != null)
                 {
                     particles[i].velocity *= RainMistCollisionMultiplier;
@@ -167,19 +163,24 @@ namespace DigitalRuby.RainMaker
             base.Start();
 
             initialEmissionRain = RainFallParticleSystem.emission.rateOverTime.constant;
-            initialStartSpeedRain = new Vector2(RainFallParticleSystem.main.startSpeed.constantMin, RainFallParticleSystem.main.startSpeed.constantMax);
+            initialStartSpeedRain =
+                new Vector2(RainFallParticleSystem.main.startSpeed.constantMin, RainFallParticleSystem.main.startSpeed.constantMax);
             initialStartSizeRain = new Vector2(RainFallParticleSystem.main.startSize.constantMin, RainFallParticleSystem.main.startSize.constantMax);
 
             if (RainMistParticleSystem != null)
             {
-                initialStartSpeedMist = new Vector2(RainMistParticleSystem.main.startSpeed.constantMin, RainMistParticleSystem.main.startSpeed.constantMax);
-                initialStartSizeMist = new Vector2(RainMistParticleSystem.main.startSize.constantMin, RainMistParticleSystem.main.startSize.constantMax);
+                initialStartSpeedMist = new Vector2(RainMistParticleSystem.main.startSpeed.constantMin,
+                    RainMistParticleSystem.main.startSpeed.constantMax);
+                initialStartSizeMist = new Vector2(RainMistParticleSystem.main.startSize.constantMin,
+                    RainMistParticleSystem.main.startSize.constantMax);
             }
 
             if (RainExplosionParticleSystem != null)
             {
-                initialStartSpeedExplosion = new Vector2(RainExplosionParticleSystem.main.startSpeed.constantMin, RainExplosionParticleSystem.main.startSpeed.constantMax);
-                initialStartSizeExplosion = new Vector2(RainExplosionParticleSystem.main.startSize.constantMin, RainExplosionParticleSystem.main.startSize.constantMax);
+                initialStartSpeedExplosion = new Vector2(RainExplosionParticleSystem.main.startSpeed.constantMin,
+                    RainExplosionParticleSystem.main.startSpeed.constantMax);
+                initialStartSizeExplosion = new Vector2(RainExplosionParticleSystem.main.startSize.constantMin,
+                    RainExplosionParticleSystem.main.startSize.constantMax);
             }
         }
 
@@ -208,10 +209,7 @@ namespace DigitalRuby.RainMaker
 
         protected override bool UseRainMistSoftParticles
         {
-            get
-            {
-                return false;
-            }
+            get { return false; }
         }
     }
 }

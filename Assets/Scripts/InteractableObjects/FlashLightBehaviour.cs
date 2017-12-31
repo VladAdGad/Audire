@@ -1,5 +1,4 @@
-﻿using System;
-using EventManagement;
+﻿using EventManagement;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -20,7 +19,7 @@ namespace InteractableObjects
                 GUI.TextArea(TipToInteractReactangle(), "TO PICK UP PRESS " + _activationButton);
             }
         }
-        
+
         private static Rect TipToInteractReactangle() => new Rect(
             Screen.width / 2 - Screen.width / 6,
             Screen.height / 2 + Screen.height / 4,

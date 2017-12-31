@@ -1,5 +1,4 @@
-﻿using System;
-using EventManagement;
+﻿using EventManagement;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -9,7 +8,7 @@ namespace InteractableObjects
     {
         [SerializeField] private KeyCode _activationButton = KeyCode.F;
         [SerializeField] private GUISkin _skin;
-        [SerializeField][TextArea]private string _bookText;
+        [SerializeField] [TextArea] private string _bookText;
         private bool _isLookingAtBook;
         private AudioSource _readingBookAudioSource;
         private bool _isReadingBook = false;
@@ -53,6 +52,7 @@ namespace InteractableObjects
         {
             _isLookingAtBook = false;
         }
+
         private void PlaySound() => _readingBookAudioSource.Play();
 
         public KeyCode ActivationKeyCode()

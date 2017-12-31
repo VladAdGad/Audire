@@ -5,7 +5,6 @@ using SceneMenager;
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.UI;
-using Random = UnityEngine.Random;
 
 namespace InteractableObjects
 {
@@ -45,13 +44,13 @@ namespace InteractableObjects
         private static IEnumerable<Button> GetButtons(IEnumerable<Button> b)
         {
             LinkedList<Button> buttons = new LinkedList<Button>();
-            
+
             foreach (Button button in b)
             {
                 buttons.AddLast(button);
                 button.GetComponentInChildren<Text>().text = Random.Range(0, 10).ToString();
             }
-            
+
             return buttons;
         }
 
@@ -69,7 +68,7 @@ namespace InteractableObjects
         {
             _isOpeningDoor = !_isOpeningDoor;
             _isCodeMatch = GetStateCurCode();
-            
+
             if (_isCodeMatch)
             {
                 _stateOfDoor = !_stateOfDoor;
@@ -84,7 +83,7 @@ namespace InteractableObjects
                 _lockPanel.SetActive(_isOpeningDoor);
                 PlayerBehaviour.SetFirstControllerInteract(!_isOpeningDoor);
             }
-            
+
             _curCode = "";
         }
 
@@ -102,7 +101,7 @@ namespace InteractableObjects
             {
                 _curCode += curButton.GetComponentInChildren<Text>().text;
             }
-            
+
             return _curCode.Equals(_codeToOpenDoor);
         }
 

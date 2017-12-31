@@ -1,18 +1,24 @@
 ﻿using UnityEngine;
-using System.Collections;
+using UnityEngine.UI;
 
 namespace DigitalRuby.RainMaker
 {
     public class DemoScript : MonoBehaviour
     {
         public RainScript RainScript;
-        public UnityEngine.UI.Toggle MouseLookToggle;
-        public UnityEngine.UI.Toggle FlashlightToggle;
-        public UnityEngine.UI.Slider RainSlider;
+        public Toggle MouseLookToggle;
+        public Toggle FlashlightToggle;
+        public Slider RainSlider;
         public Light Flashlight;
         public GameObject Sun;
 
-        private enum RotationAxes { MouseXAndY = 0, MouseX = 1, MouseY = 2 }
+        private enum RotationAxes
+        {
+            MouseXAndY = 0,
+            MouseX = 1,
+            MouseY = 2
+        }
+
         private RotationAxes axes = RotationAxes.MouseXAndY;
         private float sensitivityX = 15F;
         private float sensitivityY = 15F;

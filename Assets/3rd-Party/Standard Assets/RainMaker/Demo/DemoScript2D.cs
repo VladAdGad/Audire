@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
-using System.Collections;
+using UnityEngine.UI;
 
 namespace DigitalRuby.RainMaker
 {
     public class DemoScript2D : MonoBehaviour
     {
-        public UnityEngine.UI.Slider RainSlider;
+        public Slider RainSlider;
         public RainScript2D RainScript;
 
         private void Start()
