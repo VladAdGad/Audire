@@ -26,7 +26,7 @@ namespace InteractableObjects
                 GUI.Box(NoteRectangle(), _noteText);
                 _isLockingNote = false;
             }
-            
+
             if (_isLockingNote)
             {
                 GUI.skin = _skin;

@@ -1,7 +1,8 @@
-using System;
+using UnityEditor.Build;
 using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;
+
 #endif
 
 namespace UnityStandardAssets.Utility
@@ -12,7 +13,7 @@ namespace UnityStandardAssets.Utility
 #endif
     public class PlatformSpecificContent : MonoBehaviour
 #if UNITY_EDITOR
-        , UnityEditor.Build.IActiveBuildTargetChanged
+        , IActiveBuildTargetChanged
 #endif
     {
         private enum BuildTargetGroup
@@ -21,14 +22,10 @@ namespace UnityStandardAssets.Utility
             Mobile
         }
 
-        [SerializeField]
-        private BuildTargetGroup m_BuildTargetGroup;
-        [SerializeField]
-        private GameObject[] m_Content = new GameObject[0];
-        [SerializeField]
-        private MonoBehaviour[] m_MonoBehaviours = new MonoBehaviour[0];
-        [SerializeField]
-        private bool m_ChildrenOfThisObject;
+        [SerializeField] private BuildTargetGroup m_BuildTargetGroup;
+        [SerializeField] private GameObject[] m_Content = new GameObject[0];
+        [SerializeField] private MonoBehaviour[] m_MonoBehaviours = new MonoBehaviour[0];
+        [SerializeField] private bool m_ChildrenOfThisObject;
 
 #if !UNITY_EDITOR
 	void OnEnable()
@@ -38,10 +35,7 @@ namespace UnityStandardAssets.Utility
 #else
         public int callbackOrder
         {
-            get
-            {
-                return 1;
-            }
+            get { return 1; }
         }
 #endif
 

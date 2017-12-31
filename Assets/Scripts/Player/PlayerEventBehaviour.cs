@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using EventManagement;
-using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -27,12 +25,12 @@ namespace Player
         private Optional<RaycastHit> GazeCast()
         {
             RaycastHit raycastHit;
-            
+
             if (!Physics.Raycast(_camera.ScreenPointToRay(_position), out raycastHit, _interactionDistance))
             {
                 MoveEyesightOn(new List<IGazable>());
             }
-            
+
             return Optional<RaycastHit>.Of(raycastHit);
         }
 

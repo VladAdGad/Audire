@@ -26,10 +26,10 @@ public class Optional<T>
 
     public Optional<V> Cast<V>() where V : class => new Optional<V>(_value as V);
 
-    public Optional<T> Do(Action<T> action) 
+    public Optional<T> Do(Action<T> action)
     {
         IfPresent(action);
-            
+
         return this;
     }
 

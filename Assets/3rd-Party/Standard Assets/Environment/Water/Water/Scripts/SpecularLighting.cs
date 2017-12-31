@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace UnityStandardAssets.Water
@@ -13,7 +12,7 @@ namespace UnityStandardAssets.Water
 
         public void Start()
         {
-            m_WaterBase = (WaterBase)gameObject.GetComponent(typeof(WaterBase));
+            m_WaterBase = (WaterBase) gameObject.GetComponent(typeof(WaterBase));
         }
 
 
@@ -21,7 +20,7 @@ namespace UnityStandardAssets.Water
         {
             if (!m_WaterBase)
             {
-                m_WaterBase = (WaterBase)gameObject.GetComponent(typeof(WaterBase));
+                m_WaterBase = (WaterBase) gameObject.GetComponent(typeof(WaterBase));
             }
 
             if (specularLight && m_WaterBase.sharedMaterial)

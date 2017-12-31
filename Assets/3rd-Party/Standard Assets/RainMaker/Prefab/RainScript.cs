@@ -1,18 +1,14 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 namespace DigitalRuby.RainMaker
 {
     public class RainScript : BaseRainScript
     {
-        [Tooltip("The height above the camera that the rain will start falling from")]
-        public float RainHeight = 25.0f;
+        [Tooltip("The height above the camera that the rain will start falling from")] public float RainHeight = 25.0f;
 
-        [Tooltip("How far the rain particle system is ahead of the player")]
-        public float RainForwardOffset = -7.0f;
+        [Tooltip("How far the rain particle system is ahead of the player")] public float RainForwardOffset = -7.0f;
 
-        [Tooltip("The top y value of the mist particles")]
-        public float RainMistHeight = 3.0f;
+        [Tooltip("The top y value of the mist particles")] public float RainMistHeight = 3.0f;
 
         private void UpdateRain()
         {

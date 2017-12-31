@@ -15,7 +15,7 @@ namespace InteractableObjects
             GUI.DrawTexture(new Rect(Screen.width / 2, Screen.height / 2, _cursorSizeX, _cursorSizeY),
                 _playerCursorOfCentreMonitor);
         }
-        
+
         public static void SetFirstControllerInteract(bool value)
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");

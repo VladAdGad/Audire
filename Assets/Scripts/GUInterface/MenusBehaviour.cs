@@ -1,10 +1,9 @@
-﻿using System.Collections.Generic;
-using InteractableObjects;
+﻿using InteractableObjects;
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.SceneManagement;
 
-namespace SceneMenager
+namespace GUInterface
 {
     public class MenusBehaviour : MonoBehaviour, IButtonBehaviour
     {

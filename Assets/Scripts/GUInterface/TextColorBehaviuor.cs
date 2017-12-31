@@ -1,17 +1,15 @@
 ﻿using UnityEngine;
-using UnityEngine.Assertions;
 using UnityEngine.EventSystems;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace SceneMenager
+namespace GUInterface
 {
     public class TextColorBehaviuor : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         private Text _text;
         [SerializeField] private Color _enterColor = Color.red;
         [SerializeField] private Color _exitColor = Color.white;
-        
+
         private void Start()
         {
             _text = GetComponent<Text>();
