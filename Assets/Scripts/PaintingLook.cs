@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
+[Obsolete("Not used anymore", false)]
 public class PaintingLook : MonoBehaviour
 {
     bool near = false;

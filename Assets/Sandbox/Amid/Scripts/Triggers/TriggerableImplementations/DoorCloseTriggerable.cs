@@ -1,15 +1,15 @@
 ﻿using InteractableObjects;
 using UnityEngine;
 
-namespace Sandbox.Amid.Scripts
+namespace Sandbox.Amid.Scripts.Triggers.TriggerableImplementations
 {
     public class DoorCloseTriggerable : ATriggerable
     {
         private bool _canClosed = true;
         private DoorBehaviour _doorBehaviour;
-        
+
         void Start() => _doorBehaviour = GetComponent<DoorBehaviour>();
-        
+
         public override void TriggerEnter(Collider collider)
         {
             if (_canClosed)

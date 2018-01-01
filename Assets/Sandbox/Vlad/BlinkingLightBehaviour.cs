@@ -1,10 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.InteropServices.ComTypes;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
-namespace InteractableObjects
+namespace Sandbox.Vlad
 {
     public class BlinkingLightBehaviour : MonoBehaviour
     {

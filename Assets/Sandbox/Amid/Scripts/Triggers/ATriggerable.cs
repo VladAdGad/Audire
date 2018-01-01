@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Sandbox.Amid.Scripts
+namespace Sandbox.Amid.Scripts.Triggers
 {
     public abstract class ATriggerable : MonoBehaviour
     {
