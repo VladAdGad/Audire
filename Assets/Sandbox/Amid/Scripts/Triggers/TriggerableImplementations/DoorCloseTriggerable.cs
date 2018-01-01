@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace Sandbox.Amid.Scripts.Triggers.TriggerableImplementations
 {
+    [RequireComponent(typeof(DoorBehaviour))]
     public class DoorCloseTriggerable : ATriggerable
     {
         private bool _canClosed = true;
