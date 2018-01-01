@@ -93,4 +93,7 @@ Assets/3rd-Party/HomeStuff/RetroLamps/Meshes/lamps_ALL_export.fbm/
 Audire.sln
 Library/
 Temp/
+
+#Rider-ReSharper chaches
+_ReSharper.Caches/
 obj/
