@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 
 namespace InteractableObjects
 {
-    public class TwilingLightBiheviour : MonoBehaviour
+    public class BlinkingLightBehaviour : MonoBehaviour
     {
         public List<GameObject> Lights;
         [SerializeField] private float _minWaitTime;
