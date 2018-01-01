@@ -5,9 +5,9 @@ namespace Sandbox.Amid.Scripts.Triggers.TriggerableImplementations
     [RequireComponent(typeof(AudioSource))]
     public class AudioTriggerable : ATriggerable
     {
-        [SerializeField] private bool singleTrigger = true;
+        [SerializeField] private bool _singleTrigger = true;
         private bool _wasActivated = false;
-
+        
         private AudioSource _audioSource;
 
         private void Start() => _audioSource = GetComponent<AudioSource>();
