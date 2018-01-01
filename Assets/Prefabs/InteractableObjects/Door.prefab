@@ -140,7 +140,6 @@ GameObject:
   - component: {fileID: 95559783569891742}
   - component: {fileID: 82155144125481204}
   - component: {fileID: 65593446247637600}
-  - component: {fileID: 114588300189211710}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -175,6 +174,8 @@ GameObject:
   - component: {fileID: 4283999370235730}
   - component: {fileID: 33006307759956828}
   - component: {fileID: 23485475625191906}
+  - component: {fileID: 64573683281307114}
+  - component: {fileID: 114997947934341134}
   m_Layer: 0
   m_Name: Door_Knob
   m_TagString: Untagged
@@ -272,8 +273,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1749553752992934}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 8.352727, y: 0.35518217, z: 13.053153}
-  m_LocalScale: {x: 1.1866392, y: 1.1866428, z: 1.1866428}
+  m_LocalPosition: {x: -1.3999596, y: 0.41618216, z: -8.183}
+  m_LocalScale: {x: 1.1866392, y: 1.1866432, z: 1.1866432}
   m_Children:
   - {fileID: 4507263735236334}
   - {fileID: 4195210115762996}
@@ -649,6 +650,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1283033965274356}
   m_Mesh: {fileID: 4300010, guid: 53fd6f5729dcb094ebf37d4437bf647a, type: 3}
+--- !u!64 &64573683281307114
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1974663986755448}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300012, guid: 53fd6f5729dcb094ebf37d4437bf647a, type: 3}
 --- !u!65 &65593446247637600
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -770,12 +785,12 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114588300189211710
+--- !u!114 &114997947934341134
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1749553752992934}
+  m_GameObject: {fileID: 1974663986755448}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 55cd10468abf46dea3f3904b0d17d8b3, type: 3}
