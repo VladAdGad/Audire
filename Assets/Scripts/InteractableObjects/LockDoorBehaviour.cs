@@ -27,8 +27,8 @@ namespace InteractableObjects
 
         private void Start()
         {
-            _openingDoorAudioSource = GetComponent<AudioSource>();
-            _animator = GetComponent<Animator>();
+            _openingDoorAudioSource = transform.parent.parent.GetComponent<AudioSource>();
+            _animator = transform.parent.parent.GetComponent<Animator>();
             _curButtons = GetButtons(_lockPanel.GetComponentsInChildren<Button>());
         }
 
