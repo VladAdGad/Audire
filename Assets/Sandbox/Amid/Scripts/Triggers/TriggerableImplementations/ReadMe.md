@@ -1,4 +1,4 @@
-### Audio Triggerable:
+# Audio Triggerable:
 ## How to use:
 1) Add AudioTriggerable to game object with Audio Source configured
 2) Add your triggerable to desiered TriggerNode
