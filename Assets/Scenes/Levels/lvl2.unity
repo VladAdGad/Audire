@@ -1615,7 +1615,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1066775132}
+    m_TransformParent: {fileID: 1129017590}
     m_Modifications:
     - target: {fileID: 400000, guid: 73200fe793825a74e89c8d364339fd51, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1647,7 +1647,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 73200fe793825a74e89c8d364339fd51, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 73200fe793825a74e89c8d364339fd51, type: 3}
       propertyPath: m_LocalScale.x
@@ -5059,8 +5059,8 @@ Transform:
   - {fileID: 877616023}
   - {fileID: 184589944}
   - {fileID: 846411651}
-  - {fileID: 1067988735}
   - {fileID: 1608644555}
+  - {fileID: 1129017590}
   m_Father: {fileID: 1228217580}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5492,6 +5492,35 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 515f1a504b89f1349899f36290f04f7a, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1129017589
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1129017590}
+  m_Layer: 0
+  m_Name: Pickables
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1129017590
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1129017589}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1067988735}
+  m_Father: {fileID: 1066775132}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1138126531 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: e270c93e4281fcb4eb88f0c7d55b6953, type: 2}
@@ -7524,7 +7553,7 @@ Transform:
   m_Children:
   - {fileID: 316507249}
   m_Father: {fileID: 1066775132}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1629573738
 GameObject:
