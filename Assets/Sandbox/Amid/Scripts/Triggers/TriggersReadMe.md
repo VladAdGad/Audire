@@ -1,5 +1,5 @@
 ### Triggers
-##How to use:
+## How to use:
 1) Create game object (prefferably empty one)
 2) Add collider to placed object
 3) Size collider and position object in world
