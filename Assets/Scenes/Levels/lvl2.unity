@@ -6082,27 +6082,22 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114260874892458564, guid: 78797e3b03357cc45bf7c0df2a3b970a,
+    - target: {fileID: 114900971364571320, guid: 78797e3b03357cc45bf7c0df2a3b970a,
         type: 2}
       propertyPath: _lockPanel
       value: 
       objectReference: {fileID: 1995355437}
-    - target: {fileID: 4883217839863294, guid: 78797e3b03357cc45bf7c0df2a3b970a, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.78365177
-      objectReference: {fileID: 0}
-    - target: {fileID: 4883217839863294, guid: 78797e3b03357cc45bf7c0df2a3b970a, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1.1719278
-      objectReference: {fileID: 0}
-    - target: {fileID: 114260874892458564, guid: 78797e3b03357cc45bf7c0df2a3b970a,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1521254356981498, guid: 78797e3b03357cc45bf7c0df2a3b970a, type: 2}
       propertyPath: m_Name
       value: LockDoor - Next Level
+      objectReference: {fileID: 0}
+    - target: {fileID: 4883217839863294, guid: 78797e3b03357cc45bf7c0df2a3b970a, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.7836527
+      objectReference: {fileID: 0}
+    - target: {fileID: 4883217839863294, guid: 78797e3b03357cc45bf7c0df2a3b970a, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.1719288
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 78797e3b03357cc45bf7c0df2a3b970a, type: 2}
