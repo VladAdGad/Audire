@@ -1,4 +1,4 @@
-### Triggers
+# Triggers
 ## How to use:
 1) Create game object (prefferably empty one)
 2) Add collider to placed object
