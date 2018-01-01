@@ -1,11 +1,8 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using Sandbox.Amid.Scripts;
 using UnityEngine;
 
-public class GenericTrigger : MonoBehaviour
+public class TriggerNode : MonoBehaviour
 {
 	[SerializeField] private List<ATriggerable> _triggerables; 
 	

@@ -64,3 +64,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a7f5d02536ccc74084686a72cca0576, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _triggerables: []
