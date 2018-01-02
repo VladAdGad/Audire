@@ -86,6 +86,7 @@ LightmapSettings:
     m_PVRFilteringAtrousColorSigma: 1
     m_PVRFilteringAtrousNormalSigma: 1
     m_PVRFilteringAtrousPositionSigma: 1
+    m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 112000002, guid: 64ddbab8af1f5b543b45b6a0b6b390d6,
     type: 2}
   m_UseShadowmask: 1
@@ -203,6 +204,7 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -550,6 +552,27 @@ Prefab:
       propertyPath: m_FontData.m_VerticalOverflow
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114978189173544032, guid: de62618e9e9afcf44a6ebd15919a3b87,
+        type: 2}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114978189173544032, guid: de62618e9e9afcf44a6ebd15919a3b87,
+        type: 2}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114024503719392590, guid: de62618e9e9afcf44a6ebd15919a3b87,
+        type: 2}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114024503719392590, guid: de62618e9e9afcf44a6ebd15919a3b87,
+        type: 2}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114014381280047472, guid: de62618e9e9afcf44a6ebd15919a3b87, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: de62618e9e9afcf44a6ebd15919a3b87, type: 2}
   m_IsPrefabParent: 0
