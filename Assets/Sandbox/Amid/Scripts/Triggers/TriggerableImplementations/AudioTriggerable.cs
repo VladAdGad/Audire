@@ -21,7 +21,7 @@ namespace Sandbox.Amid.Scripts.Triggers.TriggerableImplementations
             }
         }
     
-        private bool CanPlaySound => singleTrigger || _wasActivated;
+        private bool CanPlaySound => _singleTrigger || _wasActivated;
 
         public override void TriggerExit(Collider collider)
         {
