@@ -452,6 +452,17 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 2.516574
       objectReference: {fileID: 0}
+    - target: {fileID: 114461461948666096, guid: 7a6cd8f1ffc32a1418b5e99412f5389c,
+        type: 2}
+      propertyPath: _skin
+      value: 
+      objectReference: {fileID: 11400000, guid: b4f58f2220fbb184a94d7302bdf86aa5,
+        type: 2}
+    - target: {fileID: 82289436257186464, guid: 7a6cd8f1ffc32a1418b5e99412f5389c,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1cf0081aa1c5bc341ab9d33bca2f5143, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a6cd8f1ffc32a1418b5e99412f5389c, type: 2}
   m_IsPrefabParent: 0
@@ -3353,6 +3364,17 @@ Prefab:
       propertyPath: m_Name
       value: Book - Bathroom
       objectReference: {fileID: 0}
+    - target: {fileID: 114090049343144648, guid: f44d9d2439102164ab316d2e84550014,
+        type: 2}
+      propertyPath: _skin
+      value: 
+      objectReference: {fileID: 11400000, guid: b4f58f2220fbb184a94d7302bdf86aa5,
+        type: 2}
+    - target: {fileID: 82667595988189714, guid: f44d9d2439102164ab316d2e84550014,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1cf0081aa1c5bc341ab9d33bca2f5143, type: 3}
     m_RemovedComponents:
     - {fileID: 65623943674632920, guid: f44d9d2439102164ab316d2e84550014, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: f44d9d2439102164ab316d2e84550014, type: 2}
@@ -6726,6 +6748,17 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 3.2287393
       objectReference: {fileID: 0}
+    - target: {fileID: 114239520819136500, guid: ad87b1f2b792fd64f9bce0f08f8f3fe2,
+        type: 2}
+      propertyPath: _skin
+      value: 
+      objectReference: {fileID: 11400000, guid: b4f58f2220fbb184a94d7302bdf86aa5,
+        type: 2}
+    - target: {fileID: 82029121590428278, guid: ad87b1f2b792fd64f9bce0f08f8f3fe2,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1cf0081aa1c5bc341ab9d33bca2f5143, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad87b1f2b792fd64f9bce0f08f8f3fe2, type: 2}
   m_IsPrefabParent: 0
@@ -8061,6 +8094,8 @@ Transform:
   - {fileID: 1736373287}
   - {fileID: 1249664050}
   - {fileID: 493529289}
+  - {fileID: 2034390802}
+  - {fileID: 1681724233}
   m_Father: {fileID: 885994507}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8262,7 +8297,7 @@ GameObject:
   - component: {fileID: 1681724231}
   - component: {fileID: 1681724230}
   m_Layer: 0
-  m_Name: Plane (1)
+  m_Name: Roof 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8328,11 +8363,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1681724229}
   m_LocalRotation: {x: -0.22950657, y: -0, z: -0, w: 0.9733072}
-  m_LocalPosition: {x: -0.53, y: 6.1, z: -7.19}
+  m_LocalPosition: {x: 13.43338, y: 15.840784, z: 10.937016}
   m_LocalScale: {x: 1.6970218, y: 1.446345, z: 1.094699}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 1630426276}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: -26.536001, y: 0, z: 0}
 --- !u!1001 &1698111814
 Prefab:
@@ -8385,6 +8420,17 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 2.6716576
       objectReference: {fileID: 0}
+    - target: {fileID: 114147107878773232, guid: 4fd978091feb0494891991563541b10f,
+        type: 2}
+      propertyPath: _skin
+      value: 
+      objectReference: {fileID: 11400000, guid: b4f58f2220fbb184a94d7302bdf86aa5,
+        type: 2}
+    - target: {fileID: 82006259554367968, guid: 4fd978091feb0494891991563541b10f,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1cf0081aa1c5bc341ab9d33bca2f5143, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4fd978091feb0494891991563541b10f, type: 2}
   m_IsPrefabParent: 0
@@ -10119,7 +10165,7 @@ GameObject:
   - component: {fileID: 2034390800}
   - component: {fileID: 2034390799}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10185,11 +10231,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2034390798}
   m_LocalRotation: {x: -0.15596598, y: -0.7038887, z: -0.14991188, w: 0.6765661}
-  m_LocalPosition: {x: -13.775, y: 6.154, z: -12.157}
-  m_LocalScale: {x: 1.4463465, y: 1.446345, z: 1.0785911}
+  m_LocalPosition: {x: 0.18838024, y: 15.894783, z: 5.9700165}
+  m_LocalScale: {x: 1.4463465, y: 1.4463451, z: 1.0785911}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 1630426276}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: -24.966002, y: -92.50201, z: 1.056}
 --- !u!1001 &2044234992
 Prefab:
