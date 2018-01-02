@@ -1510,7 +1510,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1679094458542716, guid: de62618e9e9afcf44a6ebd15919a3b87, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224382029371411672, guid: de62618e9e9afcf44a6ebd15919a3b87,
         type: 2}
@@ -3224,7 +3224,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 860937961
+  randomSeed: -2057411765
   InitialModule:
     serializedVersion: 3
     enabled: 1
