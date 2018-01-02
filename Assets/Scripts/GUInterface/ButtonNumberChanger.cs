@@ -9,7 +9,7 @@ namespace GUInterface
     public class ButtonNumberChanger : MonoBehaviour
     {
         private static readonly IDictionary<string, string> NextNumber = NumbersWith(x => x + 1);
-        private static readonly IDictionary<string, string> PreviousNumber = NumbersWith(x => x + 9);
+//        private static readonly IDictionary<string, string> PreviousNumber = NumbersWith(x => x + 9);
 
         private Text _text;
 
