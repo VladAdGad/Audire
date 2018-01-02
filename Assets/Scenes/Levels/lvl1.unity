@@ -1271,7 +1271,7 @@ Prefab:
         type: 2}
       propertyPath: _skin
       value: 
-      objectReference: {fileID: 11400000, guid: 77d68fcc06fea3f40853ae3f92acb13a,
+      objectReference: {fileID: 11400000, guid: 01e4beb8f0016774e97860437f762a7b,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
@@ -5292,7 +5292,7 @@ Prefab:
         type: 2}
       propertyPath: _skin
       value: 
-      objectReference: {fileID: 11400000, guid: 77d68fcc06fea3f40853ae3f92acb13a,
+      objectReference: {fileID: 11400000, guid: 4a2bc93c6c9288a40b43e8592358a37d,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
@@ -6525,7 +6525,7 @@ Prefab:
         type: 2}
       propertyPath: _skin
       value: 
-      objectReference: {fileID: 11400000, guid: 77d68fcc06fea3f40853ae3f92acb13a,
+      objectReference: {fileID: 11400000, guid: 4a2bc93c6c9288a40b43e8592358a37d,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
