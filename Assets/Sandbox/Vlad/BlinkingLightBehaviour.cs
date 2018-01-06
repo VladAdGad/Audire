@@ -6,17 +6,21 @@ namespace Sandbox.Vlad
 {
     public class BlinkingLightBehaviour : MonoBehaviour
     {
+        [SerializeField] private bool _onStart = false;
+        [Range(0f, 1f)] [SerializeField] private float _minWaitTime;
+        [Range(0f, 1f)] [SerializeField] private float _maxWaitTime;
         public List<GameObject> Lights;
-        [SerializeField] private float _minWaitTime;
-        [SerializeField] private float _maxWaitTime;
-        private bool _state;
 
-        private void Update()
+        private void Start()
         {
-            if (Input.GetKeyDown(KeyCode.M))
+            if (_onStart)
             {
                 StartCoroutine(BlinkingLights());
             }
+        }
+
+        private void Update()
+        {
         }
 
         private IEnumerator BlinkingLights()
