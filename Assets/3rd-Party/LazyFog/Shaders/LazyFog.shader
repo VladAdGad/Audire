@@ -86,7 +86,7 @@ SubShader {
 			c.a *= IN.color.a-2.5*length(IN.uv-float2(0.5, 0.5));
 			c.a*=_Alpha;
 			c.a-=_AlphaSub;
-			return c;
+			return  clamp(c, 0, 1);
 			
              }
              ENDCG
