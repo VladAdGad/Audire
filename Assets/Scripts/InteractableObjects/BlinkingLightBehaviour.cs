@@ -1,8 +1,8 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
 
-namespace Sandbox.Vlad
+namespace InteractableObjects
 {
     [RequireComponent(typeof(MeshRenderer))]
     public class BlinkingLightBehaviour : MonoBehaviour
@@ -35,6 +35,13 @@ namespace Sandbox.Vlad
                 _meshRenderer.material = _material2;
                 yield return new WaitForSeconds(Random.Range(_minWaitTime, _maxWaitTime));
             }
+        }
+
+        private void OnValidate()
+        {
+            Assert.IsNotNull(_lights);
+            Assert.IsNotNull(_material1);
+            Assert.IsNotNull(_material2);
         }
     }
 }
