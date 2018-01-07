@@ -333,13 +333,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d661c483b1ed4b5cb398b93a7cdb934a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _onStart: 1
+  _minWaitTime: 0.1
+  _maxWaitTime: 0.3
   Lights:
   - {fileID: 1756036612}
   - {fileID: 1891409408}
   - {fileID: 1121762021}
   - {fileID: 1953667710}
-  _minWaitTime: 0.1
-  _maxWaitTime: 0.3
 --- !u!1 &1121762021
 GameObject:
   m_ObjectHideFlags: 0
