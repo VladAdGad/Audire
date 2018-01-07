@@ -3025,6 +3025,26 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114286733471039844, guid: 380448825edf63a4ab21011416a8fa23,
+        type: 2}
+      propertyPath: _maxWaitTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114286733471039844, guid: 380448825edf63a4ab21011416a8fa23,
+        type: 2}
+      propertyPath: _minWaitTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108568905468514308, guid: 380448825edf63a4ab21011416a8fa23,
+        type: 2}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 108411709799378248, guid: 380448825edf63a4ab21011416a8fa23,
+        type: 2}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 380448825edf63a4ab21011416a8fa23, type: 2}
   m_IsPrefabParent: 0
