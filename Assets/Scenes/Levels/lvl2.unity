@@ -9951,6 +9951,10 @@ Prefab:
       propertyPath: InitialModule.maxNumParticles
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 11437536, guid: 69b40ef7ee16c834c844b3fa26e0fdda, type: 2}
+      propertyPath: RainIntensity
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69b40ef7ee16c834c844b3fa26e0fdda, type: 2}
   m_IsPrefabParent: 0
