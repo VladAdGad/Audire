@@ -23,11 +23,13 @@ namespace DigitalRuby.RainMaker
 
         [Tooltip("Particle system to use for rain mist")] public ParticleSystem RainMistParticleSystem;
 
-        [Tooltip("The threshold for intensity (0 - 1) at which mist starts to appear")] [Range(0.0f, 1.0f)] public float RainMistThreshold = 0.5f;
+        [Tooltip("The threshold for intensity (0 - 1) at which mist starts to appear")] [Range(0.0f, 1.0f)]
+        public float RainMistThreshold = 0.5f;
 
         [Tooltip("Wind looping clip")] public AudioClip WindSound;
 
-        [Tooltip("Wind sound volume modifier, use this to lower your sound if it's too loud.")] public float WindSoundVolumeModifier = 0.5f;
+        [Tooltip("Wind sound volume modifier, use this to lower your sound if it's too loud.")]
+        public float WindSoundVolumeModifier = 0.5f;
 
         [Tooltip("Wind zone that will affect and follow the rain")] public WindZone WindZone;
 
@@ -76,8 +78,8 @@ namespace DigitalRuby.RainMaker
                     }
                     else
                     {
-                        WindZone.transform.rotation =
-                            Quaternion.Euler(Random.Range(-30.0f, 30.0f), Random.Range(0.0f, 360.0f), 0.0f);
+                        WindZone.transform.rotation = Quaternion.Euler(Random.Range(-30.0f, 30.0f),
+                            Random.Range(0.0f, 360.0f), 0.0f);
                     }
                     nextWindTime = Time.time + Random.Range(WindChangeInterval.x, WindChangeInterval.y);
                     audioSourceWind.Play((WindZone.windMain / WindSpeedRange.z) * WindSoundVolumeModifier);
@@ -265,12 +267,14 @@ namespace DigitalRuby.RainMaker
 
         protected virtual float RainFallEmissionRate()
         {
-            return (RainFallParticleSystem.main.maxParticles / RainFallParticleSystem.main.startLifetime.constant) * RainIntensity;
+            return (RainFallParticleSystem.main.maxParticles / RainFallParticleSystem.main.startLifetime.constant) *
+                   RainIntensity;
         }
 
         protected virtual float MistEmissionRate()
         {
-            return (RainMistParticleSystem.main.maxParticles / RainMistParticleSystem.main.startLifetime.constant) * RainIntensity * RainIntensity;
+            return (RainMistParticleSystem.main.maxParticles / RainMistParticleSystem.main.startLifetime.constant) *
+                   RainIntensity * RainIntensity;
         }
 
         protected virtual bool UseRainMistSoftParticles

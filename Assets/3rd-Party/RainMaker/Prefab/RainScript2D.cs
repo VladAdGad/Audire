@@ -19,10 +19,12 @@ namespace DigitalRuby.RainMaker
         private Vector2 initialStartSizeExplosion;
         private readonly ParticleSystem.Particle[] particles = new ParticleSystem.Particle[2048];
 
-        [Tooltip("The starting y offset for rain and mist. This will be offset as a percentage of visible height from the top of the visible world.")]
+        [Tooltip(
+            "The starting y offset for rain and mist. This will be offset as a percentage of visible height from the top of the visible world.")]
         public float RainHeightMultiplier = 0.15f;
 
-        [Tooltip("The total width of the rain and mist as a percentage of visible width")] public float RainWidthMultiplier = 1.5f;
+        [Tooltip("The total width of the rain and mist as a percentage of visible width")]
+        public float RainWidthMultiplier = 1.5f;
 
         [Tooltip("Collision mask for the rain particles")] public LayerMask CollisionMask = -1;
 
@@ -30,7 +32,8 @@ namespace DigitalRuby.RainMaker
             "Lifetime to assign to rain particles that have collided. 0 for instant death. This can allow the rain to penetrate a little bit beyond the collision point.")]
         [Range(0.0f, 0.5f)] public float CollisionLifeTimeRain = 0.02f;
 
-        [Tooltip("Multiply the velocity of any mist colliding by this amount")] [Range(0.0f, 0.99f)] public float RainMistCollisionMultiplier = 0.75f;
+        [Tooltip("Multiply the velocity of any mist colliding by this amount")] [Range(0.0f, 0.99f)]
+        public float RainMistCollisionMultiplier = 0.75f;
 
         private void EmitExplosion(ref Vector3 pos)
         {
@@ -60,11 +63,13 @@ namespace DigitalRuby.RainMaker
             }
             if (FollowCamera)
             {
-                p.transform.position = new Vector3(Camera.transform.position.x, visibleBounds.max.y + yOffset, p.transform.position.z);
+                p.transform.position = new Vector3(Camera.transform.position.x, visibleBounds.max.y + yOffset,
+                    p.transform.position.z);
             }
             else
             {
-                p.transform.position = new Vector3(p.transform.position.x, visibleBounds.max.y + yOffset, p.transform.position.z);
+                p.transform.position = new Vector3(p.transform.position.x, visibleBounds.max.y + yOffset,
+                    p.transform.position.z);
             }
             p.transform.localScale = new Vector3(visibleWorldWidth * RainWidthMultiplier, 1.0f, 1.0f);
             var m = p.main;
@@ -91,7 +96,8 @@ namespace DigitalRuby.RainMaker
                 for (int i = 0; i < count; i++)
                 {
                     Vector3 pos = particles[i].position + RainFallParticleSystem.transform.position;
-                    hit = Physics2D.Raycast(pos, particles[i].velocity.normalized, particles[i].velocity.magnitude * Time.deltaTime);
+                    hit = Physics2D.Raycast(pos, particles[i].velocity.normalized,
+                        particles[i].velocity.magnitude * Time.deltaTime);
                     if (hit.collider != null && ((1 << hit.collider.gameObject.layer) & CollisionMask) != 0)
                     {
                         if (CollisionLifeTimeRain == 0.0f)
@@ -144,7 +150,8 @@ namespace DigitalRuby.RainMaker
             for (int i = 0; i < count; i++)
             {
                 Vector3 pos = particles[i].position + RainMistParticleSystem.transform.position;
-                hit = Physics2D.Raycast(pos, particles[i].velocity.normalized, particles[i].velocity.magnitude * Time.deltaTime, CollisionMask);
+                hit = Physics2D.Raycast(pos, particles[i].velocity.normalized,
+                    particles[i].velocity.magnitude * Time.deltaTime, CollisionMask);
                 if (hit.collider != null)
                 {
                     particles[i].velocity *= RainMistCollisionMultiplier;
@@ -163,9 +170,10 @@ namespace DigitalRuby.RainMaker
             base.Start();
 
             initialEmissionRain = RainFallParticleSystem.emission.rateOverTime.constant;
-            initialStartSpeedRain =
-                new Vector2(RainFallParticleSystem.main.startSpeed.constantMin, RainFallParticleSystem.main.startSpeed.constantMax);
-            initialStartSizeRain = new Vector2(RainFallParticleSystem.main.startSize.constantMin, RainFallParticleSystem.main.startSize.constantMax);
+            initialStartSpeedRain = new Vector2(RainFallParticleSystem.main.startSpeed.constantMin,
+                RainFallParticleSystem.main.startSpeed.constantMax);
+            initialStartSizeRain = new Vector2(RainFallParticleSystem.main.startSize.constantMin,
+                RainFallParticleSystem.main.startSize.constantMax);
 
             if (RainMistParticleSystem != null)
             {

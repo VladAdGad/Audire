@@ -21,7 +21,8 @@ namespace DigitalRuby.RainMaker
                     s.shapeType = ParticleSystemShapeType.ConeVolume;
                     RainFallParticleSystem.transform.position = Camera.transform.position;
                     RainFallParticleSystem.transform.Translate(0.0f, RainHeight, RainForwardOffset);
-                    RainFallParticleSystem.transform.rotation = Quaternion.Euler(0.0f, Camera.transform.rotation.eulerAngles.y, 0.0f);
+                    RainFallParticleSystem.transform.rotation =
+                        Quaternion.Euler(0.0f, Camera.transform.rotation.eulerAngles.y, 0.0f);
                     if (RainMistParticleSystem != null)
                     {
                         var s2 = RainMistParticleSystem.shape;
