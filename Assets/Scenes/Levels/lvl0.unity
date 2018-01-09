@@ -156,6 +156,7 @@ GameObject:
   - component: {fileID: 189840216}
   - component: {fileID: 189840215}
   - component: {fileID: 189840214}
+  - component: {fileID: 189840218}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: Untagged
@@ -207,8 +208,8 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
+  m_AllowMSAA: 0
+  m_AllowDynamicResolution: 1
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -227,6 +228,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -11.274, y: -99.274, z: 0.65800005}
+--- !u!114 &189840218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 189840213}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 22224cd798fb7d941aaefad443bde198, type: 2}
 --- !u!1001 &779340457
 Prefab:
   m_ObjectHideFlags: 0
@@ -352,9 +365,9 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 6
+  m_Intensity: 6.5
   m_Range: 40
-  m_SpotAngle: 100
+  m_SpotAngle: 117
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -373,7 +386,7 @@ Light:
     m_Bits: 4294967295
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 1.2
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0

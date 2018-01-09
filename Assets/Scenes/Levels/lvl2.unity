@@ -14050,97 +14050,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1062450820150196, guid: 98f1acc51abbb2d49aba87d8864caaa3, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114427359312856556, guid: 98f1acc51abbb2d49aba87d8864caaa3,
-        type: 2}
-      propertyPath: _interactionDistance
-      value: 1.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1681279976242420, guid: 98f1acc51abbb2d49aba87d8864caaa3, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 82063898767239988, guid: 98f1acc51abbb2d49aba87d8864caaa3,
-        type: 2}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: cde2df83fe584a04082a4589c6695f50, type: 3}
-    - target: {fileID: 82067673536922364, guid: 98f1acc51abbb2d49aba87d8864caaa3,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 20092216095014454, guid: 98f1acc51abbb2d49aba87d8864caaa3,
-        type: 2}
-      propertyPath: m_AllowMSAA
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 20092216095014454, guid: 98f1acc51abbb2d49aba87d8864caaa3,
-        type: 2}
-      propertyPath: m_HDR
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 81733299440083318, guid: 98f1acc51abbb2d49aba87d8864caaa3,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 20092216095014454, guid: 98f1acc51abbb2d49aba87d8864caaa3,
-        type: 2}
-      propertyPath: orthographic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 20092216095014454, guid: 98f1acc51abbb2d49aba87d8864caaa3,
-        type: 2}
-      propertyPath: m_Depth
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 20092216095014454, guid: 98f1acc51abbb2d49aba87d8864caaa3,
-        type: 2}
-      propertyPath: m_AllowDynamicResolution
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4737739208977288, guid: 98f1acc51abbb2d49aba87d8864caaa3, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 108930352983642968, guid: 98f1acc51abbb2d49aba87d8864caaa3,
-        type: 2}
-      propertyPath: m_Cookie
-      value: 
-      objectReference: {fileID: 2800000, guid: 7a04f0e602a8b1b40b2ef17916166e21, type: 3}
-    - target: {fileID: 108930352983642968, guid: 98f1acc51abbb2d49aba87d8864caaa3,
+    - target: {fileID: 114769022263762104, guid: 98f1acc51abbb2d49aba87d8864caaa3,
         type: 2}
       propertyPath: m_Enabled
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 108930352983642968, guid: 98f1acc51abbb2d49aba87d8864caaa3,
-        type: 2}
-      propertyPath: m_SpotAngle
-      value: 44
-      objectReference: {fileID: 0}
-    - target: {fileID: 108930352983642968, guid: 98f1acc51abbb2d49aba87d8864caaa3,
-        type: 2}
-      propertyPath: m_BounceIntensity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 108930352983642968, guid: 98f1acc51abbb2d49aba87d8864caaa3,
-        type: 2}
-      propertyPath: m_Shadows.m_Type
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 108930352983642968, guid: 98f1acc51abbb2d49aba87d8864caaa3,
-        type: 2}
-      propertyPath: m_DrawHalo
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 108930352983642968, guid: 98f1acc51abbb2d49aba87d8864caaa3,
-        type: 2}
-      propertyPath: m_Range
-      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98f1acc51abbb2d49aba87d8864caaa3, type: 2}
