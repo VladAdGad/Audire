@@ -74,8 +74,6 @@ namespace InteractableObjects
                 _stateOfDoor = !_stateOfDoor;
                 _animator.SetBool("open", _stateOfDoor);
                 PlaySound();
-                _lockPanel.SetActive(false);
-                PlayerBehaviour.SetFirstControllerInteract(true);
                 StartCoroutine(LoadScene.ChangeLevel());
             }
             else
