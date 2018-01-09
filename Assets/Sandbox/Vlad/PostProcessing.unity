@@ -4751,7 +4751,7 @@ Prefab:
     - target: {fileID: 20092216095014454, guid: 98f1acc51abbb2d49aba87d8864caaa3,
         type: 2}
       propertyPath: m_AllowDynamicResolution
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 20092216095014454, guid: 98f1acc51abbb2d49aba87d8864caaa3,
         type: 2}
