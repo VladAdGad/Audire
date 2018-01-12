@@ -28,8 +28,8 @@ namespace Triggers.TriggerableImplementations
         private IEnumerator Wait(int seconds)
         {
             yield return new WaitForSeconds(seconds);
-            _doorBehaviour.OnPress();
             _canClosed = false;
+            _doorBehaviour.OnPress();
         }
     }
 }

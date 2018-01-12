@@ -8,7 +8,6 @@ namespace Triggers.TriggerableImplementations
     {
         [SerializeField] private bool _singleTrigger = true;
         [SerializeField] private int _delay = 0;
-        private bool _wasActivated = false;
         
         private AudioSource _audioSource;
 
@@ -22,7 +21,7 @@ namespace Triggers.TriggerableImplementations
             }
         }
     
-        private bool CanPlaySound => _singleTrigger || _wasActivated;
+        private bool CanPlaySound => _singleTrigger;
 
         public override void TriggerExit(Collider collider)
         {
@@ -31,7 +30,7 @@ namespace Triggers.TriggerableImplementations
         private IEnumerator Wait(int seconds)
         {
             yield return new WaitForSeconds(seconds);
-            _wasActivated = true;
+            _singleTrigger = false;
             _audioSource.Play();
         }
 
