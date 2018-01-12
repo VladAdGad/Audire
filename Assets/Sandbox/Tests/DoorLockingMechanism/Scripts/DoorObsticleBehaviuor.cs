@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using EventManagement;
+﻿using EventManagement;
 using InteractableObjects;
 using UnityEngine;
-using Utilities;
 
 [RequireComponent(typeof(Animator))]
 public class DoorObsticleBehaviuor : MonoBehaviour, IPressable
