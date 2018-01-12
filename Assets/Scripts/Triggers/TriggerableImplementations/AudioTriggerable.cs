@@ -7,8 +7,8 @@ namespace Triggers.TriggerableImplementations
     public class AudioTriggerable : ATriggerable
     {
         [SerializeField] private bool _singleTrigger;
-        private bool _multiTrigger;
         [SerializeField] private int _delay = 0;
+        private bool _multiTrigger;
 
         private AudioSource _audioSource;
 
