@@ -10333,9 +10333,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1358797372}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c965d1be9054bc08af1b7cd9be119fe, type: 3}
+  m_Script: {fileID: 11500000, guid: b79eebd3e6e44ff59a73c71f2eeed4b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _delay: 4
 --- !u!82 &1358797379
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10728,10 +10729,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1388009868}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50750481671431f48b35f1d65ace61de, type: 3}
+  m_Script: {fileID: 11500000, guid: 51aa1b2378c142efaac28f6b6318449b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _singleTrigger: 1
+  _delay: 0
 --- !u!1 &1391397071
 GameObject:
   m_ObjectHideFlags: 0
@@ -12472,12 +12474,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1815011304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a7f5d02536ccc74084686a72cca0576, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b6daec257444a5e8c340f569baf42a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _triggerables:
-  - {fileID: 1388009871}
   - {fileID: 1358797373}
+  - {fileID: 1388009871}
 --- !u!65 &1815011307
 BoxCollider:
   m_ObjectHideFlags: 0
