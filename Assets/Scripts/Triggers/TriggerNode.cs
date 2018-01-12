@@ -7,7 +7,7 @@ namespace Triggers
     {
         [SerializeField] private List<ATriggerable> _triggerables;
 
-        void OnTriggerEnter(Collider other) => _triggerables.ForEach(it => it.TriggerEnter(other));
-        void OnTriggerExit(Collider other) => _triggerables.ForEach(it => it.TriggerExit(other));
+        private void OnTriggerEnter(Collider other) => _triggerables.ForEach(it => it.TriggerEnter(other));
+        private void OnTriggerExit(Collider other) => _triggerables.ForEach(it => it.TriggerExit(other));
     }
 }
