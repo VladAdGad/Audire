@@ -3154,6 +3154,21 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 108930352983642968, guid: 98f1acc51abbb2d49aba87d8864caaa3,
+        type: 2}
+      propertyPath: m_SpotAngle
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 108930352983642968, guid: 98f1acc51abbb2d49aba87d8864caaa3,
+        type: 2}
+      propertyPath: m_Intensity
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 108930352983642968, guid: 98f1acc51abbb2d49aba87d8864caaa3,
+        type: 2}
+      propertyPath: m_Range
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98f1acc51abbb2d49aba87d8864caaa3, type: 2}
   m_IsPrefabParent: 0
