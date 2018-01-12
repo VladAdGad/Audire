@@ -10336,7 +10336,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c965d1be9054bc08af1b7cd9be119fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _delay: 4
 --- !u!82 &1358797379
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10733,7 +10732,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _singleTrigger: 1
-  _delay: 0
 --- !u!1 &1391397071
 GameObject:
   m_ObjectHideFlags: 0
