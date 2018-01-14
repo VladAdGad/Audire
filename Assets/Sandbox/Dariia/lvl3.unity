@@ -3976,7 +3976,7 @@ GameObject:
   m_Component:
   - component: {fileID: 575150377}
   m_Layer: 0
-  m_Name: Level 2
+  m_Name: Stage 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13720,7 +13720,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1847845616}
   m_Layer: 0
-  m_Name: Level 3
+  m_Name: Stage 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
