@@ -8,15 +8,15 @@ namespace InteractableObjects
     {
         [SerializeField] private GUISkin _skin;
         [SerializeField] private KeyCode _activationButton = KeyCode.E;
+        [SerializeField] private AudioSource _closingDoorAudioSource;
+        [SerializeField] private AudioSource _openingDoorAudioSource;
         private bool _isOpeningDoor = false;
         private bool _isLookingAtDoor = false;
         private bool _stateOfDoor = false;
         private Animator _animator;
-        private AudioSource _openingDoorAudioSource;
 
         private void Start()
         {
-            _openingDoorAudioSource = transform.parent.parent.GetComponent<AudioSource>();
             _animator = transform.parent.parent.GetComponent<Animator>();
         }
 
@@ -44,14 +44,24 @@ namespace InteractableObjects
             _isOpeningDoor = !_isOpeningDoor;
             _stateOfDoor = !_stateOfDoor;
             _animator.SetBool("open", _stateOfDoor);
-            PlaySound();
+            PlaySound(_stateOfDoor);
         }
 
-        private void PlaySound()
+        private void PlaySound(bool stateOfDoor)
         {
-            if (!_openingDoorAudioSource.isPlaying)
+            if (stateOfDoor)
             {
-                _openingDoorAudioSource.Play();
+                if (!_openingDoorAudioSource.isPlaying)
+                {
+                    _openingDoorAudioSource.Play();
+                }
+            }
+            else
+            {
+                if (!_closingDoorAudioSource.isPlaying)
+                {
+                    _closingDoorAudioSource.Play();
+                }
             }
         }
 
