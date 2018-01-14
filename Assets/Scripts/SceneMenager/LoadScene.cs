@@ -11,9 +11,15 @@ namespace SceneMenager
 
         public static IEnumerator ChangeLevel()
         {
+            PlayerBehaviour.SetFirstControllerInteract(false);
             float fadeTime = GameObject.Find("FPSController").GetComponent<Fading>().BeginFade(1);
             yield return new WaitForSeconds(fadeTime);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + NextScene);
+        }
+
+        public static void ReloadScene()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

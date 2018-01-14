@@ -34,11 +34,9 @@ namespace Player
             return (_fadeSpeed);
         }
 
-        // OnLevelWasLoaded is called when a level is loaded. It takes loaded level index (int) as a parameter so you can limit the fade in to certain scenes.
-        void OnLevelWasLoaded()
+        public void StartFaiding()
         {
-            // alpha = 1;  // use this if the alpha is not set to 1 by default
-            BeginFade(-1); // call the fade in function
+            gameObject.GetComponent<Fading>().BeginFade(1);
         }
 
         private void OnValidate()
