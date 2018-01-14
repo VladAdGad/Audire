@@ -19,7 +19,7 @@ namespace Sandbox.Vlad.Scripts
 
         private void Start()
         {
-            _deathAnimation = GetComponent<Animator>();
+            _deathAnimation = GetComponentInChildren<Animator>();
             _faidingImage = _deathCauseCanvas.GetComponent<Image>();
         }
 
