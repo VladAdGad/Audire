@@ -19,16 +19,8 @@ namespace Sandbox.Vlad.Scripts
 
         private void Start()
         {
-            _deathAnimation = GetComponentInChildren<Animator>();
+            _deathAnimation = GetComponent<Animator>();
             _faidingImage = _deathCauseCanvas.GetComponent<Image>();
-        }
-
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.M))
-            {
-                StartCoroutine(ProcessOfDeath());
-            }
         }
 
         private void StartPlayAnimation()
@@ -63,9 +55,9 @@ namespace Sandbox.Vlad.Scripts
             _faidingImage.CrossFadeAlpha(1, 5, false);
         }
 
-        public static void ChangeTextOfDeathCause(string deathCause)
+        public void ChangeTextOfDeathCause(string deathCause)
         {
-            _deathCauseText = deathCause;
+            _deathCauseCanvas.GetComponentInChildren<Text>().text = deathCause;
         }
 
         private void OnValidate()
