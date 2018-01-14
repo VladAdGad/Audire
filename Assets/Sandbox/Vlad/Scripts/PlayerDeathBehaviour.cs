@@ -1,8 +1,8 @@
 ﻿using System.Collections;
-using NUnit.Framework;
 using Player;
 using SceneMenager;
 using UnityEngine;
+using UnityEngine.Assertions;
 using UnityEngine.UI;
 
 namespace Sandbox.Vlad.Scripts
@@ -62,7 +62,7 @@ namespace Sandbox.Vlad.Scripts
 
         private void OnValidate()
         {
-            Assert.NotNull(_deathCauseCanvas);
+            Assert.IsNotNull(_deathCauseCanvas);
         }
     }
 }
