@@ -1,17 +1,13 @@
-﻿using UnityEngine;
+﻿using Player;
+using UnityEngine;
 
-namespace Sandbox.Vlad.Scripts
+namespace Triggers
 {
     public class DeathOnTriggered : MonoBehaviour
     {
         [SerializeField] private string _deathText = "";
-        private AudioSource _deathRattle;
+        [SerializeField] [Range(0, 10)] private float _secondsBeforeDeath = .0f;
         private PlayerDeathBehaviour _playerDeathBehaviour;
-
-        private void Start()
-        {
-            _deathRattle = GetComponent<AudioSource>();
-        }
 
         public void OnTriggerEnter(Collider collider)
         {
@@ -19,9 +15,15 @@ namespace Sandbox.Vlad.Scripts
             if (_playerDeathBehaviour != null)
             {
                 _playerDeathBehaviour.ChangeTextOfDeathCause(_deathText);
-                _deathRattle.Play();
-                StartCoroutine(_playerDeathBehaviour.ProcessOfDeath());
+                StartProcessOfDeath();
             }
+        }
+
+        private void StartProcessOfDeath()
+        {
+            StartCoroutine(_secondsBeforeDeath != .0f
+                ? _playerDeathBehaviour.ProcessOfDeath(_secondsBeforeDeath)
+                : _playerDeathBehaviour.ProcessOfDeath());
         }
     }
 }
