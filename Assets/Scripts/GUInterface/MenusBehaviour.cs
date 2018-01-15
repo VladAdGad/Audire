@@ -1,6 +1,5 @@
 ﻿using Player;
 using UnityEngine;
-using UnityEngine.Assertions;
 using UnityEngine.SceneManagement;
 
 namespace GUInterface
