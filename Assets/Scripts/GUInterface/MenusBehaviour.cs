@@ -1,6 +1,5 @@
 ﻿using Player;
 using UnityEngine;
-using UnityEngine.Assertions;
 using UnityEngine.SceneManagement;
 
 namespace GUInterface
@@ -9,20 +8,19 @@ namespace GUInterface
     {
         [SerializeField] private Transform _pauseMenuCanvas;
         [SerializeField] private bool _setPauseMenuActive;
-        private readonly int _firstScene = 1;
+        private const int IndexFirstScene = 1;
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.Escape) && _setPauseMenuActive)
             {
-                if (_setPauseMenuActive)
-                    PauseOrUnPause();
+                PauseOrUnPause();
             }
         }
 
         public void StartGame()
         {
-            SceneManager.LoadScene(_firstScene);
+            SceneManager.LoadScene(IndexFirstScene);
         }
 
         public void PauseOrUnPause()
@@ -44,11 +42,6 @@ namespace GUInterface
         public void Exit()
         {
             Application.Quit();
-        }
-
-        private void OnValidate()
-        {
-            Assert.IsNotNull(_pauseMenuCanvas);
         }
     }
 }

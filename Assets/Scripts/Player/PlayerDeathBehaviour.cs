@@ -13,7 +13,6 @@ namespace Sandbox.Vlad.Scripts
         [SerializeField] private GameObject _deathCauseCanvas;
         private const float WaitBeforeReloadSceneSeconds = 5;
         private const float WaitBeforeFaideSeconds = 1.5f;
-        private static string _deathCauseText = "You died";
         private Animator _deathAnimation;
         private Image _faidingImage;
 

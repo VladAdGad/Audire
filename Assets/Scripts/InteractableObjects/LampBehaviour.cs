@@ -41,7 +41,7 @@ namespace InteractableObjects
         public void OnPress()
         {
             _isLampState = !_isLampState;
-            _light.enabled  = _isLampState;
+            _light.enabled = _isLampState;
             PlaySound();
         }
 

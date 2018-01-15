@@ -27,7 +27,7 @@ namespace Player
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             player.GetComponent<FirstPersonController>().enabled = false;
-            player.GetComponent<PlayerEventBehaviour>().enabled = false;            
+            player.GetComponent<PlayerEventBehaviour>().enabled = false;
         }
 
         private void OnValidate()
