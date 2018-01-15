@@ -28,7 +28,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1681279976242420
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,27 +90,27 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1681279976242420}
-  m_LocalRotation: {x: -0, y: 0.009213713, z: -0, w: 0.99995756}
-  m_LocalPosition: {x: -15.1, y: 0.971, z: -17.76}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 107.839, y: 0.971, z: 100.679}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4169087336097618}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 1.056, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &4737739208977288
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1062450820150196}
-  m_LocalRotation: {x: -0.06870184, y: -0.017097695, z: -0.00376291, w: 0.9974837}
-  m_LocalPosition: {x: 0.027000498, y: -0.30500007, z: -0.035000354}
+  m_LocalRotation: {x: -0.017367767, y: -0.005400613, z: -0.004312469, w: 0.9998253}
+  m_LocalPosition: {x: 0.027001452, y: -0.30500013, z: -0.03500034}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4169087336097618}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -7.885, y: -1.9430001, z: -0.298}
+  m_LocalEulerAnglesHint: {x: -1.9930001, y: -0.611, z: -0.48400003}
 --- !u!20 &20092216095014454
 Camera:
   m_ObjectHideFlags: 1
@@ -142,11 +142,11 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 0
-  m_AllowDynamicResolution: 1
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+  m_StereoMirrorMode: 0
 --- !u!54 &54478022315227534
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -340,8 +340,8 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
-  m_Range: 20
-  m_SpotAngle: 44
+  m_Range: 31
+  m_SpotAngle: 55
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
