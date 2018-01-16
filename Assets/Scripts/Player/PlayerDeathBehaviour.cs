@@ -15,6 +15,7 @@ namespace Player
         private AudioSource _deathRattle;
         private Animator _deathAnimation;
         private Image _faidingImage;
+        private bool _isPlayerDie;
 
         private void Start()
         {
@@ -31,26 +32,35 @@ namespace Player
 
         public IEnumerator ProcessOfDeath()
         {
-            PlayerBehaviour.PlayerDisable();
-            StartPlayAnimation();
-            yield return new WaitForSeconds(WaitBeforeFaideSeconds);
-            StartFaiding();
-            ShowTextOfDeathCause();
-            yield return new WaitForSeconds(WaitBeforeReloadSceneSeconds);
-            LoadScene.ReloadScene();
+            if (!_isPlayerDie)
+            {
+                SetPlayerIsDie();
+                _deathRattle.Play();
+                PlayerBehaviour.PlayerDisable();
+                StartPlayAnimation();
+                yield return new WaitForSeconds(WaitBeforeFaideSeconds);
+                StartFaiding();
+                ShowTextOfDeathCause();
+                yield return new WaitForSeconds(WaitBeforeReloadSceneSeconds);
+                LoadScene.ReloadScene();
+            }
         }
-        
+
         public IEnumerator ProcessOfDeath(float secondsBeforeDeath)
         {
-            yield return new WaitForSeconds(secondsBeforeDeath);
-            _deathRattle.Play();
-            PlayerBehaviour.PlayerDisable();
-            StartPlayAnimation();
-            yield return new WaitForSeconds(WaitBeforeFaideSeconds);
-            StartFaiding();
-            ShowTextOfDeathCause();
-            yield return new WaitForSeconds(WaitBeforeReloadSceneSeconds);
-            LoadScene.ReloadScene();
+            if (!_isPlayerDie)
+            {
+                SetPlayerIsDie();
+                yield return new WaitForSeconds(secondsBeforeDeath);
+                _deathRattle.Play();
+                PlayerBehaviour.PlayerDisable();
+                StartPlayAnimation();
+                yield return new WaitForSeconds(WaitBeforeFaideSeconds);
+                StartFaiding();
+                ShowTextOfDeathCause();
+                yield return new WaitForSeconds(WaitBeforeReloadSceneSeconds);
+                LoadScene.ReloadScene();
+            }
         }
 
         private void ShowTextOfDeathCause()
@@ -71,6 +81,11 @@ namespace Player
         public void ChangeTextOfDeathCause(string deathCause)
         {
             _deathCauseCanvas.GetComponentInChildren<Text>().text = deathCause;
+        }
+
+        private void SetPlayerIsDie()
+        {
+            _isPlayerDie = !_isPlayerDie;
         }
 
 //TODO why there is null but it isn't?        

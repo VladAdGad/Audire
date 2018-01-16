@@ -12,7 +12,7 @@ namespace Triggers
         public void OnTriggerEnter(Collider collider)
         {
             _playerDeathBehaviour = collider.GetComponentInChildren<PlayerDeathBehaviour>();
-            if (_playerDeathBehaviour != null)
+            if (_playerDeathBehaviour != null && _playerDeathBehaviour.enabled)
             {
                 _playerDeathBehaviour.ChangeTextOfDeathCause(_deathText);
                 StartProcessOfDeath();
