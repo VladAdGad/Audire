@@ -25,7 +25,7 @@ namespace InteractableObjects
             if (_isLookingAtDoor)
             {
                 GUI.skin = _skin;
-                GUI.TextArea(TipToInteractReactangle(), "FOR OPEN PRESS " + _activationButton);
+                GUI.TextArea(TipToInteractReactangle(), "TO OPEN PRESS " + _activationButton);
             }
         }
 
