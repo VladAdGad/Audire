@@ -7,12 +7,11 @@ namespace GUInterface
     public class MenusBehaviour : MonoBehaviour, IButtonBehaviour
     {
         [SerializeField] private Transform _pauseMenuCanvas;
-        [SerializeField] private bool _setPauseMenuActive;
         private const int IndexFirstScene = 1;
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Escape) && _setPauseMenuActive)
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
                 PauseOrUnPause();
             }
@@ -25,16 +24,16 @@ namespace GUInterface
 
         public void PauseOrUnPause()
         {
-            if (_pauseMenuCanvas.gameObject.activeInHierarchy == false)
+            if (!_pauseMenuCanvas.gameObject.activeSelf)
             {
-                _pauseMenuCanvas.gameObject.SetActive(true);
-                PlayerBehaviour.SetFirstControllerInteract(false);
+                _pauseMenuCanvas.gameObject.SetActive(!_pauseMenuCanvas.gameObject.activeSelf);
+                PlayerBehaviour.PlayerOnPause(false);
                 Time.timeScale = 0;
             }
             else
             {
-                _pauseMenuCanvas.gameObject.SetActive(false);
-                PlayerBehaviour.SetFirstControllerInteract(true);
+                _pauseMenuCanvas.gameObject.SetActive(!_pauseMenuCanvas.gameObject.activeSelf);
+                PlayerBehaviour.PlayerOnPause(true);
                 Time.timeScale = 1;
             }
         }
