@@ -2,7 +2,7 @@
 using UnityEngine.Assertions;
 using UnityStandardAssets.Characters.FirstPerson;
 
-namespace InteractableObjects
+namespace Player
 {
     public class PlayerBehaviour : MonoBehaviour
     {
@@ -21,6 +21,24 @@ namespace InteractableObjects
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             player.GetComponent<FirstPersonController>().GetMouseLook().SetCursorLock(value);
             player.GetComponent<FirstPersonController>().enabled = value;
+        }
+
+        public static void PlayerOnPause(bool value)
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            player.GetComponent<FirstPersonController>().GetMouseLook().SetCursorLock(value);
+            player.GetComponent<FirstPersonController>().enabled = value;
+            player.GetComponent<PlayerEventBehaviour>().enabled = value;
+            GameObject firstPersonCharacter = GameObject.FindGameObjectWithTag("MainCamera");
+            firstPersonCharacter.GetComponent<AudioListener>().enabled = value;
+        }
+
+        public static void PlayerDisable()
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            player.GetComponentInChildren<PlayerDeathBehaviour>().enabled = false;
+            player.GetComponent<FirstPersonController>().enabled = false;
+            player.GetComponent<PlayerEventBehaviour>().enabled = false;
         }
 
         private void OnValidate()

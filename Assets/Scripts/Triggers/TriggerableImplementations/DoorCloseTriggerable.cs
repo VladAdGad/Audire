@@ -24,7 +24,7 @@ namespace Triggers.TriggerableImplementations
         public override void TriggerExit(Collider collider)
         {
         }
-        
+
         private IEnumerator Wait(int seconds)
         {
             yield return new WaitForSeconds(seconds);

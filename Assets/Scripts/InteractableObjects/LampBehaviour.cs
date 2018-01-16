@@ -8,14 +8,12 @@ namespace InteractableObjects
     {
         [SerializeField] private GUISkin _skin;
         [SerializeField] private KeyCode _activationButton = KeyCode.E;
+        [SerializeField] private GameObject _lights;
         private AudioSource _turningLapmSound;
-        private Light _light;
-        private bool _isLampState = false;
         private bool _isLookingLamp = false;
 
         private void Start()
         {
-            _light = gameObject.GetComponentInChildren<Light>();
             _turningLapmSound = GetComponent<AudioSource>();
         }
 
@@ -40,8 +38,7 @@ namespace InteractableObjects
 
         public void OnPress()
         {
-            _isLampState = !_isLampState;
-            _light.enabled  = _isLampState;
+            _lights.SetActive(!_lights.activeSelf);
             PlaySound();
         }
 
