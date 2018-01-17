@@ -8913,7 +8913,6 @@ GameObject:
   - component: {fileID: 912368130}
   - component: {fileID: 912368128}
   - component: {fileID: 912368131}
-  - component: {fileID: 912368133}
   m_Layer: 9
   m_Name: WalkingDeath
   m_TagString: Untagged
@@ -9067,17 +9066,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.7088225, y: 8.0423765, z: 1.082078}
   m_Center: {x: -0.2794733, y: 3.249578, z: 0.041039255}
---- !u!114 &912368133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 912368126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2ffb8ebd1abca249856373f3b68d0c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &913007965 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 197846, guid: 2e56118484113a44faa3c8e83481b418, type: 2}
@@ -16024,7 +16012,7 @@ Prefab:
     - target: {fileID: 114769022263762104, guid: 98f1acc51abbb2d49aba87d8864caaa3,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98f1acc51abbb2d49aba87d8864caaa3, type: 2}
