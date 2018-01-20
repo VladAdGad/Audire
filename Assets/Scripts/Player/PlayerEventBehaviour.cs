@@ -23,7 +23,7 @@ namespace Player
             .Do(interactables => MoveEyesightOn(CurrentGazeablesOf(interactables)))
             .Do(Press);
 
-        private Optional<RaycastHit> GazeCast()
+        public Optional<RaycastHit> GazeCast()
         {
             RaycastHit raycastHit;
 
