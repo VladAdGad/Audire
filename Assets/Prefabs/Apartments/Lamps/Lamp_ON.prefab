@@ -422,3 +422,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _skin: {fileID: 11400000, guid: 77d68fcc06fea3f40853ae3f92acb13a, type: 2}
   _activationButton: 101
+  _lights: {fileID: 0}
