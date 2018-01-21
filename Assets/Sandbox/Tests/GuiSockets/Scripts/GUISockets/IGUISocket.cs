@@ -5,5 +5,4 @@
         void Activate();
         void Deactivate();
     }
-    
 }

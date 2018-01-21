@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class TooltipGuiSocket : MonoBehaviour, IGUISocket
 {
-    [SerializeField]
-    private Text socketText;
+    [SerializeField] private Text socketText;
 
     private static readonly String EMPTY = "";
 
