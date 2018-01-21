@@ -7,12 +7,14 @@ namespace InteractableObjects
 {
     public class BookBehaviour : MonoBehaviour, IGazable, IPressable
     {
+        [SerializeField] private TooltipGuiSocket _tooltipGuiSocket;
+        
         [SerializeField] private KeyCode _activationButton = KeyCode.F;
         [SerializeField] private GUISkin _skin;
         [SerializeField] [TextArea] private string _bookText;
-        private bool _isLookingAtBook;
         private AudioSource _readingBookAudioSource;
         private bool _isReadingBook = false;
+
 
         private void Start() => _readingBookAudioSource = GetComponent<AudioSource>();
 
@@ -22,13 +24,6 @@ namespace InteractableObjects
             {
                 GUI.skin = _skin;
                 GUI.Box(BookRectangle(), _bookText);
-                _isLookingAtBook = false;
-            }
-
-            if (_isLookingAtBook)
-            {
-                GUI.skin = _skin;
-                GUI.TextArea(TipToInteractReactangle(), "TO PICK UP PRESS " + _activationButton);
             }
         }
 
@@ -38,20 +33,14 @@ namespace InteractableObjects
             Screen.width / 2f + Screen.width / 6,
             Screen.height - Screen.height / 18);
 
-        private static Rect TipToInteractReactangle() => new Rect(
-            Screen.width / 2 - Screen.width / 6,
-            Screen.height / 2 + Screen.height / 4,
-            Screen.width / 3f,
-            Screen.width / 2 - 2 * Screen.width / 5);
-
         public void OnGazeEnter()
         {
-            _isLookingAtBook = true;
+            _tooltipGuiSocket.Display("TO PICK UP PRESS " + _activationButton);
         }
 
         public void OnGazeExit()
         {
-            _isLookingAtBook = false;
+            _tooltipGuiSocket.Flush();
         }
 
         private void PlaySound() => _readingBookAudioSource.Play();
@@ -64,6 +53,12 @@ namespace InteractableObjects
         public void OnPress()
         {
             _isReadingBook = !_isReadingBook;
+            
+            if(_isReadingBook)
+                _tooltipGuiSocket.Deactivate();
+            else
+                _tooltipGuiSocket.Activate();
+            
             PlayerBehaviour.SetFirstControllerInteract(!_isReadingBook);
             PlaySound();
         }
