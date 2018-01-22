@@ -14,16 +14,13 @@ namespace Triggers
             _playerDeathBehaviour = collider.GetComponentInChildren<PlayerDeathBehaviour>();
             if (_playerDeathBehaviour != null && _playerDeathBehaviour.enabled)
             {
-                _playerDeathBehaviour.ChangeTextOfDeathCause(_deathText);
-                StartProcessOfDeath();
+                _playerDeathBehaviour.StartProcessOfDeath(_secondsBeforeDeath, _deathText);
             }
         }
-
-        private void StartProcessOfDeath()
+        
+        private void DestroyGameObject()
         {
-            StartCoroutine(_secondsBeforeDeath != .0f
-                ? _playerDeathBehaviour.ProcessOfDeath(_secondsBeforeDeath)
-                : _playerDeathBehaviour.ProcessOfDeath());
+            Destroy(gameObject);
         }
     }
 }
