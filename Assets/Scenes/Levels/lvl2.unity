@@ -8399,7 +8399,7 @@ GameObject:
   - component: {fileID: 783320894}
   - component: {fileID: 783320893}
   - component: {fileID: 783320892}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall2 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9110,7 +9110,7 @@ GameObject:
   - component: {fileID: 874444554}
   - component: {fileID: 874444553}
   - component: {fileID: 874444552}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall2 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16772,6 +16772,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 108930352983642968, guid: 98f1acc51abbb2d49aba87d8864caaa3,
+        type: 2}
+      propertyPath: m_CullingMask.m_Bits
+      value: 4294967039
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98f1acc51abbb2d49aba87d8864caaa3, type: 2}
   m_IsPrefabParent: 0
@@ -17008,7 +17013,7 @@ GameObject:
   - component: {fileID: 2128531263}
   - component: {fileID: 2128531262}
   - component: {fileID: 2128531261}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Wall2 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
