@@ -47,6 +47,11 @@ namespace InteractableObjects
             PlaySound(_stateOfDoor);
         }
 
+        public bool GetStateOfDoor()
+        {
+            return _stateOfDoor;
+        }
+
         private void PlaySound(bool stateOfDoor)
         {
             if (stateOfDoor)

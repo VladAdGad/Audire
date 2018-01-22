@@ -29,8 +29,8 @@ namespace GUInterface
         {
             if (!_pauseMenuCanvas.gameObject.activeSelf)
             {
-                _imageGuiSocket.Flush();
-                _tooltipGuiSocket.Flush();
+//                _imageGuiSocket.Flush();
+//                _tooltipGuiSocket.Flush();
 
                 _pauseMenuCanvas.gameObject.SetActive(!_pauseMenuCanvas.gameObject.activeSelf);
                 PlayerBehaviour.PlayerOnPause(false);

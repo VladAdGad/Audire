@@ -30,7 +30,7 @@ namespace Player
             _deathAnimation.Play(_nameOfTheDeathAnimation);
         }
 
-        public IEnumerator ProcessOfDeath()
+        private IEnumerator ProcessOfDeath()
         {
             if (!_isPlayerDie)
             {
@@ -46,7 +46,7 @@ namespace Player
             }
         }
 
-        public IEnumerator ProcessOfDeath(float secondsBeforeDeath)
+        private IEnumerator ProcessOfDeath(float secondsBeforeDeath)
         {
             if (!_isPlayerDie)
             {
@@ -78,7 +78,7 @@ namespace Player
             _faidingImage.CrossFadeAlpha(1, 3, false);
         }
 
-        public void ChangeTextOfDeathCause(string deathCause)
+        private void ChangeTextOfDeathCause(string deathCause)
         {
             _deathCauseCanvas.GetComponentInChildren<Text>().text = deathCause;
         }
@@ -86,6 +86,14 @@ namespace Player
         private void SetPlayerIsDie()
         {
             _isPlayerDie = !_isPlayerDie;
+        }
+        
+        public void StartProcessOfDeath(float secondsBeforeDeath, string deathText)
+        {
+            ChangeTextOfDeathCause(deathText);
+            StartCoroutine(secondsBeforeDeath != .0f
+                ? ProcessOfDeath(secondsBeforeDeath)
+                : ProcessOfDeath());
         }
 
 //TODO why there is null but it isn't?        
