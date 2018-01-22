@@ -6,6 +6,9 @@ namespace GUInterface
 {
     public class MenusBehaviour : MonoBehaviour, IButtonBehaviour
     {
+        [SerializeField] private ImageGuiSocket _imageGuiSocket;
+        [SerializeField] private TooltipGuiSocket _tooltipGuiSocket;
+
         [SerializeField] private Transform _pauseMenuCanvas;
         private const int IndexFirstScene = 1;
 
@@ -26,6 +29,9 @@ namespace GUInterface
         {
             if (!_pauseMenuCanvas.gameObject.activeSelf)
             {
+                _imageGuiSocket.Flush();
+                _tooltipGuiSocket.Flush();
+
                 _pauseMenuCanvas.gameObject.SetActive(!_pauseMenuCanvas.gameObject.activeSelf);
                 PlayerBehaviour.PlayerOnPause(false);
                 Time.timeScale = 0;
