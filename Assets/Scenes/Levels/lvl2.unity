@@ -12371,6 +12371,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.1719297
       objectReference: {fileID: 0}
+    - target: {fileID: 114900971364571320, guid: 78797e3b03357cc45bf7c0df2a3b970a,
+        type: 2}
+      propertyPath: _codeToOpenDoor
+      value: 3117
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 78797e3b03357cc45bf7c0df2a3b970a, type: 2}
   m_IsPrefabParent: 0
