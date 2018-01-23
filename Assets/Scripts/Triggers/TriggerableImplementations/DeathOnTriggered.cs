@@ -1,7 +1,7 @@
 ﻿using Player;
 using UnityEngine;
 
-namespace Triggers
+namespace Triggers.TriggerableImplementations
 {
     public class DeathOnTriggered : MonoBehaviour
     {
@@ -17,7 +17,7 @@ namespace Triggers
                 _playerDeathBehaviour.StartProcessOfDeath(_secondsBeforeDeath, _deathText);
             }
         }
-        
+
         private void DestroyGameObject()
         {
             Destroy(gameObject);

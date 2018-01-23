@@ -87,7 +87,7 @@ namespace Player
         {
             _isPlayerDie = !_isPlayerDie;
         }
-        
+
         public void StartProcessOfDeath(float secondsBeforeDeath, string deathText)
         {
             ChangeTextOfDeathCause(deathText);
@@ -97,9 +97,9 @@ namespace Player
         }
 
 //TODO why there is null but it isn't?        
-//        private void OnValidate()
-//        {
-//            Assert.IsNotNull(_deathCauseCanvas);
-//        }
+        private void OnValidate()
+        {
+            Assert.IsNotNull(_deathCauseCanvas);
+        }
     }
 }

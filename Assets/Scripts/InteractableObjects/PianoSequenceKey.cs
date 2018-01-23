@@ -1,4 +1,5 @@
 ﻿using EventManagement;
+using Triggers.TriggerableImplementations;
 using UnityEngine;
 
 namespace Assets.Sandbox.Tests.PianoPlay.Scripts
@@ -8,8 +9,9 @@ namespace Assets.Sandbox.Tests.PianoPlay.Scripts
         [SerializeField] private PianoKeySequenceTriggerer _pianoKeySequenceTriggerer;
         [SerializeField] private KeyCode _keyToListen;
         [SerializeField] private AudioSource _keySound;
-    
+
         public KeyCode ActivationKeyCode() => _keyToListen;
+
         public void OnPress()
         {
             _keySound.Play();
