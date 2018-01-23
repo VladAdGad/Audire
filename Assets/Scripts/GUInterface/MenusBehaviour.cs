@@ -1,5 +1,7 @@
-﻿using Player;
+﻿using System.Runtime.InteropServices;
+using Player;
 using UnityEngine;
+using UnityEngine.Assertions;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
@@ -52,6 +54,12 @@ namespace GUInterface
         public void Exit()
         {
             Application.Quit();
+        }
+
+        private void OnValidate()
+        {
+            Assert.IsNotNull(_unpaused, "Missed reference");
+            Assert.IsNotNull(_paused, "Missed reference");
         }
     }
 }
