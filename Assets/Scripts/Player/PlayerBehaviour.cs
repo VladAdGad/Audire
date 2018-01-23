@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.Assertions;
 using UnityStandardAssets.Characters.FirstPerson;
 
 namespace Player
@@ -19,8 +18,6 @@ namespace Player
             player.GetComponent<FirstPersonController>().GetMouseLook().SetCursorLock(value);
             player.GetComponent<FirstPersonController>().enabled = value;
             player.GetComponent<PlayerEventBehaviour>().enabled = value;
-            GameObject firstPersonCharacter = GameObject.FindGameObjectWithTag("MainCamera");
-            firstPersonCharacter.GetComponent<AudioListener>().enabled = value;
         }
 
         public static void PlayerDisable()
