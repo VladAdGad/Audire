@@ -50,7 +50,6 @@ namespace InteractableObjects
             PlayerBehaviour.SetFirstControllerInteract(true);
         }
 
-
         private void OnValidate()
         {
             Assert.IsNotNull(_tooltipGuiSocket, "Tooltip socket is null!");
