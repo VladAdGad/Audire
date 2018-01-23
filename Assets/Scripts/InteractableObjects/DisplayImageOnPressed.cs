@@ -19,7 +19,6 @@ namespace InteractableObjects
         public void OnGazeEnter() => _tooltipGuiSocket.Display($"To read press {_activationButton}");
         public void OnGazeExit() => _tooltipGuiSocket.Flush();
 
-
         public KeyCode ActivationKeyCode() => _activationButton;
 
         public void OnPress()
