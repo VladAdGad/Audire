@@ -433,7 +433,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tooltipGuiSocket: {fileID: 1069517275}
   _imageGuiSocket: {fileID: 705507934}
-  _playerBehaviour: {fileID: 0}
   _activationButton: 102
   _readingBookAudioSource: {fileID: 51784776}
   _displayImage: {fileID: 21300000, guid: 6a400e6692273ea409d048fc25d78f26, type: 3}
@@ -1546,7 +1545,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tooltipGuiSocket: {fileID: 1069517275}
   _imageGuiSocket: {fileID: 705507934}
-  _playerBehaviour: {fileID: 0}
   _activationButton: 102
   _readingBookAudioSource: {fileID: 167595022}
   _displayImage: {fileID: 21300000, guid: 14d700759b7ae51419f58e7853629ce6, type: 3}
@@ -3659,23 +3657,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114902901377703296, guid: 273fa41db43175849addf60568e3cbd2,
-        type: 2}
-      propertyPath: _unpaused
-      value: 
-      objectReference: {fileID: 24500006, guid: 8b30800e82bd9ed44865f7d03224fca4,
-        type: 2}
-    - target: {fileID: 114902901377703296, guid: 273fa41db43175849addf60568e3cbd2,
-        type: 2}
-      propertyPath: _paused
-      value: 
-      objectReference: {fileID: 245791850664449206, guid: 8b30800e82bd9ed44865f7d03224fca4,
-        type: 2}
-    - target: {fileID: 114902901377703296, guid: 273fa41db43175849addf60568e3cbd2,
-        type: 2}
-      propertyPath: _playerBehaviour
-      value: 
-      objectReference: {fileID: 1945744869}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 273fa41db43175849addf60568e3cbd2, type: 2}
   m_IsPrefabParent: 0
@@ -8463,7 +8444,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tooltipGuiSocket: {fileID: 1069517275}
   _imageGuiSocket: {fileID: 705507934}
-  _playerBehaviour: {fileID: 1945744869}
   _activationButton: 102
   _readingBookAudioSource: {fileID: 761815379}
   _displayImage: {fileID: 21300000, guid: 15fb3f3a5ad471b45a1483585cbf9a64, type: 3}
@@ -9576,7 +9556,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tooltipGuiSocket: {fileID: 1069517275}
   _imageGuiSocket: {fileID: 705507934}
-  _playerBehaviour: {fileID: 0}
   _activationButton: 102
   _readingBookAudioSource: {fileID: 825404707}
   _displayImage: {fileID: 21300000, guid: b4e9efd41d30e5d44b367d737b9e7939, type: 3}
@@ -16795,12 +16774,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ccc64212044e0e34f84a6312e28e7025, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &1945744869 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114495300419159328, guid: 98f1acc51abbb2d49aba87d8864caaa3,
-    type: 2}
-  m_PrefabInternal: {fileID: 2086095838}
-  m_Script: {fileID: 11500000, guid: 6bec5fac6a7f47b18c52393390efc567, type: 3}
 --- !u!4 &1968491959 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4274610738465068, guid: 0f77ee36dc8849842a76754607c7ad18,
