@@ -17,6 +17,6 @@ namespace Triggers
         {
             _triggerables.ForEach(it => it.TriggerExit(other));
             gameObject.GetComponent<BoxCollider>().enabled = !_disableTriggerAfterActivate;
-        } 
+        }
     }
 }

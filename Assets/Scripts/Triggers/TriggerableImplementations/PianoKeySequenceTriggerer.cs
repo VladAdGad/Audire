@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Assertions;
 using Utilities;
 
-namespace Assets.Sandbox.Tests.PianoPlay.Scripts
+namespace Triggers.TriggerableImplementations
 {
     public class PianoKeySequenceTriggerer : MonoBehaviour
     {
@@ -51,7 +51,7 @@ namespace Assets.Sandbox.Tests.PianoPlay.Scripts
         }
 
         private void ResetProggress() => _nextKeyIndex = 0;
-    
+
 
         private void StopResetProgressCorutine() =>
             Optional<Coroutine>

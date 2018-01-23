@@ -20,7 +20,7 @@ namespace InteractableObjects
                 DestroyGameObject();
             }
         }
-        
+
         private void DestroyGameObject()
         {
             Destroy(gameObject);

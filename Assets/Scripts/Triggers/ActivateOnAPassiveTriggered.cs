@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace Assets.Sandbox.Tests.PianoPlay.Scripts
+﻿namespace Triggers
 {
     public class ActivateOnAPassiveTriggered : APassiveTriggerable
     {
