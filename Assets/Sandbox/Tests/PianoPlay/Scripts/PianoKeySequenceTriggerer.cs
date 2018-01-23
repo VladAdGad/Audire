@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.Assertions;
 using Utilities;
 
 namespace Assets.Sandbox.Tests.PianoPlay.Scripts
@@ -60,7 +60,7 @@ namespace Assets.Sandbox.Tests.PianoPlay.Scripts
 
         private void OnValidate()
         {
-            Assert.True(_keySequence.Count > 0, "Piano Key Sequence must contain at least one key!");
+            Assert.IsTrue(_keySequence.Count > 0, "Piano Key Sequence must contain at least one key!");
         }
     }
 }
