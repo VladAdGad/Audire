@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.Assertions;
 using UnityStandardAssets.Characters.FirstPerson;
 
 namespace Player
