@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using InteractableObjects;
+using InteractableObjects.Doors;
 using UnityEngine;
 
 namespace Triggers.TriggerableImplementations

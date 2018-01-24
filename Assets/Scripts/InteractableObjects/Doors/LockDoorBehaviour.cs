@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.UI;
 
-namespace InteractableObjects
+namespace InteractableObjects.Doors
 {
     [RequireComponent(typeof(GameObject))]
     public class LockDoorBehaviour : MonoBehaviour, IGazable, IPressable

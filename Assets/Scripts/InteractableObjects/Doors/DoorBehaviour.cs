@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.Assertions;
 
-namespace InteractableObjects
+namespace InteractableObjects.Doors
 {
     public class DoorBehaviour : MonoBehaviour, IGazable, IPressable
     {
