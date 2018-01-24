@@ -1,5 +1,4 @@
-﻿using System.Runtime.InteropServices;
-using Player;
+﻿using Player;
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.Audio;
@@ -7,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 namespace GUInterface
 {
-    public class MenusBehaviour : MonoBehaviour, IButtonBehaviour
+    public class MenuButtonsBehaviour : MonoBehaviour, IButtonBehaviour
     {
         [SerializeField] private Transform _pauseMenuCanvas;
         [SerializeField] private AudioMixerSnapshot _unpaused;
