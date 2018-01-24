@@ -194,7 +194,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4380549089699618, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1212498305193556, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
       propertyPath: m_Name
@@ -681,7 +681,8 @@ Prefab:
       propertyPath: _codeToOpenDoor
       value: 2487
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114900971364571320, guid: 78797e3b03357cc45bf7c0df2a3b970a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 78797e3b03357cc45bf7c0df2a3b970a, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &162877661
@@ -1517,37 +1518,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 355123790}
   m_Mesh: {fileID: 4300038, guid: 0ccd472cba226de41b565ef0ab256ed8, type: 3}
---- !u!1 &356099411 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1212498305193556, guid: d989ad5707cdb4148b79eac98d22a8b3,
-    type: 2}
-  m_PrefabInternal: {fileID: 648321680}
---- !u!4 &356099412 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4380549089699618, guid: d989ad5707cdb4148b79eac98d22a8b3,
-    type: 2}
-  m_PrefabInternal: {fileID: 648321680}
---- !u!114 &356099413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 356099411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcc5b3dad07f4806b84f3c69cb1d8040, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _tooltipGuiSocket: {fileID: 0}
-  _imageGuiSocket: {fileID: 0}
-  _activationButton: 102
-  _readingBookAudioSource: {fileID: 356099414}
-  _displayImage: {fileID: 21300000, guid: 7a79402c5325b8648bb3bff8dbfb3721, type: 3}
---- !u!82 &356099414 stripped
-AudioSource:
-  m_PrefabParentObject: {fileID: 82845474569830046, guid: d989ad5707cdb4148b79eac98d22a8b3,
-    type: 2}
-  m_PrefabInternal: {fileID: 648321680}
 --- !u!1 &370600929
 GameObject:
   m_ObjectHideFlags: 0
@@ -2464,101 +2434,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 640970250}
   m_Mesh: {fileID: 4300046, guid: 0ccd472cba226de41b565ef0ab256ed8, type: 3}
---- !u!1001 &648321680
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 681903154}
-    m_Modifications:
-    - target: {fileID: 4380549089699618, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 62.730865
-      objectReference: {fileID: 0}
-    - target: {fileID: 4380549089699618, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 52.220833
-      objectReference: {fileID: 0}
-    - target: {fileID: 4380549089699618, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -50.492783
-      objectReference: {fileID: 0}
-    - target: {fileID: 4380549089699618, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0.017133573
-      objectReference: {fileID: 0}
-    - target: {fileID: 4380549089699618, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0.13562056
-      objectReference: {fileID: 0}
-    - target: {fileID: 4380549089699618, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0.013498864
-      objectReference: {fileID: 0}
-    - target: {fileID: 4380549089699618, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.9905207
-      objectReference: {fileID: 0}
-    - target: {fileID: 4380549089699618, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4380549089699618, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 3.5554066
-      objectReference: {fileID: 0}
-    - target: {fileID: 4380549089699618, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.037616253
-      objectReference: {fileID: 0}
-    - target: {fileID: 4380549089699618, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 4.784421
-      objectReference: {fileID: 0}
-    - target: {fileID: 4380549089699618, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 2.1550002
-      objectReference: {fileID: 0}
-    - target: {fileID: 4380549089699618, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 15.569001
-      objectReference: {fileID: 0}
-    - target: {fileID: 4380549089699618, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -1.2670001
-      objectReference: {fileID: 0}
-    - target: {fileID: 114204651120938258, guid: d989ad5707cdb4148b79eac98d22a8b3,
-        type: 2}
-      propertyPath: _noteText
-      value: "\t\t\tAugust 11, 1971 \n \n\n\n  Dear sister,\n \n I hope this letter
-        finds you well. I was thinking about your suggestion to stay for some time
-        at your house, but I am not sure if it is a good idea. Don\u2019t you worry
-        about me, I will be completely fine. \n I found a one actually great house
-        in the woods near the city. The price is not very high, I wonder why. Maybe
-        because this house stands really far from other buildings, but for me, it\u2019s
-        just perfect - I finally can be absolutely alone there. \n And, you know,
-        this house has some kind of\u2026 atmosphere. When I was visiting it, for
-        the first time in many months I felt good. I even had some inspirational thoughts,
-        can you believe it? I am sure that this is a new beginning for me and my career.
-        \n \n Give Angie a kiss for me. Can\u2019t wait to read your answer. \n \n\n
-        \ \t \t \t      Best regards, \n \t \t \t       your brother"
-      objectReference: {fileID: 0}
-    - target: {fileID: 114204651120938258, guid: d989ad5707cdb4148b79eac98d22a8b3,
-        type: 2}
-      propertyPath: _skin
-      value: 
-      objectReference: {fileID: 11400000, guid: 01e4beb8f0016774e97860437f762a7b,
-        type: 2}
-    - target: {fileID: 23847124648995578, guid: d989ad5707cdb4148b79eac98d22a8b3,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 9ba74091553bb6949a70702870d6f13f, type: 2}
-    m_RemovedComponents:
-    - {fileID: 114204651120938258, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
-    - {fileID: 114302845020471708, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
-  m_ParentPrefab: {fileID: 100100000, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &681903153
 GameObject:
   m_ObjectHideFlags: 0
@@ -2584,7 +2459,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 356099412}
   - {fileID: 1803139622}
   m_Father: {fileID: 563708176}
   m_RootOrder: 2
@@ -5298,8 +5172,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11437536, guid: 69b40ef7ee16c834c844b3fa26e0fdda, type: 2}
       propertyPath: RainIntensity
-      value: 0.207
+      value: 0.03
       objectReference: {fileID: 0}
+    - target: {fileID: 11437536, guid: 69b40ef7ee16c834c844b3fa26e0fdda, type: 2}
+      propertyPath: Camera
+      value: 
+      objectReference: {fileID: 189840216}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69b40ef7ee16c834c844b3fa26e0fdda, type: 2}
   m_IsPrefabParent: 0
