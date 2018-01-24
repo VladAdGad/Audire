@@ -1,15 +1,16 @@
 ﻿using Player;
 using UnityEngine;
+using UnityEngine.Assertions;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 namespace GUInterface
 {
-    public class MenusBehaviour : MonoBehaviour, IButtonBehaviour
+    public class MenuButtonsBehaviour : MonoBehaviour, IButtonBehaviour
     {
-        [SerializeField] private ImageGuiSocket _imageGuiSocket;
-        [SerializeField] private TooltipGuiSocket _tooltipGuiSocket;
-
         [SerializeField] private Transform _pauseMenuCanvas;
+        [SerializeField] private AudioMixerSnapshot _unpaused;
+        [SerializeField] private AudioMixerSnapshot _paused;
         private const int IndexFirstScene = 1;
 
         private void Update()
@@ -29,24 +30,30 @@ namespace GUInterface
         {
             if (!_pauseMenuCanvas.gameObject.activeSelf)
             {
-//                _imageGuiSocket.Flush();
-//                _tooltipGuiSocket.Flush();
-
                 _pauseMenuCanvas.gameObject.SetActive(!_pauseMenuCanvas.gameObject.activeSelf);
                 PlayerBehaviour.PlayerOnPause(false);
                 Time.timeScale = 0;
+                _paused.TransitionTo(.01f);
             }
             else
             {
                 _pauseMenuCanvas.gameObject.SetActive(!_pauseMenuCanvas.gameObject.activeSelf);
                 PlayerBehaviour.PlayerOnPause(true);
                 Time.timeScale = 1;
+                _unpaused.TransitionTo(.01f);
             }
         }
 
         public void Exit()
         {
             Application.Quit();
+        }
+
+        private void OnValidate()
+        {
+            Assert.IsNotNull(_pauseMenuCanvas, "Missed reference");
+            Assert.IsNotNull(_unpaused, "Missed reference");
+            Assert.IsNotNull(_paused, "Missed reference");
         }
     }
 }

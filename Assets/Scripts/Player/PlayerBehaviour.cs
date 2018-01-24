@@ -5,29 +5,36 @@ namespace Player
 {
     public class PlayerBehaviour : MonoBehaviour
     {
-        public static void SetFirstControllerInteract(bool value)
+        private static GameObject _player;
+        private static bool _stateInteract;
+
+        private void Start()
         {
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
-            player.GetComponent<FirstPersonController>().GetMouseLook().SetCursorLock(value);
-            player.GetComponent<FirstPersonController>().enabled = value;
+            _player = GameObject.FindGameObjectWithTag("Player");
         }
 
-        public static void PlayerOnPause(bool value)
+        public static void PlayerInteractWith(bool stateInteratcWith)
         {
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
-            player.GetComponent<FirstPersonController>().GetMouseLook().SetCursorLock(value);
-            player.GetComponent<FirstPersonController>().enabled = value;
-            player.GetComponent<PlayerEventBehaviour>().enabled = value;
-            GameObject firstPersonCharacter = GameObject.FindGameObjectWithTag("MainCamera");
-            firstPersonCharacter.GetComponent<AudioListener>().enabled = value;
+            _stateInteract = !stateInteratcWith;
+            _player.GetComponent<FirstPersonController>().GetMouseLook().SetCursorLock(stateInteratcWith);
+            _player.GetComponent<FirstPersonController>().enabled = stateInteratcWith;
+        }
+
+        public static void PlayerOnPause(bool statePause)
+        {
+            if (!_stateInteract)
+            {
+                _player.GetComponent<FirstPersonController>().GetMouseLook().SetCursorLock(statePause);
+                _player.GetComponent<FirstPersonController>().enabled = statePause;
+            }
+            _player.GetComponent<PlayerEventBehaviour>().enabled = statePause;
         }
 
         public static void PlayerDisable()
         {
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
-            player.GetComponentInChildren<PlayerDeathBehaviour>().enabled = false;
-            player.GetComponent<FirstPersonController>().enabled = false;
-            player.GetComponent<PlayerEventBehaviour>().enabled = false;
+            _player.GetComponentInChildren<PlayerDeathBehaviour>().enabled = false;
+            _player.GetComponent<FirstPersonController>().enabled = false;
+            _player.GetComponent<PlayerEventBehaviour>().enabled = false;
         }
     }
 }

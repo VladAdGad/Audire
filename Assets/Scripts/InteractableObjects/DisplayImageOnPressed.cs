@@ -1,7 +1,6 @@
 ﻿using EventManagement;
 using Player;
 using UnityEngine;
-using UnityEngine.Assertions;
 
 namespace InteractableObjects
 {
@@ -40,22 +39,14 @@ namespace InteractableObjects
         {
             _tooltipGuiSocket.Display($"To exit press {_activationButton}");
             _imageGuiSocket.Display(_displayImage);
-            PlayerBehaviour.SetFirstControllerInteract(false);
+            PlayerBehaviour.PlayerInteractWith(false);
         }
 
         private void StopReadingBook()
         {
             OnGazeEnter();
             _imageGuiSocket.Flush();
-            PlayerBehaviour.SetFirstControllerInteract(true);
-        }
-
-
-        private void OnValidate()
-        {
-            Assert.IsNotNull(_tooltipGuiSocket, "Tooltip socket is null!");
-            Assert.IsNotNull(_imageGuiSocket, "Image gui socket is null!");
-            Assert.IsNotNull(_displayImage, "DisplayImage is null!");
+            PlayerBehaviour.PlayerInteractWith(true);
         }
     }
 }

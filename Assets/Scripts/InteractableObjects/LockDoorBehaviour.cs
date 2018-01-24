@@ -80,7 +80,7 @@ namespace InteractableObjects
             else
             {
                 _lockPanel.SetActive(_isOpeningDoor);
-                PlayerBehaviour.SetFirstControllerInteract(!_isOpeningDoor);
+                PlayerBehaviour.PlayerInteractWith(!_isOpeningDoor);
             }
 
             _curCode = "";
