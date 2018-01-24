@@ -95,11 +95,5 @@ namespace Player
                 ? ProcessOfDeath(secondsBeforeDeath)
                 : ProcessOfDeath());
         }
-
-//TODO why there is null but it isn't?        
-        private void OnValidate()
-        {
-            Assert.IsNotNull(_deathCauseCanvas);
-        }
     }
 }

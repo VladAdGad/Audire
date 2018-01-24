@@ -52,8 +52,6 @@ namespace InteractableObjects
 
         private void OnValidate()
         {
-            Assert.IsNotNull(_tooltipGuiSocket, "Tooltip socket is null!");
-            Assert.IsNotNull(_imageGuiSocket, "Image gui socket is null!");
             Assert.IsNotNull(_displayImage, "DisplayImage is null!");
         }
     }
