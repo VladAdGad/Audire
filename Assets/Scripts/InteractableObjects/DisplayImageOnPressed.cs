@@ -1,7 +1,6 @@
 ﻿using EventManagement;
 using Player;
 using UnityEngine;
-using UnityEngine.Assertions;
 
 namespace InteractableObjects
 {
@@ -48,11 +47,6 @@ namespace InteractableObjects
             OnGazeEnter();
             _imageGuiSocket.Flush();
             PlayerBehaviour.PlayerInteractWith(true);
-        }
-
-        private void OnValidate()
-        {
-            Assert.IsNotNull(_displayImage, "DisplayImage is null!");
         }
     }
 }
