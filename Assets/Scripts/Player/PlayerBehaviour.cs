@@ -24,7 +24,8 @@ namespace Player
         {
             if (!_stateInteract)
             {
-                PlayerInteractWith(statePause);
+                _player.GetComponent<FirstPersonController>().GetMouseLook().SetCursorLock(statePause);
+                _player.GetComponent<FirstPersonController>().enabled = statePause;
             }
             _player.GetComponent<PlayerEventBehaviour>().enabled = statePause;
         }
