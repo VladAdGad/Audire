@@ -1,7 +1,7 @@
 ﻿using EventManagement;
 using UnityEngine;
 
-namespace InteractableObjects.Doors
+namespace Sandbox.Tests.KeyLockedDoor.Scripts
 {
     public class DoorKey : MonoBehaviour, IPressable
     {

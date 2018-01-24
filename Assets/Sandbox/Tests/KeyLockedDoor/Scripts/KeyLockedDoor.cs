@@ -3,7 +3,7 @@ using EventManagement;
 using UnityEngine;
 using UnityEngine.Assertions;
 
-namespace InteractableObjects.Doors
+namespace Sandbox.Tests.KeyLockedDoor.Scripts
 {
     public class KeyLockedDoor : MonoBehaviour, IGazable, IPressable
     {
