@@ -9,9 +9,6 @@ namespace GUInterface
 {
     public class MenusBehaviour : MonoBehaviour, IButtonBehaviour
     {
-        [SerializeField] private ImageGuiSocket _imageGuiSocket;
-        [SerializeField] private TooltipGuiSocket _tooltipGuiSocket;
-
         [SerializeField] private Transform _pauseMenuCanvas;
         [SerializeField] private AudioMixerSnapshot _unpaused;
         [SerializeField] private AudioMixerSnapshot _paused;
@@ -34,9 +31,6 @@ namespace GUInterface
         {
             if (!_pauseMenuCanvas.gameObject.activeSelf)
             {
-//                _imageGuiSocket.Flush();
-//                _tooltipGuiSocket.Flush();
-
                 _pauseMenuCanvas.gameObject.SetActive(!_pauseMenuCanvas.gameObject.activeSelf);
                 PlayerBehaviour.PlayerOnPause(false);
                 Time.timeScale = 0;
@@ -58,6 +52,7 @@ namespace GUInterface
 
         private void OnValidate()
         {
+            Assert.IsNotNull(_pauseMenuCanvas, "Missed reference");
             Assert.IsNotNull(_unpaused, "Missed reference");
             Assert.IsNotNull(_paused, "Missed reference");
         }
