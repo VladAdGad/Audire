@@ -1463,6 +1463,7 @@ Prefab:
     m_RemovedComponents:
     - {fileID: 0}
     - {fileID: 0}
+    - {fileID: 114302845020471708, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &167595020 stripped
@@ -8360,6 +8361,7 @@ Prefab:
     m_RemovedComponents:
     - {fileID: 0}
     - {fileID: 0}
+    - {fileID: 114302845020471708, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &761815377 stripped
@@ -9470,6 +9472,7 @@ Prefab:
     m_RemovedComponents:
     - {fileID: 0}
     - {fileID: 0}
+    - {fileID: 114302845020471708, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &825404705 stripped
