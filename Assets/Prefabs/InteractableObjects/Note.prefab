@@ -22,9 +22,8 @@ GameObject:
   - component: {fileID: 33182695823018782}
   - component: {fileID: 65349809273987076}
   - component: {fileID: 23847124648995578}
-  - component: {fileID: 64461077451460838}
   - component: {fileID: 82845474569830046}
-  - component: {fileID: 114204651120938258}
+  - component: {fileID: 114302845020471708}
   m_Layer: 0
   m_Name: Note
   m_TagString: Untagged
@@ -39,8 +38,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1212498305193556}
   m_LocalRotation: {x: -0, y: 0.87123966, z: -0, w: -0.49085796}
-  m_LocalPosition: {x: 9.682687, y: 1.1171827, z: 15.326153}
-  m_LocalScale: {x: 0.20307456, y: 0.0021485293, z: 0.2732725}
+  m_LocalPosition: {x: -0.069999695, y: 1.1781827, z: -5.91}
+  m_LocalScale: {x: 0.20307465, y: 0.0021485293, z: 0.27327263}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -59,7 +58,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bed1b16408b279c499f034215f02bfa4, type: 2}
+  - {fileID: 2100000, guid: 1850ddbe611042b48a198434361a6bf7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -86,20 +85,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1212498305193556}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!64 &64461077451460838
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1212498305193556}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!65 &65349809273987076
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -110,8 +95,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.1208673, y: 52.023956, z: 3.8203785}
-  m_Center: {x: 0.020530242, y: -30.820297, z: 0.040757313}
+  m_Size: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
+  m_Center: {x: -0.0000038146973, y: 0, z: 0}
 --- !u!82 &82845474569830046
 AudioSource:
   m_ObjectHideFlags: 1
@@ -192,7 +177,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114204651120938258
+--- !u!114 &114302845020471708
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -200,9 +185,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1212498305193556}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c209a9bd609d45719388cbb002681bad, type: 3}
+  m_Script: {fileID: 11500000, guid: fcc5b3dad07f4806b84f3c69cb1d8040, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _skin: {fileID: 11400000, guid: 77d68fcc06fea3f40853ae3f92acb13a, type: 2}
+  _tooltipGuiSocket: {fileID: 0}
+  _imageGuiSocket: {fileID: 0}
   _activationButton: 102
-  _noteText: 
+  _readingBookAudioSource: {fileID: 82845474569830046}
+  _displayImage: {fileID: 21300000, guid: 6a400e6692273ea409d048fc25d78f26, type: 3}

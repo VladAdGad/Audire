@@ -1,5 +1,5 @@
 ﻿using EventManagement;
-using InteractableObjects;
+using InteractableObjects.Doors;
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]

@@ -48,12 +48,5 @@ namespace GUInterface
         {
             Application.Quit();
         }
-
-        private void OnValidate()
-        {
-            Assert.IsNotNull(_pauseMenuCanvas, "Missed reference");
-            Assert.IsNotNull(_unpaused, "Missed reference");
-            Assert.IsNotNull(_paused, "Missed reference");
-        }
     }
 }

@@ -2,7 +2,7 @@
 using Triggers.TriggerableImplementations;
 using UnityEngine;
 
-namespace Assets.Sandbox.Tests.PianoPlay.Scripts
+namespace InteractableObjects
 {
     public class PianoSequenceKey : MonoBehaviour, IPressable
     {

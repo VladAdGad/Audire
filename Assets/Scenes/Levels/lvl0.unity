@@ -330,7 +330,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 441802076}
-  - component: {fileID: 441802075}
   m_Layer: 5
   m_Name: GUI
   m_TagString: Untagged
@@ -338,19 +337,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &441802075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114955512522264328, guid: de62618e9e9afcf44a6ebd15919a3b87,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 441802074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee0c026febd348c4bfb01538f074767c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pauseMenuCanvas: {fileID: 0}
 --- !u!224 &441802076
 RectTransform:
   m_ObjectHideFlags: 0
@@ -761,16 +747,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114260655458363384, guid: b19bbb49e2b4af1469f66f42a0f44178,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 441802075}
-    - target: {fileID: 114355137937568270, guid: b19bbb49e2b4af1469f66f42a0f44178,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 441802075}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b19bbb49e2b4af1469f66f42a0f44178, type: 2}
   m_IsPrefabParent: 0

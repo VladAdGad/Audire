@@ -1,4 +1,5 @@
-﻿using Player;
+﻿using InteractableObjects.Doors;
+using Player;
 using UnityEngine;
 
 namespace InteractableObjects

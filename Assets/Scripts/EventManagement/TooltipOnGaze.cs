@@ -1,7 +1,6 @@
-﻿using EventManagement;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Assets.Sandbox.Tests.PianoPlay.Scripts
+namespace EventManagement
 {
     public class TooltipOnGaze : MonoBehaviour, IGazable
     {
