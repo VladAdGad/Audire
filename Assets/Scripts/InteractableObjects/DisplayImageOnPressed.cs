@@ -40,14 +40,14 @@ namespace InteractableObjects
         {
             _tooltipGuiSocket.Display($"To exit press {_activationButton}");
             _imageGuiSocket.Display(_displayImage);
-            PlayerBehaviour.SetFirstControllerInteract(false);
+            PlayerBehaviour.PlayerInteractWith(false);
         }
 
         private void StopReadingBook()
         {
             OnGazeEnter();
             _imageGuiSocket.Flush();
-            PlayerBehaviour.SetFirstControllerInteract(true);
+            PlayerBehaviour.PlayerInteractWith(true);
         }
 
         private void OnValidate()

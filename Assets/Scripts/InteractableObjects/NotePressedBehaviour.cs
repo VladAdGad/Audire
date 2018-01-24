@@ -53,7 +53,7 @@ namespace InteractableObjects
         public void OnPress()
         {
             _isReadingNote = !_isReadingNote;
-            PlayerBehaviour.SetFirstControllerInteract(!_isReadingNote);
+            PlayerBehaviour.PlayerInteractWith(!_isReadingNote);
             PlaySound();
         }
 
