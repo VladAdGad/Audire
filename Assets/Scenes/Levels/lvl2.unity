@@ -360,87 +360,27 @@ Prefab:
       propertyPath: m_Name
       value: Note - Bathroom
       objectReference: {fileID: 0}
-    - target: {fileID: 114204651120938258, guid: d989ad5707cdb4148b79eac98d22a8b3,
+    - target: {fileID: 114302845020471708, guid: d989ad5707cdb4148b79eac98d22a8b3,
         type: 2}
-      propertyPath: _skin
+      propertyPath: _tooltipGuiSocket
       value: 
-      objectReference: {fileID: 11400000, guid: 4a2bc93c6c9288a40b43e8592358a37d,
+      objectReference: {fileID: 1069517275}
+    - target: {fileID: 114302845020471708, guid: d989ad5707cdb4148b79eac98d22a8b3,
         type: 2}
-    - target: {fileID: 114204651120938258, guid: d989ad5707cdb4148b79eac98d22a8b3,
-        type: 2}
-      propertyPath: _noteText
-      value: "                                              October 14, 1972\r\n\r\r\n\r\n\r\n\r\n\r\nDear
-        Sir,\r\n\r\n\tAs you asked, I am attaching your prescription to this letter.
-        But, please, control the dosage. Overdosing by anti-anxiety and sleeping pills
-        can be fatal. \r\n\nWrite to me whenever you will have seizures again.   \r\n\r\n\r\n\r\n\r\n
-        \                             Charles Danton, the doctor\r\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 65349809273987076, guid: d989ad5707cdb4148b79eac98d22a8b3,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 1.0000002
-      objectReference: {fileID: 0}
-    - target: {fileID: 65349809273987076, guid: d989ad5707cdb4148b79eac98d22a8b3,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 1.0000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 65349809273987076, guid: d989ad5707cdb4148b79eac98d22a8b3,
-        type: 2}
-      propertyPath: m_Size.z
-      value: 1.0000002
-      objectReference: {fileID: 0}
-    - target: {fileID: 65349809273987076, guid: d989ad5707cdb4148b79eac98d22a8b3,
-        type: 2}
-      propertyPath: m_Center.x
-      value: -0.0000038146973
-      objectReference: {fileID: 0}
-    - target: {fileID: 65349809273987076, guid: d989ad5707cdb4148b79eac98d22a8b3,
-        type: 2}
-      propertyPath: m_Center.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 65349809273987076, guid: d989ad5707cdb4148b79eac98d22a8b3,
-        type: 2}
-      propertyPath: m_Center.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 23847124648995578, guid: d989ad5707cdb4148b79eac98d22a8b3,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: _imageGuiSocket
       value: 
-      objectReference: {fileID: 2100000, guid: 1850ddbe611042b48a198434361a6bf7, type: 2}
-    m_RemovedComponents:
-    - {fileID: 64461077451460838, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
-    - {fileID: 114204651120938258, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
+      objectReference: {fileID: 705507934}
+    - target: {fileID: 4380549089699618, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.20307475
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380549089699618, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.27327275
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &51784774 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1212498305193556, guid: d989ad5707cdb4148b79eac98d22a8b3,
-    type: 2}
-  m_PrefabInternal: {fileID: 51784773}
---- !u!114 &51784775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 51784774}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcc5b3dad07f4806b84f3c69cb1d8040, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _tooltipGuiSocket: {fileID: 1069517275}
-  _imageGuiSocket: {fileID: 705507934}
-  _activationButton: 102
-  _readingBookAudioSource: {fileID: 51784776}
-  _displayImage: {fileID: 21300000, guid: 6a400e6692273ea409d048fc25d78f26, type: 3}
---- !u!82 &51784776 stripped
-AudioSource:
-  m_PrefabParentObject: {fileID: 82845474569830046, guid: d989ad5707cdb4148b79eac98d22a8b3,
-    type: 2}
-  m_PrefabInternal: {fileID: 51784773}
 --- !u!1001 &62789103
 Prefab:
   m_ObjectHideFlags: 0
@@ -1474,15 +1414,13 @@ Prefab:
       propertyPath: m_Name
       value: Note - Dining table
       objectReference: {fileID: 0}
-    - target: {fileID: 114204651120938258, guid: d989ad5707cdb4148b79eac98d22a8b3,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: _noteText
       value: "\u2026 I feel so inspired here! I am glad that I made this decision
         to move here. In the last weeks, I wrote a few new melodies, that I am sure
         Academy will like! Now they will have to admit my talent!.."
       objectReference: {fileID: 0}
-    - target: {fileID: 114204651120938258, guid: d989ad5707cdb4148b79eac98d22a8b3,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: _skin
       value: 
       objectReference: {fileID: 11400000, guid: 4a2bc93c6c9288a40b43e8592358a37d,
@@ -1523,8 +1461,8 @@ Prefab:
       value: 
       objectReference: {fileID: 2100000, guid: b0a68c5a088ceeb4590f0b9ef4292bc6, type: 2}
     m_RemovedComponents:
-    - {fileID: 64461077451460838, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
-    - {fileID: 114204651120938258, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &167595020 stripped
@@ -8398,15 +8336,13 @@ Prefab:
       propertyPath: m_Center.y
       value: 0.0009765625
       objectReference: {fileID: 0}
-    - target: {fileID: 114204651120938258, guid: d989ad5707cdb4148b79eac98d22a8b3,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: _noteText
       value: "List of the books to read:\r\n\n\r\n1.\u201CMurder on the Orient Express\u201D
         by Agatha Christie\r\n\n2.\u201CNorthanger Abbey\u201D by Jane Austen\r\n\n3.\u201CFrankenstein\u201D
         by Mary Shelley\r\n\n4.\u201CThe Canterville Ghost\u201D by Oscar Wilde\r\n"
       objectReference: {fileID: 0}
-    - target: {fileID: 114204651120938258, guid: d989ad5707cdb4148b79eac98d22a8b3,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: _skin
       value: 
       objectReference: {fileID: 11400000, guid: 4a2bc93c6c9288a40b43e8592358a37d,
@@ -8422,8 +8358,8 @@ Prefab:
       value: 
       objectReference: {fileID: 2100000, guid: cfa7091fb76866341b520d3c01050494, type: 2}
     m_RemovedComponents:
-    - {fileID: 64461077451460838, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
-    - {fileID: 114204651120938258, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &761815377 stripped
@@ -9509,14 +9445,12 @@ Prefab:
       propertyPath: m_Center.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114204651120938258, guid: d989ad5707cdb4148b79eac98d22a8b3,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: _skin
       value: 
       objectReference: {fileID: 11400000, guid: 4a2bc93c6c9288a40b43e8592358a37d,
         type: 2}
-    - target: {fileID: 114204651120938258, guid: d989ad5707cdb4148b79eac98d22a8b3,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: _noteText
       value: "\u2026 This house is full of old things, that, apparently, were left
         by its old owners. Some ancient books, vases, paintings\u2026  Paintings are
@@ -9534,8 +9468,8 @@ Prefab:
       value: 
       objectReference: {fileID: 2100000, guid: e6d323f0595f67c459340e3718adb8b2, type: 2}
     m_RemovedComponents:
-    - {fileID: 64461077451460838, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
-    - {fileID: 114204651120938258, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
+    - {fileID: 0}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: d989ad5707cdb4148b79eac98d22a8b3, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &825404705 stripped
