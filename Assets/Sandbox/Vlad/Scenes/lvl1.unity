@@ -7373,7 +7373,7 @@ MonoBehaviour:
   _doorToOpen: {fileID: 1607578671}
   _activationButton: 101
   _soundOnPickUpAudioSource: {fileID: 2044164939}
-  _codeToOpenDoor: 1111
+  _codeToUnlockDoor: 
 --- !u!114 &1607578671 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114900971364571320, guid: 78797e3b03357cc45bf7c0df2a3b970a,
@@ -7504,12 +7504,12 @@ Prefab:
     - target: {fileID: 114900971364571320, guid: 78797e3b03357cc45bf7c0df2a3b970a,
         type: 2}
       propertyPath: _toolTipText
-      value: To open press E
+      value: To open press
       objectReference: {fileID: 0}
     - target: {fileID: 114900971364571320, guid: 78797e3b03357cc45bf7c0df2a3b970a,
         type: 2}
       propertyPath: _lockedStateTooltip
-      value: To unlock press E
+      value: To unlock press
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 78797e3b03357cc45bf7c0df2a3b970a, type: 2}

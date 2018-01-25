@@ -9,7 +9,7 @@ namespace InteractableObjects.Doors
     {
         [SerializeField] private TooltipGuiSocket _tooltipGuiSocket;
         [SerializeField] private string _toolTipText;
-        [SerializeField] private KeyCode _activationButton = KeyCode.Mouse0;
+        [SerializeField] private KeyCode _activationButton = KeyCode.E;
         [SerializeField] private AudioSource _closingDoorAudioSource;
         [SerializeField] private AudioSource _openingDoorAudioSource;
 
@@ -21,7 +21,7 @@ namespace InteractableObjects.Doors
             _animator = transform.parent.parent.GetComponent<Animator>();
         }
 
-        public void OnGazeEnter() => _tooltipGuiSocket.Display(_toolTipText);
+        public void OnGazeEnter() => _tooltipGuiSocket.Display($"{_toolTipText} {_activationButton}");
         public void OnGazeExit() => _tooltipGuiSocket.Flush();
         
         public KeyCode ActivationKeyCode() => _activationButton;
