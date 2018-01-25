@@ -52,7 +52,7 @@ namespace InteractableObjects.Doors
 
             _doorClosed = false;
 
-            StartCoroutine(LoadScene.ChangeLevel());
+            StartCoroutine(LoadScene.LoadNextLevel());
         }
 
         private void CloseDoor()
