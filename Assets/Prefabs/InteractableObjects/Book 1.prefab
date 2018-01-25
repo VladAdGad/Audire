@@ -164,7 +164,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -188,11 +188,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcc5b3dad07f4806b84f3c69cb1d8040, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _tooltipGuiSocket: {fileID: 0}
+  _imageGuiSocket: {fileID: 0}
   _activationButton: 102
-  _skin: {fileID: 11400000, guid: 77d68fcc06fea3f40853ae3f92acb13a, type: 2}
-  _bookText: "\u201CI came out this way years ago and spent three days in Stamboul
-    then.\u201D\r\n\n\u201COh! I see. Well, I may say I\u2019m very glad you are going
-    right through, because I am.\u201D\r\n\nHe made a kind of clumsy little bow, flushing
-    a little as he did so.\r\n\n\u201CHe is susceptible, our Colonel,\u201D thought
-    Hercule Poirot to himself with some amusement. \u201CThe train, it is as dangerous
-    as a sea voyage!\u201D\r\n"
+  _readingBookAudioSource: {fileID: 0}
+  _displayImage: {fileID: 0}
