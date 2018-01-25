@@ -23,7 +23,10 @@ namespace InteractableObjects.Doors
         public void UnlockDoor() => _doorLocked = false;
 
 
-        public void OnGazeEnter() => _tooltipGuiSocket.Display(_doorLocked ? _lockedStateTooltip : _toolTipText);
+        public void OnGazeEnter() => _tooltipGuiSocket.Display(_doorLocked
+            ? $"{_lockedStateTooltip} {_activationButton}"
+            : $"{_toolTipText} {_activationButton}");
+
         public void OnGazeExit() => _tooltipGuiSocket.Flush();
 
 
@@ -42,7 +45,7 @@ namespace InteractableObjects.Doors
         private void OpenDoor()
         {
             if (IsDoorInMotion()) return;
-            
+
             _animator.SetBool("open", true);
             _openingDoorAudioSource.Play();
 

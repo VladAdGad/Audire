@@ -8,7 +8,8 @@ namespace InteractableObjects.Doors
     public class DoorBehaviour : MonoBehaviour, IGazable, IPressable
     {
         [SerializeField] private TooltipGuiSocket _tooltipGuiSocket;
-        [SerializeField] private string _toolTipText;
+        [SerializeField] private string _toolTipOpenText;
+        [SerializeField] private string _toolTipCloseText;
         [SerializeField] private KeyCode _activationButton = KeyCode.E;
         [SerializeField] private AudioSource _closingDoorAudioSource;
         [SerializeField] private AudioSource _openingDoorAudioSource;
@@ -21,9 +22,12 @@ namespace InteractableObjects.Doors
             _animator = transform.parent.parent.GetComponent<Animator>();
         }
 
-        public void OnGazeEnter() => _tooltipGuiSocket.Display($"{_toolTipText} {_activationButton}");
+        public void OnGazeEnter() => _tooltipGuiSocket.Display(_doorClosed
+            ? $"{_toolTipOpenText} {_activationButton}"
+            : $"{_toolTipCloseText} {_activationButton}");
+
         public void OnGazeExit() => _tooltipGuiSocket.Flush();
-        
+
         public KeyCode ActivationKeyCode() => _activationButton;
 
         public void OnPress()
@@ -32,12 +36,12 @@ namespace InteractableObjects.Doors
                 OpenDoor();
             else
                 CloseDoor();
-        }  
-        
+        }
+
         private void OpenDoor()
         {
             if (IsDoorInMotion()) return;
-            
+
             _animator.SetBool("open", true);
             _openingDoorAudioSource.Play();
 
@@ -58,7 +62,7 @@ namespace InteractableObjects.Doors
         {
             return _doorClosed;
         }
-        
+
         private bool IsDoorInMotion() => _openingDoorAudioSource.isPlaying || _closingDoorAudioSource.isPlaying;
 
         private void OnValidate()
