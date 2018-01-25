@@ -1,4 +1,4 @@
-﻿using GUInterface;
+﻿using Gui;
 using UnityEngine;
 
 namespace EventManagement

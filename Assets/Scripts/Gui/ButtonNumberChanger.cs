@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace GUInterface
+namespace Gui
 {
     public class ButtonNumberChanger : MonoBehaviour
     {

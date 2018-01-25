@@ -1,5 +1,5 @@
 ﻿using EventManagement;
-using GUInterface;
+using Gui;
 using Player;
 using UnityEngine;
 

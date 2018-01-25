@@ -1,4 +1,4 @@
-﻿namespace GUInterface
+﻿namespace Gui.Interfaces
 {
     public interface IGuiSocket
     {

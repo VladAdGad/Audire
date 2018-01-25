@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+﻿using Gui.Interfaces;
+using UnityEngine;
 using UnityEngine.UI;
 
-namespace GUInterface
+namespace Gui
 {
     public class TooltipGuiSocket : MonoBehaviour, IGuiSocket
     {

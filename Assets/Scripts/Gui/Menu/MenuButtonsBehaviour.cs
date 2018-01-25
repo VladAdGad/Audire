@@ -1,10 +1,10 @@
-﻿using Player;
+﻿using Gui.Interfaces;
+using Player;
 using UnityEngine;
-using UnityEngine.Assertions;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
-namespace GUInterface
+namespace Gui.Menu
 {
     public class MenuButtonsBehaviour : MonoBehaviour, IButtonBehaviour
     {
