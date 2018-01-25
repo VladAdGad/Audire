@@ -42,7 +42,7 @@ namespace Sandbox.Tests.KeyLockedDoor.Scripts
 
         private void OpenDoor()
         {
-            if (isDoorInMotion()) return;
+            if (IsDoorInMotion()) return;
             
             _animator.SetBool("open", true);
             _openingDoorAudioSource.Play();
@@ -52,7 +52,7 @@ namespace Sandbox.Tests.KeyLockedDoor.Scripts
 
         private void CloseDoor()
         {
-            if (isDoorInMotion()) return;
+            if (IsDoorInMotion()) return;
 
             _closingDoorAudioSource.Play();
             _animator.SetBool("open", false);
@@ -62,7 +62,7 @@ namespace Sandbox.Tests.KeyLockedDoor.Scripts
 
         //TODO @Vlad change this costyl na triggery po okonchaniju animacji, sozdaj boolean id door closed i mienaj s
         //pomoshciu metod etot boolin, a w etoj wozwrashchaj sostojanije
-        private bool isDoorInMotion() => _openingDoorAudioSource.isPlaying || _closingDoorAudioSource.isPlaying;
+        private bool IsDoorInMotion() => _openingDoorAudioSource.isPlaying || _closingDoorAudioSource.isPlaying;
 
 
         private void Start() => _animator = transform.parent.parent.GetComponent<Animator>();
