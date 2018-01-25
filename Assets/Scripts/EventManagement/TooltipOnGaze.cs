@@ -1,4 +1,4 @@
-﻿using Sandbox.Tests.GuiSockets.Scripts.GUISockets;
+﻿using GUInterface;
 using UnityEngine;
 
 namespace EventManagement

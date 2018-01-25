@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace Sandbox.Tests.GuiSockets.Scripts.GUISockets
+namespace GUInterface
 {
     public class TooltipGuiSocket : MonoBehaviour, IGuiSocket
     {

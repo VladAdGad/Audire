@@ -1,4 +1,4 @@
-﻿namespace Sandbox.Tests.GuiSockets.Scripts.GUISockets
+﻿namespace GUInterface
 {
     public interface IGuiSocket
     {

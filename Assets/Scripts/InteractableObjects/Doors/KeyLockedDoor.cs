@@ -1,9 +1,9 @@
 ﻿using EventManagement;
-using Sandbox.Tests.GuiSockets.Scripts.GUISockets;
+using GUInterface;
 using UnityEngine;
 using UnityEngine.Assertions;
 
-namespace Sandbox.Tests.KeyLockedDoor.Scripts
+namespace InteractableObjects.Doors
 {
     public class KeyLockedDoor : MonoBehaviour, IGazable, IPressable
     {
