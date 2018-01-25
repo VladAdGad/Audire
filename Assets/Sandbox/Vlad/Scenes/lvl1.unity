@@ -1408,7 +1408,7 @@ RectTransform:
   - {fileID: 915364716}
   - {fileID: 1128413422}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3809,53 +3809,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 665295177}
   m_Mesh: {fileID: 4300000, guid: aa588f75104cb8042acf31263cd73619, type: 3}
---- !u!1001 &673812647
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4722188757057764, guid: 9026b644ebff51b4a888464cc3b704fc, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -13.982
-      objectReference: {fileID: 0}
-    - target: {fileID: 4722188757057764, guid: 9026b644ebff51b4a888464cc3b704fc, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -4.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4722188757057764, guid: 9026b644ebff51b4a888464cc3b704fc, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -23.135
-      objectReference: {fileID: 0}
-    - target: {fileID: 4722188757057764, guid: 9026b644ebff51b4a888464cc3b704fc, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0.5015597
-      objectReference: {fileID: 0}
-    - target: {fileID: 4722188757057764, guid: 9026b644ebff51b4a888464cc3b704fc, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0.49843544
-      objectReference: {fileID: 0}
-    - target: {fileID: 4722188757057764, guid: 9026b644ebff51b4a888464cc3b704fc, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.49843544
-      objectReference: {fileID: 0}
-    - target: {fileID: 4722188757057764, guid: 9026b644ebff51b4a888464cc3b704fc, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.5015597
-      objectReference: {fileID: 0}
-    - target: {fileID: 4722188757057764, guid: 9026b644ebff51b4a888464cc3b704fc, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114997947934341134, guid: 9026b644ebff51b4a888464cc3b704fc,
-        type: 2}
-      propertyPath: _tooltipGuiSocket
-      value: 
-      objectReference: {fileID: 768926307}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 9026b644ebff51b4a888464cc3b704fc, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &678856707
 GameObject:
   m_ObjectHideFlags: 0
@@ -3961,7 +3914,7 @@ Transform:
   - {fileID: 774937623}
   - {fileID: 1085974461}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &718779222
 GameObject:
@@ -7400,6 +7353,33 @@ Transform:
   m_PrefabParentObject: {fileID: 4104894862659832, guid: a91e4e7b9b2d28641af044c8d8d3627a,
     type: 2}
   m_PrefabInternal: {fileID: 1567650410}
+--- !u!1 &1607578668 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1579341967644588, guid: 78797e3b03357cc45bf7c0df2a3b970a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1647502502}
+--- !u!114 &1607578670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1607578668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba2a3bb4ddbe4e32a5cc9ed6192f1ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lockPanel: {fileID: 361644850}
+  _doorToOpen: {fileID: 1607578671}
+  _activationButton: 101
+  _soundOnPickUpAudioSource: {fileID: 2044164939}
+  _codeToOpenDoor: 1111
+--- !u!114 &1607578671 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114900971364571320, guid: 78797e3b03357cc45bf7c0df2a3b970a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1647502502}
+  m_Script: {fileID: 11500000, guid: d23d2cce92454881ba5029585319397a, type: 3}
 --- !u!1 &1608520786
 GameObject:
   m_ObjectHideFlags: 0
@@ -7514,7 +7494,22 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4883217839863294, guid: 78797e3b03357cc45bf7c0df2a3b970a, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114900971364571320, guid: 78797e3b03357cc45bf7c0df2a3b970a,
+        type: 2}
+      propertyPath: _tooltipGuiSocket
+      value: 
+      objectReference: {fileID: 768926307}
+    - target: {fileID: 114900971364571320, guid: 78797e3b03357cc45bf7c0df2a3b970a,
+        type: 2}
+      propertyPath: _toolTipText
+      value: To open press E
+      objectReference: {fileID: 0}
+    - target: {fileID: 114900971364571320, guid: 78797e3b03357cc45bf7c0df2a3b970a,
+        type: 2}
+      propertyPath: _lockedStateTooltip
+      value: To unlock press E
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 78797e3b03357cc45bf7c0df2a3b970a, type: 2}

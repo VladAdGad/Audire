@@ -12,10 +12,10 @@ namespace InteractableObjects.Doors
         [SerializeField] private LockDoorBehaviour _doorToOpen;
         [SerializeField] private KeyCode _activationButton = KeyCode.E;
         [SerializeField] private AudioSource _soundOnPickUpAudioSource;
-        [SerializeField] private string _codeToOpenDoor;
-        private string _curCode = "";
+        [SerializeField] private string _codeToUnlockDoor;
+        
         private IEnumerable<Button> _buttonsOnLockPanel;
-        private bool _kostyl = false;
+        private string _currentCode = "";
 
         private void Start()
         {
@@ -27,11 +27,10 @@ namespace InteractableObjects.Doors
         
         public void OnPress()
         {
-            _kostyl = !_kostyl;
-            PlayerBehaviour.PlayerInteractWith(!_kostyl);
-            _lockPanel.SetActive(_kostyl);
+            PlayerBehaviour.PlayerInteractWith(_lockPanel.activeSelf);
+            _lockPanel.SetActive(!_lockPanel.activeSelf);
             
-            if (GetStateCurCode())
+            if (IsCodeGood())
             {
                 _doorToOpen.UnlockDoor();
                 _soundOnPickUpAudioSource.Play();
@@ -39,20 +38,20 @@ namespace InteractableObjects.Doors
                 Destroy(this);
             }
 
-            _curCode = "";
+            _currentCode = "";
         }
 
-        private bool GetStateCurCode()
+        private bool IsCodeGood()
         {
             foreach (Button curButton in _buttonsOnLockPanel)
             {
-                _curCode += curButton.GetComponentInChildren<Text>().text;
+                _currentCode += curButton.GetComponentInChildren<Text>().text;
             }
 
-            return _curCode.Equals(_codeToOpenDoor);
+            return _currentCode.Equals(_codeToUnlockDoor);
         }
-        
-        private IEnumerable<Button> GetButtons(IEnumerable<Button> b)
+
+        private static IEnumerable<Button> GetButtons(IEnumerable<Button> b)
         {
             LinkedList<Button> buttons = new LinkedList<Button>();
 
