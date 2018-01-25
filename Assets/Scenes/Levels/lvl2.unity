@@ -236,6 +236,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114997947934341134, guid: 9026b644ebff51b4a888464cc3b704fc,
+        type: 2}
+      propertyPath: _tooltipGuiSocket
+      value: 
+      objectReference: {fileID: 1069517275}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9026b644ebff51b4a888464cc3b704fc, type: 2}
   m_IsPrefabParent: 0
@@ -7450,6 +7455,11 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1.1866416
       objectReference: {fileID: 0}
+    - target: {fileID: 114997947934341134, guid: 9026b644ebff51b4a888464cc3b704fc,
+        type: 2}
+      propertyPath: _tooltipGuiSocket
+      value: 
+      objectReference: {fileID: 1069517275}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9026b644ebff51b4a888464cc3b704fc, type: 2}
   m_IsPrefabParent: 0
@@ -13105,12 +13115,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2e56118484113a44faa3c8e83481b418, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &1358797373 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114439728070532360, guid: 9026b644ebff51b4a888464cc3b704fc,
-    type: 2}
-  m_PrefabInternal: {fileID: 589740597}
-  m_Script: {fileID: 11500000, guid: b79eebd3e6e44ff59a73c71f2eeed4b1, type: 3}
 --- !u!1001 &1360523904
 Prefab:
   m_ObjectHideFlags: 0
@@ -15541,7 +15545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _triggerables:
-  - {fileID: 1358797373}
+  - {fileID: 0}
   - {fileID: 1388009871}
   - {fileID: 489548031}
   _disableTriggerAfterActivate: 0
