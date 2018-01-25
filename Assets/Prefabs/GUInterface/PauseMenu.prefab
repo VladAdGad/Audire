@@ -373,8 +373,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee0c026febd348c4bfb01538f074767c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _imageGuiSocket: {fileID: 0}
-  _tooltipGuiSocket: {fileID: 0}
   _pauseMenuCanvas: {fileID: 224557392560321154}
   _unpaused: {fileID: 24500006, guid: 8b30800e82bd9ed44865f7d03224fca4, type: 2}
   _paused: {fileID: 245791850664449206, guid: 8b30800e82bd9ed44865f7d03224fca4, type: 2}

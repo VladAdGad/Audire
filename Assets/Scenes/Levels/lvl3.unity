@@ -1082,8 +1082,13 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4857363227948464, guid: 158076de7d533bd4ea1768b132ca1e87, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114214313319214874, guid: 158076de7d533bd4ea1768b132ca1e87,
+        type: 2}
+      propertyPath: _tooltipGuiSocket
+      value: 
+      objectReference: {fileID: 280262050}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 158076de7d533bd4ea1768b132ca1e87, type: 2}
   m_IsPrefabParent: 0
@@ -4116,8 +4121,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 91770490}
   - {fileID: 2100954036}
+  - {fileID: 91770490}
   m_Father: {fileID: 1439681821}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4372,7 +4377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tooltipGuiSocket: {fileID: 280262050}
   _imageGuiSocket: {fileID: 661370142}
-  _activationButton: 102
+  _activationButton: 101
   _readingBookAudioSource: {fileID: 436268091}
   _displayImage: {fileID: 21300000, guid: 2af26bf4317717342b7898b63929699b, type: 3}
 --- !u!82 &436268091 stripped
@@ -6926,6 +6931,16 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114725904285613514, guid: 78797e3b03357cc45bf7c0df2a3b970a,
+        type: 2}
+      propertyPath: _lockPanel
+      value: 
+      objectReference: {fileID: 1487194995}
+    - target: {fileID: 114536239688999264, guid: 78797e3b03357cc45bf7c0df2a3b970a,
+        type: 2}
+      propertyPath: _tooltipGuiSocket
+      value: 
+      objectReference: {fileID: 280262050}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 78797e3b03357cc45bf7c0df2a3b970a, type: 2}
   m_IsPrefabParent: 0
@@ -14097,6 +14112,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 89c51683c6044a84eb49f914f6d0db8a, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1487194995 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1551633973164410, guid: 89c51683c6044a84eb49f914f6d0db8a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1487194994}
 --- !u!1 &1488176033 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100098, guid: 354b79b07e6d4ec44bc91c3b459f43de, type: 3}
@@ -14503,7 +14523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tooltipGuiSocket: {fileID: 280262050}
   _imageGuiSocket: {fileID: 661370142}
-  _activationButton: 102
+  _activationButton: 101
   _readingBookAudioSource: {fileID: 1527660611}
   _displayImage: {fileID: 21300000, guid: 43dc4598881fad04d93edb2efa9ef2c3, type: 3}
 --- !u!82 &1527660611 stripped
@@ -19070,7 +19090,6 @@ GameObject:
   - component: {fileID: 1982680771}
   - component: {fileID: 1982680774}
   - component: {fileID: 1982680773}
-  - component: {fileID: 1982680772}
   m_Layer: 0
   m_Name: Particle System
   m_TagString: Untagged
@@ -19085,30 +19104,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1982680770}
   m_LocalRotation: {x: -0, y: 0.7267505, z: -0, w: 0.6869016}
-  m_LocalPosition: {x: 6.8, y: -1.17, z: 3.19}
+  m_LocalPosition: {x: 131.57, y: -0.52, z: 124.42}
   m_LocalScale: {x: 10, y: 5, z: 10}
   m_Children: []
   m_Father: {fileID: 875845306}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 93.229004, z: 0}
---- !u!114 &1982680772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1982680770}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ee9af5f0769444259c39a59205758b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scale: 0.6
-  intensity: 0.6
-  alpha: 0.6
-  alphasub: 0.05
-  pow: 0.6
-  color: {r: 1, g: 0.95, b: 0.9, a: 1}
-  fogMaterial: {fileID: 2100000, guid: 015ded2f9331e4ffdb975fd20910ea0c, type: 2}
 --- !u!199 &1982680773
 ParticleSystemRenderer:
   serializedVersion: 4
@@ -22872,7 +22873,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tooltipGuiSocket: {fileID: 280262050}
   _imageGuiSocket: {fileID: 661370142}
-  _activationButton: 102
+  _activationButton: 101
   _readingBookAudioSource: {fileID: 2011166699}
   _displayImage: {fileID: 21300000, guid: 4d26c5c38b0e2f44abd184283663de9e, type: 3}
 --- !u!82 &2011166699 stripped
@@ -23645,8 +23646,13 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4866552106583038, guid: 34c6e59cca1bb734293f7f3ee73e99f3, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114374002596031938, guid: 34c6e59cca1bb734293f7f3ee73e99f3,
+        type: 2}
+      propertyPath: _tooltipGuiSocket
+      value: 
+      objectReference: {fileID: 280262050}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34c6e59cca1bb734293f7f3ee73e99f3, type: 2}
   m_IsPrefabParent: 0
@@ -23808,7 +23814,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tooltipGuiSocket: {fileID: 280262050}
   _imageGuiSocket: {fileID: 661370142}
-  _activationButton: 102
+  _activationButton: 101
   _readingBookAudioSource: {fileID: 2127514848}
   _displayImage: {fileID: 21300000, guid: febdad7c21170114490afbbc7ff95e6d, type: 3}
 --- !u!82 &2127514848 stripped

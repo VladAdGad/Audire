@@ -1,124 +1,73 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using EventManagement;
-using EventManagement.Interfaces;
-using Player;
+﻿using EventManagement.Interfaces;
+using Gui;
 using SceneMenager;
 using UnityEngine;
 using UnityEngine.Assertions;
-using UnityEngine.UI;
 
 namespace InteractableObjects.Doors
 {
-    [RequireComponent(typeof(GameObject))]
     public class LockDoorBehaviour : MonoBehaviour, IGazable, IPressable
     {
-        [SerializeField] private GameObject _lockPanel;
-        [SerializeField] private GUISkin _skin;
+        [SerializeField] private TooltipGuiSocket _tooltipGuiSocket;
+        [SerializeField] private string _toolTipText;
+        [SerializeField] private string _lockStateTooltip;
         [SerializeField] private KeyCode _activationButton = KeyCode.E;
-        [SerializeField] private string _codeToOpenDoor;
-        [SerializeField] private AudioSource _closingDoorAudioSource;
+
         [SerializeField] private AudioSource _openingDoorAudioSource;
-        private string _curCode = "";
-        private bool _isCodeMatch = false;
-        private bool _isOpeningDoor = false;
-        private bool _isLookingAtDoor = false;
-        private bool _stateOfDoor = false;
+        [SerializeField] private AudioSource _closingDoorAudioSource;
+
         private Animator _animator;
-        private IEnumerable<Button> _curButtons;
-        private IEnumerator _loadNextScene;
 
-        private void Start()
-        {
-            _animator = transform.parent.parent.GetComponent<Animator>();
-            _curButtons = GetButtons(_lockPanel.GetComponentsInChildren<Button>());
-        }
+        private bool _doorLocked = true;
+        private bool _doorClosed = true;
 
-        private void OnGUI()
-        {
-            if (_isLookingAtDoor)
-            {
-                GUI.skin = _skin;
-                GUI.TextArea(TipToInteractReactangle(), "FOR OPEN PRESS " + _activationButton);
-            }
-        }
+        private void Start() => _animator = transform.parent.parent.GetComponent<Animator>();
 
-        private static IEnumerable<Button> GetButtons(IEnumerable<Button> b)
-        {
-            LinkedList<Button> buttons = new LinkedList<Button>();
+        public void OnGazeEnter() =>
+            _tooltipGuiSocket.Display(
+                _doorLocked ? $"{_lockStateTooltip} {_activationButton}" : $"{_toolTipText} {_activationButton}");
 
-            foreach (Button button in b)
-            {
-                buttons.AddLast(button);
-                button.GetComponentInChildren<Text>().text = Random.Range(0, 10).ToString();
-            }
+        public void OnGazeExit() => _tooltipGuiSocket.Flush();
 
-            return buttons;
-        }
-
-        private static Rect TipToInteractReactangle() => new Rect(
-            Screen.width / 2 - Screen.width / 6,
-            Screen.height / 2 + Screen.height / 4,
-            Screen.width / 3f,
-            Screen.width / 2 - 2 * Screen.width / 5);
-
-        public void OnGazeEnter() => _isLookingAtDoor = true;
-        public void OnGazeExit() => _isLookingAtDoor = false;
         public KeyCode ActivationKeyCode() => _activationButton;
+        
+        public void UnlockDoor() => _doorLocked = false;
 
         public void OnPress()
         {
-            _isOpeningDoor = !_isOpeningDoor;
-            _isCodeMatch = GetStateCurCode();
+            if (_doorLocked) return;
 
-            if (_isCodeMatch)
-            {
-                _stateOfDoor = !_stateOfDoor;
-                _animator.SetBool("open", _stateOfDoor);
-                PlaySound(_stateOfDoor);
-                StartCoroutine(LoadScene.ChangeLevel());
-            }
+            if (_doorClosed)
+                OpenDoor();
             else
-            {
-                _lockPanel.SetActive(_isOpeningDoor);
-                PlayerBehaviour.PlayerInteractWith(!_isOpeningDoor);
-            }
-
-            _curCode = "";
+                CloseDoor();
         }
 
-        private void PlaySound(bool stateOfDoor)
+        private void OpenDoor()
         {
-            if (stateOfDoor)
-            {
-                if (!_openingDoorAudioSource.isPlaying)
-                {
-                    _openingDoorAudioSource.Play();
-                }
-            }
-            else
-            {
-                if (!_closingDoorAudioSource.isPlaying)
-                {
-                    _closingDoorAudioSource.Play();
-                }
-            }
+            if (IsDoorInMotion()) return;
+
+            _animator.SetBool("open", true);
+            _openingDoorAudioSource.Play();
+
+            _doorClosed = false;
+
+            StartCoroutine(LoadScene.LoadNextLevel());
         }
 
-        private bool GetStateCurCode()
+        private void CloseDoor()
         {
-            foreach (Button curButton in _curButtons)
-            {
-                _curCode += curButton.GetComponentInChildren<Text>().text;
-            }
+            if (IsDoorInMotion()) return;
 
-            return _curCode.Equals(_codeToOpenDoor);
+            _closingDoorAudioSource.Play();
+            _animator.SetBool("open", false);
+
+            _doorClosed = true;
         }
 
-        private void OnValidate()
-        {
-            Assert.IsNotNull(_skin);
-            Assert.AreNotEqual(_activationButton, KeyCode.None);
-        }
+        private bool IsDoorInMotion() => _openingDoorAudioSource.isPlaying || _closingDoorAudioSource.isPlaying;
+
+        private void OnValidate() =>
+            Assert.AreNotEqual(_activationButton, KeyCode.None, "Door Actiation button must not be null.");
     }
 }

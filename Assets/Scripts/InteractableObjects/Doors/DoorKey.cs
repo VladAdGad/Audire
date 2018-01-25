@@ -1,12 +1,11 @@
-﻿using EventManagement;
-using EventManagement.Interfaces;
+﻿using EventManagement.Interfaces;
 using UnityEngine;
 
 namespace InteractableObjects.Doors
 {
     public class DoorKey : MonoBehaviour, IPressable
     {
-        [SerializeField] private InteractableObjects.Doors.KeyLockedDoor _doorToOpen;
+        [SerializeField] private KeyLockedDoor _doorToOpen;
         [SerializeField] private KeyCode _activationButton = KeyCode.E;
         [SerializeField] private AudioSource _soundOnPickUpAudioSource;
 

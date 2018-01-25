@@ -9,9 +9,9 @@ namespace SceneMenager
     {
         private const int NextScene = 1;
 
-        public static IEnumerator ChangeLevel()
+        public static IEnumerator LoadNextLevel()
         {
-            PlayerBehaviour.PlayerInteractWith(false);
+            PlayerBehaviour.PlayerOnPause(false);
             float fadeTime = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Fading>().BeginFade(1);
             yield return new WaitForSeconds(fadeTime);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + NextScene);
