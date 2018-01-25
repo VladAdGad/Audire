@@ -16,7 +16,6 @@ namespace InteractableObjects.Doors
         [SerializeField] private AudioSource _openingDoorAudioSource;
         [SerializeField] private AudioSource _closingDoorAudioSource;
 
-        private bool _stateOfDoor = false;
         private Animator _animator;
 
         private bool _doorLocked = true;
