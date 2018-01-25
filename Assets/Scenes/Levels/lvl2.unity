@@ -14538,6 +14538,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114738980514799656, guid: fd7cdf75cc971e24394f35c75998f6da,
+        type: 2}
+      propertyPath: _tooltipGuiSocket
+      value: 
+      objectReference: {fileID: 1069517275}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fd7cdf75cc971e24394f35c75998f6da, type: 2}
   m_IsPrefabParent: 0

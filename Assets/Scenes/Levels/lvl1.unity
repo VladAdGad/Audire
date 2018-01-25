@@ -1113,6 +1113,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 12.682046
       objectReference: {fileID: 0}
+    - target: {fileID: 114957001371633622, guid: d77cf4653c8e51c4dab34b6f9971631f,
+        type: 2}
+      propertyPath: _tooltipGuiSocket
+      value: 
+      objectReference: {fileID: 768926307}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d77cf4653c8e51c4dab34b6f9971631f, type: 2}
   m_IsPrefabParent: 0
@@ -4593,8 +4598,8 @@ Transform:
   m_LocalScale: {x: 0.057117026, y: 0.057117056, z: 0.057117056}
   m_Children:
   - {fileID: 544154217}
-  - {fileID: 1433062016}
   - {fileID: 1534911749}
+  - {fileID: 1433062016}
   m_Father: {fileID: 718073821}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7166,7 +7171,7 @@ Transform:
   - {fileID: 1816945865}
   - {fileID: 1330719268}
   m_Father: {fileID: 871483262}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1560515952
 Transform:

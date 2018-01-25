@@ -1082,13 +1082,13 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4857363227948464, guid: 158076de7d533bd4ea1768b132ca1e87, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114214313319214874, guid: 158076de7d533bd4ea1768b132ca1e87,
         type: 2}
-      propertyPath: _activationButton
-      value: 101
-      objectReference: {fileID: 0}
+      propertyPath: _tooltipGuiSocket
+      value: 
+      objectReference: {fileID: 280262050}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 158076de7d533bd4ea1768b132ca1e87, type: 2}
   m_IsPrefabParent: 0
@@ -4121,8 +4121,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 91770490}
   - {fileID: 2100954036}
+  - {fileID: 91770490}
   m_Father: {fileID: 1439681821}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -23665,8 +23665,13 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4866552106583038, guid: 34c6e59cca1bb734293f7f3ee73e99f3, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114374002596031938, guid: 34c6e59cca1bb734293f7f3ee73e99f3,
+        type: 2}
+      propertyPath: _tooltipGuiSocket
+      value: 
+      objectReference: {fileID: 280262050}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34c6e59cca1bb734293f7f3ee73e99f3, type: 2}
   m_IsPrefabParent: 0
