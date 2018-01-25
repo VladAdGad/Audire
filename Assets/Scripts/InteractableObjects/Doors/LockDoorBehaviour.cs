@@ -10,7 +10,7 @@ namespace InteractableObjects.Doors
     {
         [SerializeField] private TooltipGuiSocket _tooltipGuiSocket;
         [SerializeField] private string _toolTipText;
-        [SerializeField] private string _lockedStateTooltip;
+        [SerializeField] private string _lockStateTooltip;
         [SerializeField] private KeyCode _activationButton = KeyCode.E;
 
         [SerializeField] private AudioSource _openingDoorAudioSource;
@@ -25,7 +25,7 @@ namespace InteractableObjects.Doors
 
         public void OnGazeEnter() =>
             _tooltipGuiSocket.Display(
-                _doorLocked ? $"{_lockedStateTooltip} {_activationButton}" : $"{_toolTipText} {_activationButton}");
+                _doorLocked ? $"{_lockStateTooltip} {_activationButton}" : $"{_toolTipText} {_activationButton}");
 
         public void OnGazeExit() => _tooltipGuiSocket.Flush();
 
