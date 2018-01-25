@@ -1,5 +1,4 @@
-﻿using EventManagement;
-using EventManagement.Interfaces;
+﻿using EventManagement.Interfaces;
 using Gui;
 using Player;
 using UnityEngine;
@@ -10,7 +9,7 @@ namespace InteractableObjects
     {
         [Header("Gui Sockets")] [SerializeField] private TooltipGuiSocket _tooltipGuiSocket;
         [SerializeField] private ImageGuiSocket _imageGuiSocket;
-        [Space(10)] [SerializeField] private KeyCode _activationButton = KeyCode.F;
+        [Space(10)] [SerializeField] private KeyCode _activationButton = KeyCode.E;
         [SerializeField] private AudioSource _readingBookAudioSource;
 
         [SerializeField] private Sprite _displayImage;
