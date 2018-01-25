@@ -141,10 +141,12 @@ GameObject:
   - component: {fileID: 4039091160795932}
   - component: {fileID: 33885936070838842}
   - component: {fileID: 23093532574981466}
-  - component: {fileID: 82574723143512606}
-  - component: {fileID: 82846488519965730}
-  - component: {fileID: 65377402299474744}
-  - component: {fileID: 114900971364571320}
+  - component: {fileID: 82936578533065514}
+  - component: {fileID: 82647479419039160}
+  - component: {fileID: 82479868923937726}
+  - component: {fileID: 65576051562936716}
+  - component: {fileID: 114536239688999264}
+  - component: {fileID: 114725904285613514}
   m_Layer: 0
   m_Name: Door_Knob
   m_TagString: Untagged
@@ -191,8 +193,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1579341967644588}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.1609161, y: 0.0518, z: -0.7092}
-  m_LocalScale: {x: 1, y: 0.61692804, z: 1.0203217}
+  m_LocalPosition: {x: -1.1609161, y: 0.042702373, z: -0.7100078}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4913272028162242}
   m_RootOrder: 0
@@ -284,8 +286,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1521254356981498}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 108.57045, y: 1.9437168, z: 96.56612}
-  m_LocalScale: {x: 1.1708993, y: 0.7836532, z: 1.1719292}
+  m_LocalPosition: {x: -11.950237, y: -4.232, z: -19.932116}
+  m_LocalScale: {x: 1.1708993, y: 0.7836513, z: 1.1719273}
   m_Children:
   - {fileID: 4975430272755824}
   - {fileID: 4913272028162242}
@@ -651,7 +653,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1579341967644588}
   m_Mesh: {fileID: 4300012, guid: 53fd6f5729dcb094ebf37d4437bf647a, type: 3}
---- !u!65 &65377402299474744
+--- !u!65 &65576051562936716
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -687,7 +689,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.4877712, y: 0.13058712, z: 2.5129325}
   m_Center: {x: 0.006801444, y: -0.00000021867406, z: 0.95175093}
---- !u!82 &82574723143512606
+--- !u!82 &82479868923937726
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -696,7 +698,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: de95c42ca2c637c40826e7e4aa92f0cc, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 641045418edbfc94781017e61d8386ac, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -767,7 +769,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!82 &82846488519965730
+--- !u!82 &82647479419039160
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -777,6 +779,86 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 054f6adcd380bc144a79ffea059a3a2b, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!82 &82936578533065514
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1579341967644588}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: de95c42ca2c637c40826e7e4aa92f0cc, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -864,7 +946,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114900971364571320
+--- !u!114 &114536239688999264
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -875,9 +957,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d23d2cce92454881ba5029585319397a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lockPanel: {fileID: 0}
-  _skin: {fileID: 11400000, guid: 77d68fcc06fea3f40853ae3f92acb13a, type: 2}
+  _tooltipGuiSocket: {fileID: 0}
+  _toolTipText: To open press
+  _lockStateTooltip: To unlock press
   _activationButton: 101
-  _codeToOpenDoor: 1111
-  _closingDoorAudioSource: {fileID: 82846488519965730}
-  _openingDoorAudioSource: {fileID: 82574723143512606}
+  _openingDoorAudioSource: {fileID: 82936578533065514}
+  _closingDoorAudioSource: {fileID: 82647479419039160}
+--- !u!114 &114725904285613514
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1579341967644588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba2a3bb4ddbe4e32a5cc9ed6192f1ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lockPanel: {fileID: 0}
+  _codeToUnlockDoor: 1111
+  _activationButton: 101
+  _soundOnPickUpAudioSource: {fileID: 82479868923937726}

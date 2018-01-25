@@ -663,6 +663,16 @@ Prefab:
       propertyPath: _codeToOpenDoor
       value: 2487
       objectReference: {fileID: 0}
+    - target: {fileID: 114536239688999264, guid: 78797e3b03357cc45bf7c0df2a3b970a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114725904285613514, guid: 78797e3b03357cc45bf7c0df2a3b970a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114900971364571320, guid: 78797e3b03357cc45bf7c0df2a3b970a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 78797e3b03357cc45bf7c0df2a3b970a, type: 2}
@@ -2754,6 +2764,25 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 799965515}
   m_Mesh: {fileID: 4300056, guid: 0ccd472cba226de41b565ef0ab256ed8, type: 3}
+--- !u!1 &823330712 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1106930962349210, guid: b19bbb49e2b4af1469f66f42a0f44178,
+    type: 2}
+  m_PrefabInternal: {fileID: 1567036764}
+--- !u!114 &823330716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 823330712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0c026febd348c4bfb01538f074767c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pauseMenuCanvas: {fileID: 0}
+  _unpaused: {fileID: 0}
+  _paused: {fileID: 0}
 --- !u!1 &844773551
 GameObject:
   m_ObjectHideFlags: 0
@@ -4078,11 +4107,21 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 823330716}
     - target: {fileID: 114260655458363384, guid: b19bbb49e2b4af1469f66f42a0f44178,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 823330716}
+    - target: {fileID: 114260655458363384, guid: b19bbb49e2b4af1469f66f42a0f44178,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 114355137937568270, guid: b19bbb49e2b4af1469f66f42a0f44178,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Exit
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b19bbb49e2b4af1469f66f42a0f44178, type: 2}

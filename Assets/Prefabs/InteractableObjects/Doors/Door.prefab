@@ -177,7 +177,6 @@ GameObject:
   - component: {fileID: 82507303675372786}
   - component: {fileID: 82323694781104834}
   - component: {fileID: 114997947934341134}
-  - component: {fileID: 114439728070532360}
   m_Layer: 0
   m_Name: Door_Knob
   m_TagString: Untagged
@@ -274,15 +273,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1749553752992934}
-  m_LocalRotation: {x: -0.5015597, y: 0.49843544, z: 0.49843544, w: 0.5015597}
-  m_LocalPosition: {x: 107.89346, y: 2.3612828, z: 94.00411}
+  m_LocalRotation: {x: -0.022929171, y: 0.70673496, z: 0.70673496, w: 0.022929171}
+  m_LocalPosition: {x: -14.428365, y: -4.096, z: -21.167439}
   m_LocalScale: {x: 1.2907292, y: 1.1866418, z: 1.1866452}
   m_Children:
   - {fileID: 4507263735236334}
   - {fileID: 4195210115762996}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 82.346, z: 7.2960005}
+  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 176.28401}
 --- !u!4 &4827295748413124
 Transform:
   m_ObjectHideFlags: 1
@@ -865,18 +864,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114439728070532360
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1974663986755448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b79eebd3e6e44ff59a73c71f2eeed4b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _delay: 3
 --- !u!114 &114997947934341134
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -888,7 +875,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55cd10468abf46dea3f3904b0d17d8b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _skin: {fileID: 11400000, guid: 77d68fcc06fea3f40853ae3f92acb13a, type: 2}
+  _tooltipGuiSocket: {fileID: 0}
+  _toolTipOpenText: To open press
+  _toolTipCloseText: To close press
   _activationButton: 101
   _closingDoorAudioSource: {fileID: 82323694781104834}
   _openingDoorAudioSource: {fileID: 82507303675372786}
