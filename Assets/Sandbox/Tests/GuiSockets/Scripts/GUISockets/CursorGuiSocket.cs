@@ -1,11 +1,13 @@
-﻿using DefaultNamespace;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class CursorGuiSocket : MonoBehaviour, IGUISocket
+namespace Sandbox.Tests.GuiSockets.Scripts.GUISockets
 {
-    [SerializeField] private Image _cursorImage;
+    public class CursorGuiSocket : MonoBehaviour, IGuiSocket
+    {
+        [SerializeField] private Image _cursorImage;
 
-    public void Activate() => _cursorImage.enabled = true;
-    public void Deactivate() => _cursorImage.enabled = false;
+        public void Activate() => _cursorImage.enabled = true;
+        public void Deactivate() => _cursorImage.enabled = false;
+    }
 }

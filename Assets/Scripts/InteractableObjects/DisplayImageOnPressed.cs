@@ -1,5 +1,6 @@
 ﻿using EventManagement;
 using Player;
+using Sandbox.Tests.GuiSockets.Scripts.GUISockets;
 using UnityEngine;
 
 namespace InteractableObjects

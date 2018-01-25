@@ -1,4 +1,5 @@
 ﻿using EventManagement;
+using Sandbox.Tests.DoorLockingMechanism.Scripts;
 using UnityEngine;
 
 public class ObsticleLockBehaivuor : MonoBehaviour, IPressable

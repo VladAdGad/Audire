@@ -2,70 +2,73 @@
 using InteractableObjects.Doors;
 using UnityEngine;
 
-[RequireComponent(typeof(Animator))]
-public class DoorObsticleBehaviuor : MonoBehaviour, IPressable
+namespace Sandbox.Tests.DoorLockingMechanism.Scripts
 {
-    [SerializeField] private KeyCode activationKeyCode = KeyCode.E;
-
-    [SerializeField] private DoorBehaviour _doorBehaviour;
-    [SerializeField] private bool _closed = true;
-    [SerializeField]  private bool _blockedByLock;
-
-    private Animator _obsticleAnimator;
-    private bool _animationInProgress;
-
-    private void Start()
+    [RequireComponent(typeof(Animator))]
+    public class DoorObsticleBehaviuor : MonoBehaviour, IPressable
     {
-        _obsticleAnimator = GetComponent<Animator>();
-        SetAnimationInProgress(false);
-        if (_closed)
-            BlockDoor();
-    }
+        [SerializeField] private KeyCode activationKeyCode = KeyCode.E;
 
-    public KeyCode ActivationKeyCode() => activationKeyCode;
-    public void OnPress() => ChangeMovingState();
+        [SerializeField] private DoorBehaviour _doorBehaviour;
+        [SerializeField] private bool _closed = true;
+        [SerializeField]  private bool _blockedByLock;
 
-    private void ChangeMovingState()
-    {
-        if (_animationInProgress || _blockedByLock) return;
+        private Animator _obsticleAnimator;
+        private bool _animationInProgress;
+
+        private void Start()
+        {
+            _obsticleAnimator = GetComponent<Animator>();
+            SetAnimationInProgress(false);
+            if (_closed)
+                BlockDoor();
+        }
+
+        public KeyCode ActivationKeyCode() => activationKeyCode;
+        public void OnPress() => ChangeMovingState();
+
+        private void ChangeMovingState()
+        {
+            if (_animationInProgress || _blockedByLock) return;
         
-        if (_closed)
-            startOpeningRotation();
-        else
-            startClosingRotation();
-    }
+            if (_closed)
+                StartOpeningRotation();
+            else
+                StartClosingRotation();
+        }
 
 
-    private void startOpeningRotation()
-    {
-        _closed = false;
-        _obsticleAnimator.Play("ObsticleRotationOpen");
-    }
+        private void StartOpeningRotation()
+        {
+            _closed = false;
+            _obsticleAnimator.Play("ObsticleRotationOpen");
+        }
 
-    private void startClosingRotation()
-    {
-        _closed = true;
-        _obsticleAnimator.Play("ObsticleRotationClose");
-    }
+        private void StartClosingRotation()
+        {
+            _closed = true;
+            _obsticleAnimator.Play("ObsticleRotationClose");
+        }
 
-    private void EnterdAnimationEvent() => SetAnimationInProgress(true);
+        private void EnterdAnimationEvent() => SetAnimationInProgress(true);
 
-    private void ExitedAnimationEvent()
-    {
-        if (_closed)
-            BlockDoor();
-        else
-            UnBlockDoor();
-        SetAnimationInProgress(false);
-    }
+        private void ExitedAnimationEvent()
+        {
+            if (_closed)
+                BlockDoor();
+            else
+                UnBlockDoor();
+            SetAnimationInProgress(false);
+        }
 
-    private void BlockDoor() => _doorBehaviour.gameObject.active = false;
-    private void UnBlockDoor() => _doorBehaviour.gameObject.active = true;
+        private void BlockDoor() => _doorBehaviour.gameObject.active = false;
+        private void UnBlockDoor() => _doorBehaviour.gameObject.active = true;
 
-    public void UnlockObsticle()
-    {
-        _blockedByLock = false;
-    }
+        public void UnlockObsticle()
+        {
+            _blockedByLock = false;
+        }
     
-    private void SetAnimationInProgress(bool value) => _animationInProgress = value;
+        private void SetAnimationInProgress(bool value) => _animationInProgress = value;
+    }
 }

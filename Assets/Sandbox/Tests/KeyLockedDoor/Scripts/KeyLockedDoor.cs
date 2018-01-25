@@ -1,5 +1,5 @@
-﻿using System;
-using EventManagement;
+﻿using EventManagement;
+using Sandbox.Tests.GuiSockets.Scripts.GUISockets;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -8,8 +8,8 @@ namespace Sandbox.Tests.KeyLockedDoor.Scripts
     public class KeyLockedDoor : MonoBehaviour, IGazable, IPressable
     {
         [SerializeField] private TooltipGuiSocket _tooltipGuiSocket;
-        [SerializeField] private String _toolTipText;
-        [SerializeField] private String _lockedStateTooltip;
+        [SerializeField] private string _toolTipText;
+        [SerializeField] private string _lockedStateTooltip;
         [SerializeField] private KeyCode _activationButton = KeyCode.E;
 
         [SerializeField] private AudioSource _openingDoorAudioSource;

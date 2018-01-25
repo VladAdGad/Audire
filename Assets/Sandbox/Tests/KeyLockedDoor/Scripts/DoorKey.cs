@@ -15,7 +15,7 @@ namespace Sandbox.Tests.KeyLockedDoor.Scripts
         {
             _doorToOpen.UnlockDoor();
             _soundOnPickUpAudioSource.Play();
-            gameObject.active = false;
+            gameObject.SetActive(false);
         }
     }
 }

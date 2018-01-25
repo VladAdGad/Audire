@@ -1,6 +1,6 @@
-﻿namespace DefaultNamespace
+﻿namespace Sandbox.Tests.GuiSockets.Scripts.GUISockets
 {
-    public interface IGUISocket
+    public interface IGuiSocket
     {
         void Activate();
         void Deactivate();
