@@ -2863,55 +2863,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 114680707716471096, guid: 0b8f2ce54e8394757b3a56654b816fbf,
-        type: 2}
-      propertyPath: m_Text
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1174404039822500, guid: 0b8f2ce54e8394757b3a56654b816fbf, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114680707716471096, guid: 0b8f2ce54e8394757b3a56654b816fbf,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224511653837377790, guid: 0b8f2ce54e8394757b3a56654b816fbf,
-        type: 2}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224511653837377790, guid: 0b8f2ce54e8394757b3a56654b816fbf,
-        type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224511653837377790, guid: 0b8f2ce54e8394757b3a56654b816fbf,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 31
-      objectReference: {fileID: 0}
-    - target: {fileID: 224511653837377790, guid: 0b8f2ce54e8394757b3a56654b816fbf,
-        type: 2}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224511653837377790, guid: 0b8f2ce54e8394757b3a56654b816fbf,
-        type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224511653837377790, guid: 0b8f2ce54e8394757b3a56654b816fbf,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114680707716471096, guid: 0b8f2ce54e8394757b3a56654b816fbf,
-        type: 2}
-      propertyPath: m_FontData.m_FontSize
-      value: 25
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b8f2ce54e8394757b3a56654b816fbf, type: 2}
   m_IsPrefabParent: 0
@@ -4902,6 +4853,11 @@ Prefab:
       propertyPath: _tooltipGuiSocket
       value: 
       objectReference: {fileID: 768926307}
+    - target: {fileID: 114725904285613514, guid: 78797e3b03357cc45bf7c0df2a3b970a,
+        type: 2}
+      propertyPath: _lockPanel
+      value: 
+      objectReference: {fileID: 361644850}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 78797e3b03357cc45bf7c0df2a3b970a, type: 2}
   m_IsPrefabParent: 0
@@ -5010,6 +4966,16 @@ Prefab:
       propertyPath: _codeToOpenDoor
       value: 2487
       objectReference: {fileID: 0}
+    - target: {fileID: 114725904285613514, guid: 78797e3b03357cc45bf7c0df2a3b970a,
+        type: 2}
+      propertyPath: _lockPanel
+      value: 
+      objectReference: {fileID: 361644850}
+    - target: {fileID: 114536239688999264, guid: 78797e3b03357cc45bf7c0df2a3b970a,
+        type: 2}
+      propertyPath: _tooltipGuiSocket
+      value: 
+      objectReference: {fileID: 768926307}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 78797e3b03357cc45bf7c0df2a3b970a, type: 2}
   m_IsPrefabParent: 0
