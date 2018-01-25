@@ -9,26 +9,26 @@ namespace InteractableObjects.Doors
     public class LockPanelDoor : MonoBehaviour, IPressable
     {
         [SerializeField] private GameObject _lockPanel;
-        [SerializeField] private LockDoorBehaviour _doorToOpen;
+        [SerializeField] private string _codeToUnlockDoor;
         [SerializeField] private KeyCode _activationButton = KeyCode.E;
         [SerializeField] private AudioSource _soundOnPickUpAudioSource;
-        [SerializeField] private string _codeToUnlockDoor;
-        
+
+        private LockDoorBehaviour _doorToOpen;
         private IEnumerable<Button> _buttonsOnLockPanel;
         private string _currentCode = "";
 
         private void Start()
         {
+            _doorToOpen = gameObject.GetComponent<LockDoorBehaviour>();
             _buttonsOnLockPanel = GetButtons(_lockPanel.GetComponentsInChildren<Button>());
         }
 
         public KeyCode ActivationKeyCode() => _activationButton;
 
-        
         public void OnPress()
         {
             ChangeStateSolveCode();
-            
+
             if (IsCodeGood())
             {
                 _doorToOpen.UnlockDoor();

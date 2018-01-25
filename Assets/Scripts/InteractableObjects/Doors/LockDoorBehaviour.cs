@@ -21,8 +21,7 @@ namespace InteractableObjects.Doors
         private bool _doorLocked = true;
         private bool _doorClosed = true;
 
-        public void UnlockDoor() => _doorLocked = false;
-
+        private void Start() => _animator = transform.parent.parent.GetComponent<Animator>();
 
         public void OnGazeEnter() =>
             _tooltipGuiSocket.Display(
@@ -30,8 +29,9 @@ namespace InteractableObjects.Doors
 
         public void OnGazeExit() => _tooltipGuiSocket.Flush();
 
-
         public KeyCode ActivationKeyCode() => _activationButton;
+        
+        public void UnlockDoor() => _doorLocked = false;
 
         public void OnPress()
         {
@@ -66,8 +66,6 @@ namespace InteractableObjects.Doors
         }
 
         private bool IsDoorInMotion() => _openingDoorAudioSource.isPlaying || _closingDoorAudioSource.isPlaying;
-
-        private void Start() => _animator = transform.parent.parent.GetComponent<Animator>();
 
         private void OnValidate() =>
             Assert.AreNotEqual(_activationButton, KeyCode.None, "Door Actiation button must not be null.");
