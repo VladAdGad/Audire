@@ -27,8 +27,7 @@ namespace InteractableObjects.Doors
         
         public void OnPress()
         {
-            PlayerBehaviour.PlayerInteractWith(_lockPanel.activeSelf);
-            _lockPanel.SetActive(!_lockPanel.activeSelf);
+            ChangeStateSolveCode();
             
             if (IsCodeGood())
             {
@@ -39,6 +38,12 @@ namespace InteractableObjects.Doors
             }
 
             _currentCode = "";
+        }
+
+        private void ChangeStateSolveCode()
+        {
+            PlayerBehaviour.PlayerInteractWith(_lockPanel.activeSelf);
+            _lockPanel.SetActive(!_lockPanel.activeSelf);
         }
 
         private bool IsCodeGood()
