@@ -4902,19 +4902,7 @@ Prefab:
       propertyPath: _tooltipGuiSocket
       value: 
       objectReference: {fileID: 768926307}
-    - target: {fileID: 65805541309707048, guid: 78797e3b03357cc45bf7c0df2a3b970a,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 82276453861647188, guid: 78797e3b03357cc45bf7c0df2a3b970a,
-        type: 2}
-      propertyPath: spreadCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114260874892458564, guid: 78797e3b03357cc45bf7c0df2a3b970a, type: 2}
-    - {fileID: 82276453861647188, guid: 78797e3b03357cc45bf7c0df2a3b970a, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 78797e3b03357cc45bf7c0df2a3b970a, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &959541746
@@ -4968,8 +4956,7 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 20.518002
       objectReference: {fileID: 0}
-    - target: {fileID: 114260874892458564, guid: 78797e3b03357cc45bf7c0df2a3b970a,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: _lockPanel
       value: 
       objectReference: {fileID: 361644850}
