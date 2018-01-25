@@ -1084,6 +1084,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114214313319214874, guid: 158076de7d533bd4ea1768b132ca1e87,
+        type: 2}
+      propertyPath: _activationButton
+      value: 101
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 158076de7d533bd4ea1768b132ca1e87, type: 2}
   m_IsPrefabParent: 0
@@ -4372,7 +4377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tooltipGuiSocket: {fileID: 280262050}
   _imageGuiSocket: {fileID: 661370142}
-  _activationButton: 102
+  _activationButton: 101
   _readingBookAudioSource: {fileID: 436268091}
   _displayImage: {fileID: 21300000, guid: 2af26bf4317717342b7898b63929699b, type: 3}
 --- !u!82 &436268091 stripped
@@ -14518,7 +14523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tooltipGuiSocket: {fileID: 280262050}
   _imageGuiSocket: {fileID: 661370142}
-  _activationButton: 102
+  _activationButton: 101
   _readingBookAudioSource: {fileID: 1527660611}
   _displayImage: {fileID: 21300000, guid: 43dc4598881fad04d93edb2efa9ef2c3, type: 3}
 --- !u!82 &1527660611 stripped
@@ -22887,7 +22892,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tooltipGuiSocket: {fileID: 280262050}
   _imageGuiSocket: {fileID: 661370142}
-  _activationButton: 102
+  _activationButton: 101
   _readingBookAudioSource: {fileID: 2011166699}
   _displayImage: {fileID: 21300000, guid: 4d26c5c38b0e2f44abd184283663de9e, type: 3}
 --- !u!82 &2011166699 stripped
@@ -23823,7 +23828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tooltipGuiSocket: {fileID: 280262050}
   _imageGuiSocket: {fileID: 661370142}
-  _activationButton: 102
+  _activationButton: 101
   _readingBookAudioSource: {fileID: 2127514848}
   _displayImage: {fileID: 21300000, guid: febdad7c21170114490afbbc7ff95e6d, type: 3}
 --- !u!82 &2127514848 stripped
