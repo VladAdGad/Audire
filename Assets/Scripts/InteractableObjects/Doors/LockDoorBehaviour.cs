@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using EventManagement;
+using EventManagement.Interfaces;
 using Player;
 using SceneMenager;
 using UnityEngine;

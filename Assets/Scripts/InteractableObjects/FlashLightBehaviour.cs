@@ -1,4 +1,5 @@
 ﻿using EventManagement;
+using EventManagement.Interfaces;
 using UnityEngine;
 using UnityEngine.Assertions;
 

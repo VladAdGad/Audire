@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using EventManagement;
+using EventManagement.Interfaces;
 using UnityEngine;
 using UnityEngine.Assertions;
 using Utilities;

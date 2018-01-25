@@ -1,4 +1,5 @@
 ﻿using EventManagement;
+using EventManagement.Interfaces;
 using Sandbox.Tests.DoorLockingMechanism.Scripts;
 using UnityEngine;
 

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace EventManagement
+namespace EventManagement.Interfaces
 {
     public interface IPressable : IInteractable
     {

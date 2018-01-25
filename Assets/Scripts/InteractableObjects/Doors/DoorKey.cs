@@ -1,4 +1,5 @@
 ﻿using EventManagement;
+using EventManagement.Interfaces;
 using UnityEngine;
 
 namespace InteractableObjects.Doors
