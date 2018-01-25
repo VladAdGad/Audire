@@ -1,17 +1,18 @@
-﻿using System;
-using DefaultNamespace;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class TooltipGuiSocket : MonoBehaviour, IGUISocket
+namespace Sandbox.Tests.GuiSockets.Scripts.GUISockets
 {
-    [SerializeField] private Text socketText;
+    public class TooltipGuiSocket : MonoBehaviour, IGuiSocket
+    {
+        [SerializeField] private Text _socketText;
 
-    private static readonly String EMPTY = "";
+        private const string Empty = "";
 
-    public void Display(String text) => socketText.text = text;
-    public void Flush() => socketText.text = EMPTY;
+        public void Display(string text) => _socketText.text = text;
+        public void Flush() => _socketText.text = Empty;
 
-    public void Activate() => socketText.enabled = true;
-    public void Deactivate() => socketText.enabled = false;
+        public void Activate() => _socketText.enabled = true;
+        public void Deactivate() => _socketText.enabled = false;
+    }
 }
