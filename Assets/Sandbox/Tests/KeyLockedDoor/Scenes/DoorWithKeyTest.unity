@@ -261,6 +261,16 @@ Prefab:
       propertyPath: _tooltipGuiSocket
       value: 
       objectReference: {fileID: 1910509935}
+    - target: {fileID: 82283590959581780, guid: b1a339aae6300a649af17af6811ddf08,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: de95c42ca2c637c40826e7e4aa92f0cc, type: 3}
+    - target: {fileID: 82663496171692574, guid: b1a339aae6300a649af17af6811ddf08,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 054f6adcd380bc144a79ffea059a3a2b, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b1a339aae6300a649af17af6811ddf08, type: 2}
   m_IsPrefabParent: 0

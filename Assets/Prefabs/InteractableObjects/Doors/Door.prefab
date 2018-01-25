@@ -173,7 +173,6 @@ GameObject:
   - component: {fileID: 4283999370235730}
   - component: {fileID: 33006307759956828}
   - component: {fileID: 23485475625191906}
-  - component: {fileID: 64573683281307114}
   - component: {fileID: 65160252491754038}
   - component: {fileID: 82507303675372786}
   - component: {fileID: 82323694781104834}
@@ -276,7 +275,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1749553752992934}
   m_LocalRotation: {x: -0.5015597, y: 0.49843544, z: 0.49843544, w: 0.5015597}
-  m_LocalPosition: {x: 1.6793137, y: 0.40586197, z: -9.746153}
+  m_LocalPosition: {x: 107.89346, y: 2.3612828, z: 94.00411}
   m_LocalScale: {x: 1.2907292, y: 1.1866418, z: 1.1866452}
   m_Children:
   - {fileID: 4507263735236334}
@@ -653,20 +652,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1283033965274356}
   m_Mesh: {fileID: 4300010, guid: 53fd6f5729dcb094ebf37d4437bf647a, type: 3}
---- !u!64 &64573683281307114
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1974663986755448}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300012, guid: 53fd6f5729dcb094ebf37d4437bf647a, type: 3}
 --- !u!65 &65160252491754038
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -712,7 +697,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9fa7ce9897f2a594b9f3f2f800f3a8ab, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 054f6adcd380bc144a79ffea059a3a2b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -792,7 +777,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c5e3544f4e2ff6e469e76e3b991a4950, type: 3}
+  m_audioClip: {fileID: 8300000, guid: de95c42ca2c637c40826e7e4aa92f0cc, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

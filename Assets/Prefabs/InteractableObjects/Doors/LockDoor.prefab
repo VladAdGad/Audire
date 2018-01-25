@@ -141,11 +141,10 @@ GameObject:
   - component: {fileID: 4039091160795932}
   - component: {fileID: 33885936070838842}
   - component: {fileID: 23093532574981466}
-  - component: {fileID: 64580343940882934}
-  - component: {fileID: 114900971364571320}
-  - component: {fileID: 82846488519965730}
   - component: {fileID: 82574723143512606}
+  - component: {fileID: 82846488519965730}
   - component: {fileID: 65377402299474744}
+  - component: {fileID: 114900971364571320}
   m_Layer: 0
   m_Name: Door_Knob
   m_TagString: Untagged
@@ -285,7 +284,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1521254356981498}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -14.502, y: 0.374, z: -6.01}
+  m_LocalPosition: {x: 108.57045, y: 1.9437168, z: 96.56612}
   m_LocalScale: {x: 1.1708993, y: 0.7836532, z: 1.1719292}
   m_Children:
   - {fileID: 4975430272755824}
@@ -652,20 +651,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1579341967644588}
   m_Mesh: {fileID: 4300012, guid: 53fd6f5729dcb094ebf37d4437bf647a, type: 3}
---- !u!64 &64580343940882934
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1579341967644588}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300012, guid: 53fd6f5729dcb094ebf37d4437bf647a, type: 3}
 --- !u!65 &65377402299474744
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -711,7 +696,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c5e3544f4e2ff6e469e76e3b991a4950, type: 3}
+  m_audioClip: {fileID: 8300000, guid: de95c42ca2c637c40826e7e4aa92f0cc, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -791,7 +776,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9fa7ce9897f2a594b9f3f2f800f3a8ab, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 054f6adcd380bc144a79ffea059a3a2b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
