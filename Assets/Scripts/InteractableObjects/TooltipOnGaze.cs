@@ -1,7 +1,9 @@
-﻿using Sandbox.Tests.GuiSockets.Scripts.GUISockets;
+﻿using EventManagement;
+using EventManagement.Interfaces;
+using Gui;
 using UnityEngine;
 
-namespace EventManagement
+namespace InteractableObjects
 {
     public class TooltipOnGaze : MonoBehaviour, IGazable
     {

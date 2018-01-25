@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+﻿using Gui.Interfaces;
+using UnityEngine;
 using UnityEngine.UI;
 
-namespace Sandbox.Tests.GuiSockets.Scripts.GUISockets
+namespace Gui
 {
     public class ImageGuiSocket : MonoBehaviour, IGuiSocket
     {

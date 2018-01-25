@@ -1,4 +1,5 @@
 ﻿using EventManagement;
+using EventManagement.Interfaces;
 using Triggers.TriggerableImplementations;
 using UnityEngine;
 

@@ -2,7 +2,7 @@
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace GUInterface
+namespace Gui.Menu
 {
     public class TextColorBehaviuor : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
