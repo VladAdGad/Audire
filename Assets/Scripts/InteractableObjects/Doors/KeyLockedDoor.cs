@@ -21,7 +21,7 @@ namespace InteractableObjects.Doors
         private void Start() => _animator = transform.parent.parent.GetComponent<Animator>();
 
         public void OnGazeEnter() => _tooltipGuiSocket.Display(_doorLocked
-            ? $"{_lockedStateTooltip} {_activationButton}"
+            ? $"{_lockedStateTooltip}"
             : $"{_toolTipText} {_activationButton}");
         
         public void OnGazeExit() => _tooltipGuiSocket.Flush();
