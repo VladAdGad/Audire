@@ -4,14 +4,11 @@ using UnityEngine;
 
 namespace Triggers.TriggerableImplementations
 {
-    [RequireComponent(typeof(DoorBehaviour))]
     public class DoorCloseTriggerable : ATriggerable
     {
         [SerializeField] private int _delay = 0;
+        [SerializeField] private DoorBehaviour _doorBehaviour;
         private bool _canClosed = true;
-        private DoorBehaviour _doorBehaviour;
-
-        private void Start() => _doorBehaviour = GetComponent<DoorBehaviour>();
 
         public override void TriggerEnter(Collider collider)
         {

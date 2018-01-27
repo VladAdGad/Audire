@@ -3,13 +3,11 @@ using UnityEngine;
 
 namespace Triggers.TriggerableImplementations
 {
-    [RequireComponent(typeof(AudioSource))]
     public class AudioTriggerable : ATriggerable
     {
         [SerializeField] private bool _singleTrigger;
         [SerializeField] private int _delay = 0;
         private bool _multiTrigger;
-
         private AudioSource _audioSource;
 
         private void Start()
