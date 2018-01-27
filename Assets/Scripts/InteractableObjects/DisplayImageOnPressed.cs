@@ -8,7 +8,7 @@ namespace InteractableObjects
     public class DisplayImageOnPressed : MonoBehaviour, IGazable, IPressable
     {
         [Header("Gui Sockets")] [SerializeField] private TooltipGuiSocket _tooltipGuiSocket;
-        [SerializeField] private ImageGuiSocket _imageGuiSocket;
+        [SerializeField] private ImageGuiSocket _imageSocket;
         [Space(10)] [SerializeField] private KeyCode _activationButton = KeyCode.E;
         [SerializeField] private AudioSource _readingBookAudioSource;
 
@@ -24,9 +24,9 @@ namespace InteractableObjects
         public void OnPress()
         {
             if (ReadingBook)
-                StopReadingBook();
+                StopDisplaying();
             else
-                StartReadingBook();
+                StartDisplaying();
 
             ChangeReadingState();
             PlaySound();
@@ -36,17 +36,17 @@ namespace InteractableObjects
 
         private void PlaySound() => _readingBookAudioSource.Play();
 
-        private void StartReadingBook()
+        private void StartDisplaying()
         {
             _tooltipGuiSocket.Display($"To exit press {_activationButton}");
-            _imageGuiSocket.Display(_displayImage);
+            _imageSocket.Display(_displayImage);
             PlayerBehaviour.PlayerInteractWith(false);
         }
 
-        private void StopReadingBook()
+        protected virtual void StopDisplaying()
         {
             OnGazeEnter();
-            _imageGuiSocket.Flush();
+            _imageSocket.Flush();
             PlayerBehaviour.PlayerInteractWith(true);
         }
     }

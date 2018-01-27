@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using SceneMenager;
 using UnityEngine;
-using UnityEngine.Assertions;
 using UnityEngine.UI;
 
 namespace Player
@@ -32,35 +31,31 @@ namespace Player
 
         private IEnumerator ProcessOfDeath()
         {
-            if (!_isPlayerDie)
-            {
-                SetPlayerIsDie();
-                _deathRattle.Play();
-                PlayerBehaviour.PlayerDisable();
-                StartPlayAnimation();
-                yield return new WaitForSeconds(WaitBeforeFaideSeconds);
-                StartFaiding();
-                ShowTextOfDeathCause();
-                yield return new WaitForSeconds(WaitBeforeReloadSceneSeconds);
-                LoadScene.ReloadScene();
-            }
+            if (_isPlayerDie) yield break;
+            SetPlayerIsDie();
+            _deathRattle.Play();
+            PlayerBehaviour.PlayerDisable();
+            StartPlayAnimation();
+            yield return new WaitForSeconds(WaitBeforeFaideSeconds);
+            StartFaiding();
+            ShowTextOfDeathCause();
+            yield return new WaitForSeconds(WaitBeforeReloadSceneSeconds);
+            LoadScene.ReloadScene();
         }
 
         private IEnumerator ProcessOfDeath(float secondsBeforeDeath)
         {
-            if (!_isPlayerDie)
-            {
-                SetPlayerIsDie();
-                yield return new WaitForSeconds(secondsBeforeDeath);
-                _deathRattle.Play();
-                PlayerBehaviour.PlayerDisable();
-                StartPlayAnimation();
-                yield return new WaitForSeconds(WaitBeforeFaideSeconds);
-                StartFaiding();
-                ShowTextOfDeathCause();
-                yield return new WaitForSeconds(WaitBeforeReloadSceneSeconds);
-                LoadScene.ReloadScene();
-            }
+            if (_isPlayerDie) yield break;
+            SetPlayerIsDie();
+            yield return new WaitForSeconds(secondsBeforeDeath);
+            _deathRattle.Play();
+            PlayerBehaviour.PlayerDisable();
+            StartPlayAnimation();
+            yield return new WaitForSeconds(WaitBeforeFaideSeconds);
+            StartFaiding();
+            ShowTextOfDeathCause();
+            yield return new WaitForSeconds(WaitBeforeReloadSceneSeconds);
+            LoadScene.ReloadScene();
         }
 
         private void ShowTextOfDeathCause()
