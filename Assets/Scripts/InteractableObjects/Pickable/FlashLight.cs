@@ -32,13 +32,11 @@ namespace InteractableObjects.Pickable
             {
                 _flashlightTipCanvas.gameObject.SetActive(!_flashlightTipCanvas.gameObject.activeSelf);
                 PlayerBehaviour.PlayerInteractWith(false);
-                Time.timeScale = 0;
             }
             else
             {
                 _flashlightTipCanvas.gameObject.SetActive(!_flashlightTipCanvas.gameObject.activeSelf);
                 PlayerBehaviour.PlayerInteractWith(true);
-                Time.timeScale = 1;
                 Destroy(gameObject);
                 Destroy(_flashlightTipCanvas.gameObject);
             }
