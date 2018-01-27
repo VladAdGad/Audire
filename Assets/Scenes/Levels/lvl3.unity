@@ -5502,7 +5502,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a6a78b6684321484fb1a38c13b08566e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2d33ed7bd90125943b7f387b19928621, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -6700,6 +6700,11 @@ Prefab:
         type: 2}
       propertyPath: _nameOfTheDeathAnimation
       value: deadAnimation2
+      objectReference: {fileID: 0}
+    - target: {fileID: 82063898767239988, guid: 98f1acc51abbb2d49aba87d8864caaa3,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98f1acc51abbb2d49aba87d8864caaa3, type: 2}
