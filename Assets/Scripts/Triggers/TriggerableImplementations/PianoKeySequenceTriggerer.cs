@@ -10,7 +10,8 @@ namespace Triggers.TriggerableImplementations
     {
         [SerializeField] private List<KeyCode> _keySequence;
         [SerializeField] private int _secondsTillSequenceWillReset = 4;
-        [SerializeField] private APassiveTriggerable _triggerOnSuccess;
+        [SerializeField] private APassiveTriggerable _triggerOnSuccess1;
+        [SerializeField] private APassiveTriggerable _triggerOnSuccess2;
 
         private int _nextKeyIndex;
         private Coroutine _squenceResetCorutine;
@@ -27,7 +28,10 @@ namespace Triggers.TriggerableImplementations
                 MoveToNextKey();
 
                 if (IsProgressSucceeded())
-                    _triggerOnSuccess.OnTrigger();
+                {
+                    _triggerOnSuccess2.OnTrigger();
+                    _triggerOnSuccess1.OnTrigger();
+                }
                 else
                     StartResetCorutine();
             }
