@@ -1,5 +1,6 @@
 ﻿using EventManagement;
 using EventManagement.Interfaces;
+using Player;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -7,6 +8,7 @@ namespace InteractableObjects
 {
     public class FlashLightBehaviour : MonoBehaviour, IGazable, IPressable
     {
+        [SerializeField] private Transform _flashlightTipCanvas;
         [SerializeField] private KeyCode _activationButton = KeyCode.F;
         [SerializeField] private GameObject _playerSpotLight;
         [SerializeField] private GUISkin _skin;
@@ -35,12 +37,33 @@ namespace InteractableObjects
         {
             _playerSpotLight.SetActive(true);
             Destroy(gameObject);
+
+            FlashlightTip();
+
         }
+
+
 
         private void OnValidate()
         {
             Assert.IsNotNull(_skin);
             Assert.IsNotNull(_playerSpotLight);
+        }
+
+        public void FlashlightTip()
+        {
+            if (!_flashlightTipCanvas.gameObject.activeSelf)
+            {
+                _flashlightTipCanvas.gameObject.SetActive(!_flashlightTipCanvas.gameObject.activeSelf);
+                PlayerBehaviour.PlayerOnPause(false);
+                Time.timeScale = 0;
+            }
+            else
+            {
+                _flashlightTipCanvas.gameObject.SetActive(!_flashlightTipCanvas.gameObject.activeSelf);
+                PlayerBehaviour.PlayerOnPause(true);
+                Time.timeScale = 1;
+            }
         }
     }
 }
