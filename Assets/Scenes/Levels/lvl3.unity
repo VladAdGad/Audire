@@ -11062,7 +11062,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _keySequence: 32000000310000003300000031000000340000003400000033000000
   _secondsTillSequenceWillReset: 4
-  _triggerOnSuccess: {fileID: 393006030}
+  _triggerOnSuccess1: {fileID: 393006030}
+  _triggerOnSuccess2: {fileID: 1644087929}
 --- !u!4 &1114898730
 Transform:
   m_ObjectHideFlags: 0
@@ -16064,13 +16065,14 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1644087928}
+  - component: {fileID: 1644087929}
   m_Layer: 0
   m_Name: Lights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1644087928
 Transform:
   m_ObjectHideFlags: 0
@@ -16087,6 +16089,17 @@ Transform:
   m_Father: {fileID: 940092613}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1644087929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1644087927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 066a22e89eb242fca50d8c34d48bf40f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1647929518
 Prefab:
   m_ObjectHideFlags: 0
