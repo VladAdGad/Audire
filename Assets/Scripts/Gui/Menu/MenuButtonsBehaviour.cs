@@ -26,6 +26,11 @@ namespace Gui.Menu
             SceneManager.LoadScene(IndexFirstScene);
         }
 
+        public void StartCredits()
+        {
+            SceneManager.LoadScene("Credits");
+        }
+
         public void PauseOrUnPause()
         {
             if (!_pauseMenuCanvas.gameObject.activeSelf)
