@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 95222972183770426}
   - component: {fileID: 65805541309707048}
   m_Layer: 0
-  m_Name: LockDoor
+  m_Name: LockCodeDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
