@@ -8,17 +8,18 @@ namespace Gui.Menu
 {
     public class MenuButtonsBehaviour : MonoBehaviour, IButtonBehaviour
     {
+        [SerializeField] private GameObject _creditsCanvas;
         [SerializeField] private Transform _pauseMenuCanvas;
         [SerializeField] private AudioMixerSnapshot _unpaused;
         [SerializeField] private AudioMixerSnapshot _paused;
+        [SerializeField] private AudioMixerSnapshot _credits;
         private const int IndexFirstScene = 1;
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                PauseOrUnPause();
-            }
+            if (!Input.GetKeyDown(KeyCode.Escape)) return;
+            PauseOrUnPause();
+            StartCredits();
         }
 
         public void StartGame()
@@ -26,9 +27,17 @@ namespace Gui.Menu
             SceneManager.LoadScene(IndexFirstScene);
         }
 
-        public void StartCredits()
+        private void StartCredits()
         {
-            SceneManager.LoadScene("Credits");
+            _creditsCanvas.SetActive(!_creditsCanvas.activeSelf);
+            if (_creditsCanvas.activeSelf)
+            {
+                _credits.TransitionTo(.01f);
+            }
+            else
+            {
+                _unpaused.TransitionTo(.01f);
+            }
         }
 
         public void PauseOrUnPause()
