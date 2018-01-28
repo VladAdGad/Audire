@@ -1,31 +1,27 @@
 ﻿using Gui.Interfaces;
+using SceneMenager;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace Gui.Menu
 {
     public class MenuButtonsBehaviour : MonoBehaviour, IButtonBehaviour
     {
-        [SerializeField] private CreditsBehaviour _credits;
         [SerializeField] private PauseBehaviour _pause;
-        private const int IndexFirstScene = 1;
 
         private void Update()
         {
             if (!Input.GetKeyDown(KeyCode.Escape)) return;
             Pause();
-            Credits();
         }
 
         public void StartGame()
         {
-            SceneManager.LoadScene(IndexFirstScene);
+            LoadScene.LoadIndexScene(LoadScene.NextScene);
         }
 
         public void Credits()
-        {            
-            if (_credits == null) return;
-            _credits.StartCredits();
+        {
+            LoadScene.LoadIndexScene(LoadScene.IndexCreditsScene);
         }
 
         public void Pause()
