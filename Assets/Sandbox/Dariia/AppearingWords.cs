@@ -1,7 +1,9 @@
-﻿using Triggers;
+﻿using InteractableObjects;
+using Triggers;
 using UnityEngine;
 
-public class AppearingWords : MonoBehaviour {
+public class AppearingWords : DisplayImageOnPressed
+{
 
     [SerializeField] private APassiveTriggerable _triggerOnSuccess1;
     [SerializeField] private APassiveTriggerable _triggerOnSuccess2;
@@ -9,18 +11,12 @@ public class AppearingWords : MonoBehaviour {
     [SerializeField] private APassiveTriggerable _triggerOnSuccess4;
 
 
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        if (Input.GetKeyDown(KeyCode.E))
+        protected override void StopDisplaying()
         {
-            _triggerOnSuccess1.OnTrigger();
+        _triggerOnSuccess1.OnTrigger();
             _triggerOnSuccess2.OnTrigger();
             _triggerOnSuccess3.OnTrigger();
             _triggerOnSuccess4.OnTrigger();
         }
-    }
 }
+
