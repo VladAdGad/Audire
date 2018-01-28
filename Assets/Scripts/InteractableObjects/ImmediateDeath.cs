@@ -1,6 +1,7 @@
 ﻿using InteractableObjects.Doors;
 using Player;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace InteractableObjects
 {
@@ -10,13 +11,13 @@ namespace InteractableObjects
         [SerializeField] [Range(0, 10)] private float _secondsBeforeDeath = .0f;
         [SerializeField] private PlayerDeathBehaviour _playerDeathBehaviour;
         [SerializeField] private DoorBehaviour _lockDoorBehaviour;
-        [SerializeField] private GameObject _sprite;
+        [SerializeField] private Image _ghostImage;
+        [SerializeField] private AudioSource _screamSoundaudioSource;
 
         private void StartEventImmediateDeath()
         {
             if (_lockDoorBehaviour.IsDoorClosed()) return;
-            _sprite.SetActive(true);
-            _playerDeathBehaviour.StartProcessOfDeath(_secondsBeforeDeath, _deathText);
+            _playerDeathBehaviour.StartProcessOfDeath(_deathText, _ghostImage, _screamSoundaudioSource);
             DestroyGameObject();
         }
 

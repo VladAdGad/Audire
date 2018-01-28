@@ -7,7 +7,9 @@ namespace SceneMenager
 {
     public class LoadScene : MonoBehaviour
     {
-        private const int NextScene = 1;
+        public static int NextScene { get; } = 1;
+        public static int MainMenuIndex { get; } = 0;
+        public static int IndexCreditsScene { get; } = 4;
 
         public static IEnumerator LoadNextLevel()
         {
@@ -20,6 +22,11 @@ namespace SceneMenager
         public static void ReloadScene()
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        public static void LoadIndexScene(int indexScene)
+        {
+            SceneManager.LoadScene(indexScene);
         }
     }
 }
