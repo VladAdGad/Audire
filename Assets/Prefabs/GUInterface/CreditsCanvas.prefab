@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 224283605432705884}
   - component: {fileID: 222069911301781968}
   - component: {fileID: 114367184593593596}
+  - component: {fileID: 114202420035609498}
   m_Layer: 5
   m_Name: ButtonLink3
   m_TagString: Untagged
@@ -484,6 +485,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114202420035609498
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1225602437059050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 360d318631634eb9ae240ef72c985b0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hyperLink: https://thrillshowx.bandcamp.com/track/automated-landing
 --- !u!114 &114239359375753476
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -518,18 +531,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6f9d6fb3af90b834d87966826d9e2e8b, type: 3}
-    m_FontSize: 30
+    m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
-    m_MaxSize: 40
+    m_MaxSize: 300
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: ' by ThrillShowX is licensed under CC BY 3.0'
+  m_Text: by ThrillShowX is licensed under CC BY 3.0
 --- !u!114 &114253524181435712
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -632,7 +645,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 6f9d6fb3af90b834d87966826d9e2e8b, type: 3}
-    m_FontSize: 30
+    m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -1270,8 +1283,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 400.3, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 379.39996, y: 0}
+  m_SizeDelta: {x: 376.81, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224183691370564808
 RectTransform:
@@ -1348,8 +1361,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -198.80984, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -193.9, y: 0}
+  m_SizeDelta: {x: 219.79, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224280273968222664
 RectTransform:
@@ -1444,7 +1457,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 400, y: -363}
+  m_AnchoredPosition: {x: 400, y: -317}
   m_SizeDelta: {x: 800, y: 723}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224572463874971796
