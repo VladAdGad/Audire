@@ -123,7 +123,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 16231128}
-  - component: {fileID: 16231129}
   m_Layer: 0
   m_Name: Room
   m_TagString: Untagged
@@ -147,21 +146,6 @@ Transform:
   m_Father: {fileID: 1549023021}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &16231129
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 64855198521375424, guid: 4a4b1c916c578834f92c6eb8f8b8198f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 16231127}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &57863736
 Prefab:
   m_ObjectHideFlags: 0
@@ -695,7 +679,6 @@ GameObject:
   m_Component:
   - component: {fileID: 162877662}
   - component: {fileID: 162877664}
-  - component: {fileID: 162877663}
   m_Layer: 0
   m_Name: Chest of drawers
   m_TagString: Untagged
@@ -727,19 +710,6 @@ Transform:
   m_Father: {fileID: 2033306787}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
---- !u!65 &162877663
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 65062503485586290, guid: 4a4b1c916c578834f92c6eb8f8b8198f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 162877661}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.5653205, y: 1, z: 1.8286717}
-  m_Center: {x: -0.21733971, y: 0, z: -0.11407462}
 --- !u!95 &162877664
 Animator:
   serializedVersion: 3
@@ -767,7 +737,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 173892630}
-  - component: {fileID: 173892631}
   m_Layer: 0
   m_Name: House_Plant_1
   m_TagString: Untagged
@@ -791,19 +760,6 @@ Transform:
   m_Father: {fileID: 2033306787}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 65.452, z: 0}
---- !u!65 &173892631
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 65156185274352582, guid: 4a4b1c916c578834f92c6eb8f8b8198f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 173892629}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.735258, y: 4.567891, z: 2.3474681}
-  m_Center: {x: 0.5845285, y: 1.7839453, z: -0.117699735}
 --- !u!1 &189840213
 GameObject:
   m_ObjectHideFlags: 0
@@ -1302,7 +1258,6 @@ GameObject:
   - component: {fileID: 327466108}
   - component: {fileID: 327466111}
   - component: {fileID: 327466110}
-  - component: {fileID: 327466109}
   m_Layer: 0
   m_Name: Chair_8
   m_TagString: Untagged
@@ -1324,19 +1279,6 @@ Transform:
   m_Father: {fileID: 2033306787}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -44.065002}
---- !u!65 &327466109
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 65193947898728646, guid: 4a4b1c916c578834f92c6eb8f8b8198f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 327466107}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.03187939, y: 0.037866995, z: 0.06680684}
-  m_Center: {x: -8.4394586e-10, y: 0.001079058, z: 0.033458136}
 --- !u!23 &327466110
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2035,7 +1977,6 @@ GameObject:
   - component: {fileID: 513282614}
   - component: {fileID: 513282617}
   - component: {fileID: 513282616}
-  - component: {fileID: 513282615}
   m_Layer: 0
   m_Name: Table_1
   m_TagString: Untagged
@@ -2057,19 +1998,6 @@ Transform:
   m_Father: {fileID: 2033306787}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -89.98, y: 90, z: 0}
---- !u!65 &513282615
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 65759320440677794, guid: 4a4b1c916c578834f92c6eb8f8b8198f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 513282613}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.08442433, y: 0.048316717, z: 0.03088611}
-  m_Center: {x: 0, y: 0.0020760314, z: 0.015352573}
 --- !u!23 &513282616
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2584,7 +2512,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 629996115}
-  - component: {fileID: 629996117}
   - component: {fileID: 629996116}
   m_Layer: 0
   m_Name: Painting1
@@ -2644,19 +2571,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &629996117
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 65868290285381908, guid: 4a4b1c916c578834f92c6eb8f8b8198f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 629996114}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.39600822, y: 0.78952384, z: 0.3618915}
-  m_Center: {x: 0.0016328865, y: -0.10523818, z: 0.16925423}
 --- !u!1 &640970250
 GameObject:
   m_ObjectHideFlags: 0
