@@ -501,10 +501,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bec5fac6a7f47b18c52393390efc567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerCursorOfCentreMonitor: {fileID: 2800000, guid: 48fe9abea7a61ab488ef8ad59914bc86,
-    type: 3}
-  _cursorSizeX: 5
-  _cursorSizeY: 5
 --- !u!114 &114668730898472688
 MonoBehaviour:
   m_ObjectHideFlags: 1
