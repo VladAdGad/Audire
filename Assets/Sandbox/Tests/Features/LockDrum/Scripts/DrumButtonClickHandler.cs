@@ -2,7 +2,7 @@
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace Assets.Sandbox.Tests.Features.DoorObsticle.Scripts
+namespace Assets.Sandbox.Tests.Features.LockDrum.Scripts
 {
     public class DrumButtonClickHandler : MonoBehaviour, IPointerClickHandler
     {
