@@ -2259,6 +2259,7 @@ GameObject:
   - component: {fileID: 547777151}
   - component: {fileID: 547777153}
   - component: {fileID: 547777152}
+  - component: {fileID: 547777154}
   m_Layer: 5
   m_Name: CreditsScroller
   m_TagString: Untagged
@@ -2389,6 +2390,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &547777154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 547777150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ffb8ebd1abca249856373f3b68d0c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameObject: {fileID: 1657570538}
 --- !u!1 &557490171
 GameObject:
   m_ObjectHideFlags: 0
