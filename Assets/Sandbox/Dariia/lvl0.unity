@@ -2401,6 +2401,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4821c171ceb7fda4da3c99c29c32c14c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _creditsCanvas: {fileID: 1657570538}
+  _unpaused: {fileID: 24500006, guid: 8b30800e82bd9ed44865f7d03224fca4, type: 2}
+  _credits: {fileID: 245040515636784634, guid: 8b30800e82bd9ed44865f7d03224fca4, type: 2}
 --- !u!1 &557490171
 GameObject:
   m_ObjectHideFlags: 0
@@ -3158,11 +3161,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee0c026febd348c4bfb01538f074767c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _creditsCanvas: {fileID: 1657570538}
-  _pauseMenuCanvas: {fileID: 0}
-  _unpaused: {fileID: 24500006, guid: 8b30800e82bd9ed44865f7d03224fca4, type: 2}
-  _paused: {fileID: 245791850664449206, guid: 8b30800e82bd9ed44865f7d03224fca4, type: 2}
-  _credits: {fileID: 245040515636784634, guid: 8b30800e82bd9ed44865f7d03224fca4, type: 2}
+  _credits: {fileID: 547777154}
+  _pause: {fileID: 0}
 --- !u!1 &844773551
 GameObject:
   m_ObjectHideFlags: 0
@@ -5302,7 +5302,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1657570539
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5965,7 +5965,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 823330716}
-        m_MethodName: StartCredits
+        m_MethodName: Credits
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

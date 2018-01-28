@@ -4,7 +4,7 @@
     {
         void StartGame();
 
-        void PauseOrUnPause();
+        void Pause();
 
         void Exit();
     }
