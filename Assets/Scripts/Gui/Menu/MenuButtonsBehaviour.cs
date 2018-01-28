@@ -33,6 +33,8 @@ namespace Gui.Menu
 
         public void PauseOrUnPause()
         {
+            if (_pauseMenuCanvas == null) return;
+            
             if (!_pauseMenuCanvas.gameObject.activeSelf)
             {
                 _pauseMenuCanvas.gameObject.SetActive(!_pauseMenuCanvas.gameObject.activeSelf);
