@@ -18,5 +18,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/lvl3.unity
     guid: b9e5e6e16ed031e4bb9f027f1469e12d
   - enabled: 1
-    path: Assets/Sandbox/Dariia/Credits.unity
-    guid: da4adf73885ff8d46bec312c8627f712
+    path: Assets/Scenes/Levels/Credits.unity
+    guid: 297eccfdcf3d4bb429dda9d56edff9f1
