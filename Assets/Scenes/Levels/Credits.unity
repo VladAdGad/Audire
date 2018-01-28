@@ -77,18 +77,15 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
-    m_PVRFilterTypeDirect: 0
-    m_PVRFilterTypeIndirect: 0
-    m_PVRFilterTypeAO: 0
+    m_PVRFiltering: 0
     m_PVRFilteringMode: 1
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
     m_PVRFilteringGaussRadiusAO: 2
-    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
-    m_PVRFilteringAtrousPositionSigmaIndirect: 2
-    m_PVRFilteringAtrousPositionSigmaAO: 1
-    m_ShowResolutionOverlay: 1
+    m_PVRFilteringAtrousColorSigma: 1
+    m_PVRFilteringAtrousNormalSigma: 1
+    m_PVRFilteringAtrousPositionSigma: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -110,8 +107,6 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
-    debug:
-      m_Flags: 0
   m_NavMeshData: {fileID: 0}
 --- !u!224 &91701778 stripped
 RectTransform:
@@ -194,11 +189,11 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 0
-  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+  m_StereoMirrorMode: 0
 --- !u!4 &531586132
 Transform:
   m_ObjectHideFlags: 0
@@ -313,6 +308,36 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.y
       value: -317
+      objectReference: {fileID: 0}
+    - target: {fileID: 114250626887047984, guid: 8346fd0c0b052b84a87a4b5bfba9d63f,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 114250626887047984, guid: 8346fd0c0b052b84a87a4b5bfba9d63f,
+        type: 2}
+      propertyPath: m_FontData.m_MaxSize
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 114365089280479868, guid: 8346fd0c0b052b84a87a4b5bfba9d63f,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 114250626887047984, guid: 8346fd0c0b052b84a87a4b5bfba9d63f,
+        type: 2}
+      propertyPath: m_Text
+      value: by ThrillShowX is licensed under CC BY 3.0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224139366591194578, guid: 8346fd0c0b052b84a87a4b5bfba9d63f,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 375.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 224258236258207506, guid: 8346fd0c0b052b84a87a4b5bfba9d63f,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -195
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8346fd0c0b052b84a87a4b5bfba9d63f, type: 2}
