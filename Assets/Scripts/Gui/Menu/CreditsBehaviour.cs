@@ -26,6 +26,7 @@ namespace Gui.Menu
         
         public void LoadMainLevelAfterCredits()
         {
+            _unpaused.TransitionTo(.01f);
             SceneManager.LoadScene(MainMenuIndex);
         }
     
