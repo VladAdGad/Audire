@@ -57,6 +57,24 @@ namespace Player
             yield return new WaitForSeconds(WaitBeforeReloadSceneSeconds);
             LoadScene.ReloadScene();
         }
+        
+        private IEnumerator ProcessOfDeath(Image ghostImage, AudioSource screamSoundaudioSource)
+        {
+            if (_isPlayerDie) yield break;
+            SetPlayerIsDie();
+            ghostImage.enabled = true;
+            screamSoundaudioSource.Play();
+            yield return new WaitForSeconds(0.2f);
+            ghostImage.enabled = false;
+            _deathRattle.Play();
+            PlayerBehaviour.PlayerDisable();
+            StartPlayAnimation();
+            yield return new WaitForSeconds(WaitBeforeFaideSeconds);
+            StartFaiding();
+            ShowTextOfDeathCause();
+            yield return new WaitForSeconds(WaitBeforeReloadSceneSeconds);
+            LoadScene.ReloadScene();
+        }
 
         private void ShowTextOfDeathCause()
         {
@@ -89,6 +107,12 @@ namespace Player
             StartCoroutine(secondsBeforeDeath != .0f
                 ? ProcessOfDeath(secondsBeforeDeath)
                 : ProcessOfDeath());
+        }
+        
+        public void StartProcessOfDeath(string deathText, Image ghostImage, AudioSource screamSoundaudioSource)
+        {
+            ChangeTextOfDeathCause(deathText);
+            StartCoroutine(ProcessOfDeath(ghostImage, screamSoundaudioSource));
         }
     }
 }
