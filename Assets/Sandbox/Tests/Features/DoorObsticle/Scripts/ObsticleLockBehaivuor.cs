@@ -1,19 +1,20 @@
-﻿using EventManagement;
-using EventManagement.Interfaces;
-using Sandbox.Tests.DoorLockingMechanism.Scripts;
+﻿using EventManagement.Interfaces;
 using UnityEngine;
 
-public class ObsticleLockBehaivuor : MonoBehaviour, IPressable
+namespace Assets.Sandbox.Tests.Features.DoorObsticle.Scripts
 {
-	[SerializeField]
-	private DoorObsticleBehaviuor _doorObsticleBehaviuor;
-	[SerializeField] private KeyCode _activationButton = KeyCode.E;
-
-	public KeyCode ActivationKeyCode() => _activationButton;
-
-	public void OnPress()
+	public class ObsticleLockBehaivuor : MonoBehaviour, IPressable
 	{
-		_doorObsticleBehaviuor.UnlockObsticle();
-		transform.gameObject.active = false;
+		[SerializeField]
+		private DoorObsticleBehaviuor _doorObsticleBehaviuor;
+		[SerializeField] private KeyCode _activationButton = KeyCode.E;
+
+		public KeyCode ActivationKeyCode() => _activationButton;
+
+		public void OnPress()
+		{
+			_doorObsticleBehaviuor.UnlockObsticle();
+			transform.gameObject.active = false;
+		}
 	}
 }
