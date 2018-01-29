@@ -15480,7 +15480,7 @@ MonoBehaviour:
   - {fileID: 80821495}
   - {fileID: 1388009871}
   - {fileID: 489548031}
-  _disableTriggerAfterActivate: 0
+  _disableTriggerAfterActivate: 1
 --- !u!65 &1815011307
 BoxCollider:
   m_ObjectHideFlags: 0
