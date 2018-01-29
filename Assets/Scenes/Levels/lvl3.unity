@@ -12151,7 +12151,7 @@ MonoBehaviour:
   _triggerSound: {fileID: 694544284}
   _triggerCollisionZone: {fileID: 161491875}
   _triggerKnockSound: {fileID: 615256491}
-  _triggerBreathPanickSound: {fileID: 997463312}
+  _triggerBreathPanicSound: {fileID: 997463312}
   _triggerCloseDoor: {fileID: 624753772}
 --- !u!82 &1527660611 stripped
 AudioSource:
