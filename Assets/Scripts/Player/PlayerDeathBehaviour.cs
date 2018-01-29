@@ -29,10 +29,11 @@ namespace Player
             _deathAnimation.Play(_nameOfTheDeathAnimation);
         }
 
-        private IEnumerator ProcessOfDeath()
+        private IEnumerator ProcessOfDeath(string deathText)
         {
             if (_isPlayerDie) yield break;
             SetPlayerIsDie();
+            ChangeTextOfDeathCause(deathText);
             _deathRattle.Play();
             PlayerBehaviour.PlayerDisable();
             StartPlayAnimation();
@@ -43,11 +44,12 @@ namespace Player
             LoadScene.ReloadScene();
         }
 
-        private IEnumerator ProcessOfDeath(float secondsBeforeDeath)
+        private IEnumerator ProcessOfDeath(float secondsBeforeDeath, string deathText)
         {
             if (_isPlayerDie) yield break;
             SetPlayerIsDie();
             yield return new WaitForSeconds(secondsBeforeDeath);
+            ChangeTextOfDeathCause(deathText);
             _deathRattle.Play();
             PlayerBehaviour.PlayerDisable();
             StartPlayAnimation();
@@ -58,10 +60,11 @@ namespace Player
             LoadScene.ReloadScene();
         }
         
-        private IEnumerator ProcessOfDeath(Image ghostImage, AudioSource screamSoundaudioSource)
+        private IEnumerator ProcessOfDeath(string deathText, Image ghostImage, AudioSource screamSoundaudioSource)
         {
             if (_isPlayerDie) yield break;
             SetPlayerIsDie();
+            ChangeTextOfDeathCause(deathText);
             ghostImage.enabled = true;
             screamSoundaudioSource.Play();
             yield return new WaitForSeconds(0.2f);
@@ -103,16 +106,14 @@ namespace Player
 
         public void StartProcessOfDeath(float secondsBeforeDeath, string deathText)
         {
-            ChangeTextOfDeathCause(deathText);
             StartCoroutine(secondsBeforeDeath != .0f
-                ? ProcessOfDeath(secondsBeforeDeath)
-                : ProcessOfDeath());
+                ? ProcessOfDeath(secondsBeforeDeath, deathText)
+                : ProcessOfDeath(deathText));
         }
         
         public void StartProcessOfDeath(string deathText, Image ghostImage, AudioSource screamSoundaudioSource)
         {
-            ChangeTextOfDeathCause(deathText);
-            StartCoroutine(ProcessOfDeath(ghostImage, screamSoundaudioSource));
+            StartCoroutine(ProcessOfDeath(deathText, ghostImage, screamSoundaudioSource));
         }
     }
 }

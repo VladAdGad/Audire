@@ -11,7 +11,7 @@ namespace Triggers.TriggerableImplementations
 
         public void OnTriggerEnter(Collider collider)
         {
-            if (_playerDeathBehaviour != null && _playerDeathBehaviour.enabled)
+            if (_playerDeathBehaviour.enabled)
             {
                 _playerDeathBehaviour.StartProcessOfDeath(_secondsBeforeDeath, _deathText);
             }
@@ -19,7 +19,7 @@ namespace Triggers.TriggerableImplementations
 
         public override void OnTrigger()
         {
-            if (_playerDeathBehaviour != null && _playerDeathBehaviour.enabled)
+            if (_playerDeathBehaviour.enabled)
             {
                 _playerDeathBehaviour.StartProcessOfDeath(_secondsBeforeDeath, _deathText);
             }
