@@ -6,25 +6,19 @@ namespace Triggers.TriggerableImplementations
 {
     public class DoorCloseTriggerable : ATriggerable
     {
-        [SerializeField] private int _delay = 0;
+        [SerializeField] [Tooltip("seconds")] private int _delay;
         [SerializeField] private DoorBehaviour _doorBehaviour;
 
-        public override void TriggerEnter(Collider collider)
-        {
-            StartCoroutine(Wait(_delay));
-        }
-
+        public override void TriggerEnter(Collider collider) => StartCoroutine(CloseOpenDoorWithDelay(_delay));
         public override void TriggerExit(Collider collider)
         {
         }
 
-        public void OnTrigger()
-        {
-            StartCoroutine(Wait(_delay));
-        }
+        public void OnTrigger() => StartCoroutine(CloseOpenDoorWithDelay(_delay));
 
-        private IEnumerator Wait(int seconds)
+        private IEnumerator CloseOpenDoorWithDelay(int seconds)
         {
+            if (seconds == 0) seconds = 1;
             yield return new WaitForSeconds(seconds);
             _doorBehaviour.OnPress();
         }
