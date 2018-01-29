@@ -977,6 +977,7 @@ Transform:
   - {fileID: 615256489}
   - {fileID: 161491874}
   - {fileID: 997463310}
+  - {fileID: 1729471395}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1038,6 +1039,16 @@ Prefab:
       propertyPath: _tooltip
       value: To pick up press E
       objectReference: {fileID: 0}
+    - target: {fileID: 114889522864096180, guid: 5c002da2a14c8d3428345bd34109f9df,
+        type: 2}
+      propertyPath: _triggerOnSuccess1
+      value: 
+      objectReference: {fileID: 1729471398}
+    - target: {fileID: 114889522864096180, guid: 5c002da2a14c8d3428345bd34109f9df,
+        type: 2}
+      propertyPath: _triggerPianoPlaying
+      value: 
+      objectReference: {fileID: 1729471398}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5c002da2a14c8d3428345bd34109f9df, type: 2}
   m_IsPrefabParent: 0
@@ -4788,7 +4799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b79eebd3e6e44ff59a73c71f2eeed4b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _delay: 0
+  _delay: 5
   _doorBehaviour: {fileID: 1012717872}
 --- !u!1 &663211786
 GameObject:
@@ -4837,7 +4848,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d532c1a0f8842f4439d383bf1675a019, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recordPlayerActive: 0
 --- !u!23 &663211789
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11139,6 +11149,130 @@ Transform:
   m_Father: {fileID: 1390965799}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1441477136
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1441477137}
+  - component: {fileID: 1441477139}
+  - component: {fileID: 1441477138}
+  m_Layer: 0
+  m_Name: TriggerAudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1441477137
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1441477136}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.08, y: 0.29, z: -2.34}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1729471395}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1441477138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1441477136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51aa1b2378c142efaac28f6b6318449b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _singleTrigger: 1
+  _delay: 0
+--- !u!82 &1441477139
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1441477136}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 243856370083705568, guid: 8b30800e82bd9ed44865f7d03224fca4,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 2e5dc1f3d44269640b83f7472178ba4d, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1441876140
 GameObject:
   m_ObjectHideFlags: 0
@@ -12151,7 +12285,7 @@ MonoBehaviour:
   _triggerSound: {fileID: 694544284}
   _triggerCollisionZone: {fileID: 161491875}
   _triggerKnockSound: {fileID: 615256491}
-  _triggerBreathPanicSound: {fileID: 997463312}
+  _triggerBreathPanicSound: {fileID: 0}
   _triggerCloseDoor: {fileID: 624753772}
 --- !u!82 &1527660611 stripped
 AudioSource:
@@ -13533,6 +13667,75 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1729471394
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1729471395}
+  - component: {fileID: 1729471397}
+  - component: {fileID: 1729471396}
+  - component: {fileID: 1729471398}
+  m_Layer: 0
+  m_Name: GenericTrigger - PianoPlaying
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1729471395
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1729471394}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.95, y: 0.59, z: 19.12}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1441477137}
+  m_Father: {fileID: 132981579}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1729471396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1729471394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b6daec257444a5e8c340f569baf42a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _triggerables:
+  - {fileID: 1441477138}
+  _disableTriggerAfterActivate: 0
+--- !u!65 &1729471397
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1729471394}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.461441, y: 0, z: 1.4100037}
+  m_Center: {x: -0.02129364, y: 0, z: -2.080391}
+--- !u!114 &1729471398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1729471394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 066a22e89eb242fca50d8c34d48bf40f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1729953702
 GameObject:
   m_ObjectHideFlags: 0
