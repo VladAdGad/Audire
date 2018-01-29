@@ -24,7 +24,13 @@ namespace Triggers.TriggerableImplementations
             }
         }
 
-        private bool CanPlaySound => _singleTrigger || _multiTrigger;
+        public void OnTrigger()
+        {
+            if (CanPlaySound)
+            {
+                StartCoroutine(Wait(_delay));
+            }
+        }
 
         public override void TriggerExit(Collider collider)
         {
@@ -36,5 +42,7 @@ namespace Triggers.TriggerableImplementations
             _singleTrigger = false;
             _audioSource.Play();
         }
+
+        private bool CanPlaySound => _singleTrigger || _multiTrigger;
     }
 }
