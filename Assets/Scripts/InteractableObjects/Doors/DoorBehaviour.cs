@@ -7,32 +7,32 @@ namespace InteractableObjects.Doors
 {
     public class DoorBehaviour : MonoBehaviour, IGazable, IPressable
     {
-        [SerializeField] private TooltipGuiSocket _tooltipGuiSocket;
-        [SerializeField] private string _toolTipOpenText;
-        [SerializeField] private string _toolTipCloseText;
-        [SerializeField] private KeyCode _activationButton = KeyCode.E;
+        [SerializeField] protected TooltipGuiSocket TooltipGuiSocket;
+        [SerializeField] protected string ToolTipOpenText;
+        [SerializeField] protected string ToolTipCloseText;
+        [SerializeField] protected KeyCode ActivationButton = KeyCode.E;
         [SerializeField] private AudioSource _closingDoorAudioSource;
         [SerializeField] private AudioSource _openingDoorAudioSource;
 
         private Animator _animator;
-        private bool _doorClosed = true;
+        protected bool DoorClosed = true;
 
         private void Start()
         {
             _animator = transform.parent.parent.GetComponent<Animator>();
         }
 
-        public void OnGazeEnter() => _tooltipGuiSocket.Display(_doorClosed
-            ? $"{_toolTipOpenText} {_activationButton}"
-            : $"{_toolTipCloseText} {_activationButton}");
+        public virtual void OnGazeEnter() => TooltipGuiSocket.Display(DoorClosed
+            ? $"{ToolTipOpenText} {ActivationButton}"
+            : $"{ToolTipCloseText} {ActivationButton}");
 
-        public void OnGazeExit() => _tooltipGuiSocket.Flush();
+        public void OnGazeExit() => TooltipGuiSocket.Flush();
 
-        public KeyCode ActivationKeyCode() => _activationButton;
+        public KeyCode ActivationKeyCode() => ActivationButton;
 
-        public void OnPress()
+        public virtual void OnPress()
         {
-            if (_doorClosed)
+            if (DoorClosed)
                 OpenDoor();
             else
                 CloseDoor();
@@ -45,7 +45,7 @@ namespace InteractableObjects.Doors
             _animator.SetBool("open", true);
             _openingDoorAudioSource.Play();
 
-            _doorClosed = false;
+            DoorClosed = false;
         }
 
         private void CloseDoor()
@@ -55,19 +55,19 @@ namespace InteractableObjects.Doors
             _closingDoorAudioSource.Play();
             _animator.SetBool("open", false);
 
-            _doorClosed = true;
+            DoorClosed = true;
         }
 
         public bool IsDoorClosed()
         {
-            return _doorClosed;
+            return DoorClosed;
         }
 
         private bool IsDoorInMotion() => _openingDoorAudioSource.isPlaying || _closingDoorAudioSource.isPlaying;
 
         private void OnValidate()
         {
-            Assert.AreNotEqual(_activationButton, KeyCode.None, "Door Actiation button must not be null.");
+            Assert.AreNotEqual(ActivationButton, KeyCode.None, "Door Actiation button must not be null.");
         }
     }
 }

@@ -1032,11 +1032,6 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114419020345018930, guid: 5c002da2a14c8d3428345bd34109f9df,
-        type: 2}
-      propertyPath: _tooltip
-      value: To pick up press E
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5c002da2a14c8d3428345bd34109f9df, type: 2}
   m_IsPrefabParent: 0
@@ -8335,11 +8330,6 @@ Prefab:
     - target: {fileID: 1944606376490562, guid: b35d63fd701226e4a8d5cdb1b12990c8, type: 2}
       propertyPath: m_Name
       value: LockKeyDoor - under stairs
-      objectReference: {fileID: 0}
-    - target: {fileID: 114364895998857914, guid: b35d63fd701226e4a8d5cdb1b12990c8,
-        type: 2}
-      propertyPath: _lockedStateTooltip
-      value: To open this door I need a key...
       objectReference: {fileID: 0}
     - target: {fileID: 114364895998857914, guid: b35d63fd701226e4a8d5cdb1b12990c8,
         type: 2}

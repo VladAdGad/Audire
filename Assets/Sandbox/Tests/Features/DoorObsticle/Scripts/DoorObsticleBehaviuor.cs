@@ -1,9 +1,8 @@
-﻿using EventManagement;
-using EventManagement.Interfaces;
+﻿using EventManagement.Interfaces;
 using InteractableObjects.Doors;
 using UnityEngine;
 
-namespace Sandbox.Tests.DoorLockingMechanism.Scripts
+namespace Assets.Sandbox.Tests.Features.DoorObsticle.Scripts
 {
     [RequireComponent(typeof(Animator))]
     public class DoorObsticleBehaviuor : MonoBehaviour, IPressable
