@@ -8,24 +8,24 @@ namespace Triggers.TriggerableImplementations
     {
         [SerializeField] private int _delay = 0;
         [SerializeField] private DoorBehaviour _doorBehaviour;
-        private bool _canClosed = true;
 
         public override void TriggerEnter(Collider collider)
         {
-            if (_canClosed)
-            {
-                StartCoroutine(Wait(_delay));
-            }
+            StartCoroutine(Wait(_delay));
         }
 
         public override void TriggerExit(Collider collider)
         {
         }
 
+        public void OnTrigger()
+        {
+            StartCoroutine(Wait(_delay));
+        }
+
         private IEnumerator Wait(int seconds)
         {
             yield return new WaitForSeconds(seconds);
-            _canClosed = false;
             _doorBehaviour.OnPress();
         }
     }
