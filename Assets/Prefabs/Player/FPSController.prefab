@@ -174,11 +174,11 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 0
+  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
-  m_StereoMirrorMode: 0
 --- !u!54 &54478022315227534
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -530,10 +530,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bec5fac6a7f47b18c52393390efc567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerCursorOfCentreMonitor: {fileID: 2800000, guid: 48fe9abea7a61ab488ef8ad59914bc86,
-    type: 3}
-  _cursorSizeX: 5
-  _cursorSizeY: 5
 --- !u!114 &114528683936587676
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -583,7 +579,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_IsWalking: 0
   m_WalkSpeed: 4
-  m_RunSpeed: 7
+  m_RunSpeed: 4
   m_RunstepLenghten: 0.7
   m_JumpSpeed: 0
   m_StickToGroundForce: 10
