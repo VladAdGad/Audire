@@ -4788,7 +4788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b79eebd3e6e44ff59a73c71f2eeed4b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _delay: 5
+  _delay: 0
   _doorBehaviour: {fileID: 1012717872}
 --- !u!1 &663211786
 GameObject:
@@ -12151,7 +12151,7 @@ MonoBehaviour:
   _triggerSound: {fileID: 694544284}
   _triggerCollisionZone: {fileID: 161491875}
   _triggerKnockSound: {fileID: 615256491}
-  _triggerBreathPanickSound: {fileID: 997463312}
+  _triggerBreathPanicSound: {fileID: 997463312}
   _triggerCloseDoor: {fileID: 624753772}
 --- !u!82 &1527660611 stripped
 AudioSource:

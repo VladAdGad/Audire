@@ -830,7 +830,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b79eebd3e6e44ff59a73c71f2eeed4b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _delay: 3
+  _delay: 0
   _doorBehaviour: {fileID: 569733896}
 --- !u!1 &81147232 stripped
 GameObject:
@@ -901,7 +901,9 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 39.45913
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 64532582550974028, guid: f1fa75ac3a6a0df4e84cdb13c25d80c0, type: 2}
+    - {fileID: 95796562045403708, guid: f1fa75ac3a6a0df4e84cdb13c25d80c0, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: f1fa75ac3a6a0df4e84cdb13c25d80c0, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &87589258 stripped
@@ -2517,7 +2519,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 154992401839120780, guid: 41bc8ed4205f82047be618396625e5cf, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 41bc8ed4205f82047be618396625e5cf, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &342218585
@@ -2859,7 +2862,8 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 64087049215802196, guid: 380448825edf63a4ab21011416a8fa23, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 380448825edf63a4ab21011416a8fa23, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &378597576 stripped
@@ -4099,7 +4103,8 @@ Prefab:
       propertyPath: m_DrawHalo
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 64087049215802196, guid: 380448825edf63a4ab21011416a8fa23, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 380448825edf63a4ab21011416a8fa23, type: 2}
   m_IsPrefabParent: 0
 --- !u!114 &569733896 stripped
@@ -9116,7 +9121,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.027410027
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9500000, guid: 2dd67fdcd4fb50041853ad2eabfe54ae, type: 3}
   m_ParentPrefab: {fileID: 100100000, guid: 2dd67fdcd4fb50041853ad2eabfe54ae, type: 3}
   m_IsPrefabParent: 0
 --- !u!1 &815759557
@@ -10317,7 +10323,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.007174628
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6400000, guid: 753d0a071ddc4d1488c34b6efac97495, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 753d0a071ddc4d1488c34b6efac97495, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &963778151
@@ -10469,7 +10476,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.20710379
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65648832914251884, guid: 08119840d27b6394d96bad897a50bfe3, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 08119840d27b6394d96bad897a50bfe3, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1002442510
@@ -10565,7 +10573,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 30
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 64928919176503042, guid: e3397ee87e6f7524e8936f2de51ebfd8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e3397ee87e6f7524e8936f2de51ebfd8, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1017204499 stripped
@@ -11217,7 +11226,7 @@ GameObject:
   - component: {fileID: 1109407884}
   - component: {fileID: 1109407886}
   m_Layer: 0
-  m_Name: TriggerAudioSource_2
+  m_Name: NoiseSound - Near the door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12015,8 +12024,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1210599480}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.2096, y: 9.77, z: 8.293}
-  m_LocalScale: {x: 1.089052, y: 0.06290001, z: 0.33458257}
+  m_LocalPosition: {x: 10.2104, y: 9.77, z: 8.284}
+  m_LocalScale: {x: 1.0889778, y: 0.06290001, z: 0.33270782}
   m_Children: []
   m_Father: {fileID: 389937978}
   m_RootOrder: 0
@@ -13085,7 +13094,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 29
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 64928919176503042, guid: e3397ee87e6f7524e8936f2de51ebfd8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e3397ee87e6f7524e8936f2de51ebfd8, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1360523905 stripped
@@ -13171,7 +13181,7 @@ GameObject:
   - component: {fileID: 1388009870}
   - component: {fileID: 1388009871}
   m_Layer: 0
-  m_Name: TriggerAudioSource_1
+  m_Name: StepsSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14140,8 +14150,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1540095758}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.994, y: 9.77, z: 12.891001}
-  m_LocalScale: {x: 0.5186257, y: 0.062899984, z: 0.589521}
+  m_LocalPosition: {x: 11.994, y: 9.77, z: 12.8953}
+  m_LocalScale: {x: 0.51862663, y: 0.062899984, z: 0.5886648}
   m_Children: []
   m_Father: {fileID: 389937978}
   m_RootOrder: 1
@@ -14548,7 +14558,7 @@ GameObject:
   - component: {fileID: 1646212498}
   - component: {fileID: 1646212500}
   m_Layer: 0
-  m_Name: GenericTrigger - Closely DeadEnd
+  m_Name: NodeTrigger - Closely DeadEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15433,7 +15443,7 @@ GameObject:
   - component: {fileID: 1815011306}
   - component: {fileID: 1815011308}
   m_Layer: 0
-  m_Name: GenericTrigger - DeadCase_1
+  m_Name: DeadCase_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15470,7 +15480,7 @@ MonoBehaviour:
   - {fileID: 80821495}
   - {fileID: 1388009871}
   - {fileID: 489548031}
-  _disableTriggerAfterActivate: 0
+  _disableTriggerAfterActivate: 1
 --- !u!65 &1815011307
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15966,7 +15976,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.002198462
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 65648832914251884, guid: 08119840d27b6394d96bad897a50bfe3, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 08119840d27b6394d96bad897a50bfe3, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1871011326
@@ -16393,7 +16404,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.027410027
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9500000, guid: 2dd67fdcd4fb50041853ad2eabfe54ae, type: 3}
   m_ParentPrefab: {fileID: 100100000, guid: 2dd67fdcd4fb50041853ad2eabfe54ae, type: 3}
   m_IsPrefabParent: 0
 --- !u!1 &1908459060
@@ -17499,7 +17511,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1.6853017
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 95990623044920476, guid: 09975493b6d329a4c9845f097c03bc69, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 09975493b6d329a4c9845f097c03bc69, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &2080711717
