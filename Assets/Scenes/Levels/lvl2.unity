@@ -11226,7 +11226,7 @@ GameObject:
   - component: {fileID: 1109407884}
   - component: {fileID: 1109407886}
   m_Layer: 0
-  m_Name: TriggerAudioSource_2
+  m_Name: NoiseSound - Near the door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14558,7 +14558,7 @@ GameObject:
   - component: {fileID: 1646212498}
   - component: {fileID: 1646212500}
   m_Layer: 0
-  m_Name: GenericTrigger - Closely DeadEnd
+  m_Name: NodeTrigger - Closely DeadEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
