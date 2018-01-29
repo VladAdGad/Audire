@@ -1,24 +1,31 @@
-﻿using EventManagement.Interfaces;
+﻿using Assets.Sandbox.Tests.Features.LockDrum.Scripts.GUI;
+using Assets.Sandbox.Tests.Features.LockDrum.Scripts.Unlockables;
+using EventManagement.Interfaces;
 using InteractableObjects.Doors;
 using Player;
+using Triggers;
 using UnityEngine;
 
-namespace Assets.Sandbox.Tests.Features.LockDrum.Scripts
+namespace Assets.Sandbox.Tests.Features.LockDrum.Scripts.Lock
 {
     public class DrumLock : MonoBehaviour, IPressable
     {
         [SerializeField] private DrumLockGuiSocket _drumLockGuiSocket;
-        [SerializeField] private KeyLockedDoor _door;
+        [SerializeField] private AUnlockable _aUnlockable;
+        [SerializeField] private APassiveTriggerable _triggbleOnUnlock;
         [SerializeField] private KeyCode _activationKeyCode;
         [SerializeField] private LockCode _unlockCode;
         [SerializeField] private LockCode _currentCode;
 
         private bool _interactingWithLock = false;
-
+        
+        public string GetCurrentCodeAt(int index) => _currentCode.GetCodeAt(index);
+        
         public KeyCode ActivationKeyCode() => _activationKeyCode;
-
-        public void OnPress() 
+        public void OnPress()
         {
+            if (IsRightCodeEntered()) return;
+            
             if (_interactingWithLock)
                 StopInteraction();
             else
@@ -31,7 +38,7 @@ namespace Assets.Sandbox.Tests.Features.LockDrum.Scripts
             _drumLockGuiSocket.Flush();
             _interactingWithLock = false;
         }
-    
+
         private void StartInteraction()
         {
             PlayerBehaviour.PlayerInteractWith(false);
@@ -39,23 +46,23 @@ namespace Assets.Sandbox.Tests.Features.LockDrum.Scripts
             _interactingWithLock = true;
         }
 
-        public void OnCodeChanged(LockCode newCode)
+
+        public void DrumChanged(int buttonIndex, string drumNumber)
         {
-            _currentCode = newCode;
+            _currentCode.ChangeSequenceMember(buttonIndex, drumNumber);
+
+            if (IsRightCodeEntered())
+                ReleaseLock();
+        }
         
-            if (!newCode.IsEqualTo(_unlockCode)) return;
-
-            releaseLock();        
-        }
-
-        private void releaseLock()
+        private bool IsRightCodeEntered() => _currentCode.IsEqualTo(_unlockCode);
+        private void ReleaseLock()
         {
+            _aUnlockable.Unlock();
+            _triggbleOnUnlock.OnTrigger();
             _drumLockGuiSocket.Flush();
+            gameObject.SetActive(false);
             PlayerBehaviour.PlayerInteractWith(true);
-            transform.parent.gameObject.SetActive(false);
-            _door.UnlockDoor();
         }
-
-        public LockCode GetCurrentCode() => _currentCode;
     }
 }
