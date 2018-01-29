@@ -10,6 +10,7 @@ namespace InteractableObjects
         [SerializeField] private APassiveTriggerable _triggerSound;
         [SerializeField] private APassiveTriggerable _triggerCollisionZone;
         [SerializeField] private AudioTriggerable _triggerKnockSound;
+        [SerializeField] private AudioTriggerable _triggerBreathPanickSound;
         [SerializeField] private DoorCloseTriggerable _triggerCloseDoor;
 
         protected override void StopDisplaying()
@@ -20,6 +21,7 @@ namespace InteractableObjects
             _triggerCollisionZone.OnTrigger();
             _triggerCloseDoor.OnTrigger();
             _triggerKnockSound.OnTrigger();
+            _triggerBreathPanickSound.OnTrigger();
         }
     }
 }
