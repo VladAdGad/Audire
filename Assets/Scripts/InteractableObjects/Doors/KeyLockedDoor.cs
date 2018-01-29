@@ -29,6 +29,8 @@ namespace InteractableObjects.Doors
         public KeyCode ActivationKeyCode() => _activationButton;
         
         public void UnlockDoor() => _doorLocked = false;
+        public void LockDoor() => _doorLocked = true;
+        public bool IdDoorOpen() => !_doorClosed;
 
         public void OnPress()
         {
