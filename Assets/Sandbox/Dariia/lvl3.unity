@@ -13527,7 +13527,7 @@ GameObject:
   - component: {fileID: 1729471396}
   - component: {fileID: 1729471398}
   m_Layer: 0
-  m_Name: GenericTrigger - SnapBranch
+  m_Name: GenericTrigger - PianoPlaying
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
