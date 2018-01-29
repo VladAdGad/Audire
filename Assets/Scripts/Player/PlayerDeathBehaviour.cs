@@ -9,15 +9,18 @@ namespace Player
     {
         [SerializeField] private string _nameOfTheDeathAnimation = "deadAnimation";
         [SerializeField] private GameObject _deathCauseCanvas;
-        private const float WaitBeforeReloadSceneSeconds = 5;
-        private const float WaitBeforeFaideSeconds = 1.5f;
+        private const int WaitBeforeReloadSceneSeconds = 5;
+        private const float WaitBeforeFaide = 1.5f;
+        private const float WaitBeforDisableScreamer = 0.2f;
         private AudioSource _deathRattle;
         private Animator _deathAnimation;
         private Image _faidingImage;
         private bool _isPlayerDie;
+        private Text _deathText;
 
         private void Start()
         {
+            _deathText = _deathCauseCanvas.GetComponentInChildren<Text>();
             _faidingImage = _deathCauseCanvas.GetComponent<Image>();
             _deathAnimation = GetComponent<Animator>();
             _deathRattle = GetComponent<AudioSource>();
@@ -34,14 +37,7 @@ namespace Player
             if (_isPlayerDie) yield break;
             SetPlayerIsDie();
             ChangeTextOfDeathCause(deathText);
-            _deathRattle.Play();
-            PlayerBehaviour.PlayerDisable();
-            StartPlayAnimation();
-            yield return new WaitForSeconds(WaitBeforeFaideSeconds);
-            StartFaiding();
-            ShowTextOfDeathCause();
-            yield return new WaitForSeconds(WaitBeforeReloadSceneSeconds);
-            LoadScene.ReloadScene();
+            StartCoroutine(StartPlayerDeath());
         }
 
         private IEnumerator ProcessOfDeath(float secondsBeforeDeath, string deathText)
@@ -50,14 +46,7 @@ namespace Player
             SetPlayerIsDie();
             yield return new WaitForSeconds(secondsBeforeDeath);
             ChangeTextOfDeathCause(deathText);
-            _deathRattle.Play();
-            PlayerBehaviour.PlayerDisable();
-            StartPlayAnimation();
-            yield return new WaitForSeconds(WaitBeforeFaideSeconds);
-            StartFaiding();
-            ShowTextOfDeathCause();
-            yield return new WaitForSeconds(WaitBeforeReloadSceneSeconds);
-            LoadScene.ReloadScene();
+            StartCoroutine(StartPlayerDeath());
         }
         
         private IEnumerator ProcessOfDeath(string deathText, Image ghostImage, AudioSource screamSoundaudioSource)
@@ -67,12 +56,17 @@ namespace Player
             ChangeTextOfDeathCause(deathText);
             ghostImage.enabled = true;
             screamSoundaudioSource.Play();
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(WaitBeforDisableScreamer);
             ghostImage.enabled = false;
+            StartCoroutine(StartPlayerDeath());
+        }
+
+        private IEnumerator StartPlayerDeath()
+        {
             _deathRattle.Play();
             PlayerBehaviour.PlayerDisable();
             StartPlayAnimation();
-            yield return new WaitForSeconds(WaitBeforeFaideSeconds);
+            yield return new WaitForSeconds(WaitBeforeFaide);
             StartFaiding();
             ShowTextOfDeathCause();
             yield return new WaitForSeconds(WaitBeforeReloadSceneSeconds);
@@ -81,7 +75,7 @@ namespace Player
 
         private void ShowTextOfDeathCause()
         {
-            _deathCauseCanvas.GetComponentInChildren<Text>().enabled = true;
+            _deathText.enabled = true;
         }
 
         private void StartFaiding()
@@ -96,12 +90,12 @@ namespace Player
 
         private void ChangeTextOfDeathCause(string deathCause)
         {
-            _deathCauseCanvas.GetComponentInChildren<Text>().text = deathCause;
+            _deathText.text = deathCause;
         }
 
         private void SetPlayerIsDie()
         {
-            _isPlayerDie = !_isPlayerDie;
+            _isPlayerDie = true;
         }
 
         public void StartProcessOfDeath(float secondsBeforeDeath, string deathText)
