@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace InteractableObjects.Doors
 {
-    public class LockPanelDoor : MonoBehaviour, IPressable
+    public class LockPanel : MonoBehaviour, IPressable
     {
         [SerializeField] private GameObject _lockPanel;
         [SerializeField] private string _codeToUnlockDoor;
