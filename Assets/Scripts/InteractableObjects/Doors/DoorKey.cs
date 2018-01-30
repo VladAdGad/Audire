@@ -1,5 +1,5 @@
 ﻿using EventManagement.Interfaces;
-using Triggers;
+using Triggers.TriggerableImplementations;
 using UnityEngine;
 
 namespace InteractableObjects.Doors
@@ -7,15 +7,15 @@ namespace InteractableObjects.Doors
     public class DoorKey : MonoBehaviour, IPressable
     {
         [SerializeField] private KeyLockedDoor _doorToOpen;
-        [SerializeField] private APassiveTriggerable _triggerPianoPlaying;
+        [SerializeField] private AudioTriggerable _triggerPickUpKey;
         [SerializeField] private KeyCode _activationButton = KeyCode.E;
 
         public KeyCode ActivationKeyCode() => _activationButton;
 
-        public void OnPress()
+        public virtual void OnPress()
         {
             _doorToOpen.UnlockDoor();
-            _triggerPianoPlaying.OnTrigger();
+            _triggerPickUpKey.OnTrigger();
             Destroy(gameObject);
         }
     }

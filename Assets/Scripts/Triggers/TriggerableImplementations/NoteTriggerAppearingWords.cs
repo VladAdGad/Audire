@@ -1,10 +1,9 @@
 ﻿using InteractableObjects;
-using Triggers;
 using UnityEngine;
 
-namespace Sandbox.Dariia
+namespace Triggers.TriggerableImplementations
 {
-    public class NoteAppearingWords : DisplayImageOnPressed
+    public class NoteTriggerAppearingWords : DisplayImageOnPressed
     {
         [SerializeField] private APassiveTriggerable _bloodyText;
 
