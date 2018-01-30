@@ -20,7 +20,7 @@ namespace Gui.Menu
             LoadMainLevelAfterCredits();
         }
 
-        public void LoadMainLevelAfterCredits()
+        private void LoadMainLevelAfterCredits()
         {
             _unpaused.TransitionTo(.01f);
             LoadScene.LoadIndexScene(LoadScene.MainMenuIndex);
