@@ -3711,7 +3711,8 @@ Prefab:
       propertyPath: m_Name
       value: "\u0421handelier (3)"
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 64451143711045904, guid: 8061e23b96bd19a4f92445ac7574fb45, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 8061e23b96bd19a4f92445ac7574fb45, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &525620519 stripped
@@ -3778,7 +3779,8 @@ Prefab:
       propertyPath: m_Name
       value: "\u0421handelier (2)"
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 64451143711045904, guid: 8061e23b96bd19a4f92445ac7574fb45, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 8061e23b96bd19a4f92445ac7574fb45, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &530372035 stripped
@@ -6267,7 +6269,8 @@ Prefab:
       propertyPath: m_Name
       value: "\u0421handelier (1)"
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 64451143711045904, guid: 8061e23b96bd19a4f92445ac7574fb45, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 8061e23b96bd19a4f92445ac7574fb45, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &797262487 stripped
@@ -10216,7 +10219,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 27
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 64451143711045904, guid: 8061e23b96bd19a4f92445ac7574fb45, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 8061e23b96bd19a4f92445ac7574fb45, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1295248109 stripped
