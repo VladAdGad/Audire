@@ -53,8 +53,8 @@ GameObject:
   - component: {fileID: 4866552106583038}
   - component: {fileID: 33772006629668396}
   - component: {fileID: 23945491723704340}
-  - component: {fileID: 82499499102165644}
   - component: {fileID: 65923752693604668}
+  - component: {fileID: 82499499102165644}
   - component: {fileID: 114374002596031938}
   m_Layer: 0
   m_Name: lamp_17
