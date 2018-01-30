@@ -222,14 +222,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1147489248469044}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.2484, y: 1.7190999, z: -0.72000015}
+  m_LocalRotation: {x: -0, y: 0.71035475, z: -0, w: 0.70384383}
+  m_LocalPosition: {x: 2.275, y: 0.009, z: -0.157}
   m_LocalScale: {x: 0.2635903, y: 0.26359028, z: 0.26359028}
   m_Children:
   - {fileID: 4158355745801948}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90.52801, z: 0}
 --- !u!4 &4357160924874298
 Transform:
   m_ObjectHideFlags: 1
@@ -545,6 +545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 95782991238655916}
+  _animationStateName: PadLockFallAnimation
 --- !u!114 &114423364807273398
 MonoBehaviour:
   m_ObjectHideFlags: 1
