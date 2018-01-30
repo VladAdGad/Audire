@@ -1899,7 +1899,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _triggerables:
   - {fileID: 834922061}
-  _disableTriggerAfterActivate: 0
+  _disableTriggerAfterActivate: 1
 --- !u!65 &236166031
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9337,7 +9337,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51aa1b2378c142efaac28f6b6318449b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _singleTrigger: 1
   _delay: 0
 --- !u!82 &834922062
 AudioSource:
@@ -13167,7 +13166,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51aa1b2378c142efaac28f6b6318449b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _singleTrigger: 1
   _delay: 0
 --- !u!1 &1391397071
 GameObject:

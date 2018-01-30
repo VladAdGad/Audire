@@ -1181,8 +1181,8 @@ Transform:
   m_LocalPosition: {x: 12.846001, y: 0.167, z: 22.538002}
   m_LocalScale: {x: 1, y: 0.19999999, z: 1}
   m_Children: []
-  m_Father: {fileID: 705476500}
-  m_RootOrder: 4
+  m_Father: {fileID: 1784366192}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &161491875
 MonoBehaviour:
@@ -4555,8 +4555,8 @@ Transform:
   m_LocalPosition: {x: 12.903, y: 1.441, z: 22.774002}
   m_LocalScale: {x: 1, y: 0.19999999, z: 1}
   m_Children: []
-  m_Father: {fileID: 705476500}
-  m_RootOrder: 3
+  m_Father: {fileID: 1064916284}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &615256490
 AudioSource:
@@ -4649,7 +4649,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51aa1b2378c142efaac28f6b6318449b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _singleTrigger: 0
   _delay: 8
 --- !u!1 &624753770
 GameObject:
@@ -4677,8 +4676,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 705476500}
-  m_RootOrder: 1
+  m_Father: {fileID: 1784366192}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &624753772
 MonoBehaviour:
@@ -5421,8 +5420,8 @@ Transform:
   m_LocalPosition: {x: 11.321999, y: 2.717, z: 15.5}
   m_LocalScale: {x: 1, y: 0.2, z: 1}
   m_Children: []
-  m_Father: {fileID: 705476500}
-  m_RootOrder: 2
+  m_Father: {fileID: 1064916284}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &694544283
 AudioSource:
@@ -5662,11 +5661,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1148993139}
-  - {fileID: 624753771}
-  - {fileID: 694544282}
-  - {fileID: 615256489}
-  - {fileID: 161491874}
-  - {fileID: 997463310}
+  - {fileID: 1784366192}
+  - {fileID: 1064916284}
   m_Father: {fileID: 132981579}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8301,8 +8297,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 705476500}
-  m_RootOrder: 5
+  m_Father: {fileID: 1064916284}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &997463311
 AudioSource:
@@ -8395,7 +8391,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51aa1b2378c142efaac28f6b6318449b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _singleTrigger: 0
   _delay: 9
 --- !u!1 &998219359 stripped
 GameObject:
@@ -8987,6 +8982,37 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1062485097}
   m_Mesh: {fileID: 4300094, guid: 354b79b07e6d4ec44bc91c3b459f43de, type: 3}
+--- !u!1 &1064916283
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1064916284}
+  m_Layer: 0
+  m_Name: Sounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1064916284
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1064916283}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 694544282}
+  - {fileID: 615256489}
+  - {fileID: 997463310}
+  m_Father: {fileID: 705476500}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1064954373 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: e59f3267b5b44c640914ca2801a28147, type: 3}
@@ -10048,7 +10074,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51aa1b2378c142efaac28f6b6318449b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _singleTrigger: 0
   _delay: 0
 --- !u!1 &1251597252
 GameObject:
@@ -14133,6 +14158,36 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1779047782}
   m_Mesh: {fileID: 4300000, guid: 2dd67fdcd4fb50041853ad2eabfe54ae, type: 3}
+--- !u!1 &1784366191
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1784366192}
+  m_Layer: 0
+  m_Name: CloseDoorCase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1784366192
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1784366191}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 624753771}
+  - {fileID: 161491874}
+  m_Father: {fileID: 705476500}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1800101350
 Prefab:
   m_ObjectHideFlags: 0
@@ -15629,7 +15684,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51aa1b2378c142efaac28f6b6318449b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _singleTrigger: 1
   _delay: 0
 --- !u!82 &1945115290
 AudioSource:
@@ -20271,7 +20325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _triggerables:
   - {fileID: 1945115289}
-  _disableTriggerAfterActivate: 0
+  _disableTriggerAfterActivate: 1
 --- !u!65 &2085321752
 BoxCollider:
   m_ObjectHideFlags: 0
