@@ -6,7 +6,7 @@ using UnityEngine.Assertions;
 
 namespace InteractableObjects.Doors
 {
-    public class LockDoorBehaviour : MonoBehaviour, IGazable, IPressable
+    public class PanelLockedDoor : MonoBehaviour, IGazable, IPressable
     {
         [SerializeField] private TooltipGuiSocket _tooltipGuiSocket;
         [SerializeField] private string _toolTipText;
