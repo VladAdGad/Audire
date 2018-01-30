@@ -6,20 +6,20 @@ using UnityEngine.UI;
 
 namespace InteractableObjects.Doors
 {
-    public class LockPanelDoor : MonoBehaviour, IPressable
+    public class LockPanel : MonoBehaviour, IPressable
     {
         [SerializeField] private GameObject _lockPanel;
         [SerializeField] private string _codeToUnlockDoor;
         [SerializeField] private KeyCode _activationButton = KeyCode.E;
         [SerializeField] private AudioSource _soundOnPickUpAudioSource;
 
-        private LockDoorBehaviour _doorToOpen;
+        private PanelLockedDoor _doorToOpen;
         private IEnumerable<Button> _buttonsOnLockPanel;
         private string _currentCode = "";
 
         private void Start()
         {
-            _doorToOpen = gameObject.GetComponent<LockDoorBehaviour>();
+            _doorToOpen = gameObject.GetComponent<PanelLockedDoor>();
             _buttonsOnLockPanel = GetButtons(_lockPanel.GetComponentsInChildren<Button>());
         }
 
