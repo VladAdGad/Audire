@@ -4649,7 +4649,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51aa1b2378c142efaac28f6b6318449b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _singleTrigger: 0
   _delay: 8
 --- !u!1 &624753770
 GameObject:
@@ -8395,7 +8394,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51aa1b2378c142efaac28f6b6318449b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _singleTrigger: 0
   _delay: 9
 --- !u!1 &998219359 stripped
 GameObject:
@@ -10048,7 +10046,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51aa1b2378c142efaac28f6b6318449b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _singleTrigger: 0
   _delay: 0
 --- !u!1 &1251597252
 GameObject:
@@ -15629,7 +15626,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51aa1b2378c142efaac28f6b6318449b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _singleTrigger: 1
   _delay: 0
 --- !u!82 &1945115290
 AudioSource:
@@ -20271,7 +20267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _triggerables:
   - {fileID: 1945115289}
-  _disableTriggerAfterActivate: 0
+  _disableTriggerAfterActivate: 1
 --- !u!65 &2085321752
 BoxCollider:
   m_ObjectHideFlags: 0
