@@ -13,8 +13,8 @@ namespace Assets.Sandbox.Tests.Features.LockDrum.Scripts.GUI
         public void Display(DrumLock drumLock) => _buttons.ForEach(button => button.ActivateButtonWith(drumLock));
         public void Flush() => _buttons.ForEach(button => button.DeactivateButton());
 
-        public void OnActivate() => gameObject.SetActive(true);
-        public void OnDeactivate() => gameObject.SetActive(false);
+        public void Activate() => gameObject.SetActive(true);
+        public void Deactivate() => gameObject.SetActive(false);
 
         private void Start() => ApplyButtonIndexNumbers();
         private void ApplyButtonIndexNumbers() =>

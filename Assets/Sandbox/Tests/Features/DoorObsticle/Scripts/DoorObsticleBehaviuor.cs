@@ -18,20 +18,22 @@ namespace Assets.Sandbox.Tests.Features.DoorObsticle.Scripts
         [SerializeField] private bool _isBlockedByLock;
 
         private Animator _obsticleAnimator;
+        private bool _animationInProgress;
 
         private void Start()
         {
             _obsticleAnimator = GetComponent<Animator>();
-            
-            if (_isClosed) _lockedDoor.LockDoor();
+            SetAnimationInProgress(false);
+            if (_isClosed)
+                BlockDoor();
         }
 
         public KeyCode ActivationKeyCode() => _activationKeyCode;
         public void OnPress() => ChangeMovingState();
 
-        public void OnGazeEnter() => _tooltipGuiSocket.Display(BlockedDoorTooltip());
-        private string BlockedDoorTooltip() => _isBlockedByLock ? _onClosedTooltip : LockedDoorTooltip();
-        private string LockedDoorTooltip() => _lockedDoor.IsDoorOpen() ? _whenDoorIsOpenTooltip : _onOpenTooltip;
+        public void OnGazeEnter() => _tooltipGuiSocket.Display(ObsticleTooltip());
+        private string ObsticleTooltip() => _isBlockedByLock ? _onClosedTooltip : ObsticleTooltipDependingOnDoorState();
+        private string ObsticleTooltipDependingOnDoorState() => _lockedDoor.IsDoorOpen() ? _whenDoorIsOpenTooltip : _onOpenTooltip;
 
         public void OnGazeExit() => _tooltipGuiSocket.Flush();
 
@@ -39,7 +41,7 @@ namespace Assets.Sandbox.Tests.Features.DoorObsticle.Scripts
 
         private void ChangeMovingState()
         {
-            if (_isBlockedByLock || _lockedDoor.IsDoorOpen()) return;
+            if (_animationInProgress || _isBlockedByLock || _lockedDoor.IsDoorOpen()) return;
         
             if (_isClosed)
                 StartOpeningRotation();
@@ -58,5 +60,21 @@ namespace Assets.Sandbox.Tests.Features.DoorObsticle.Scripts
             _isClosed = true;
             _obsticleAnimator.Play("ObsticleRotationClose");
         }
+
+        private void EnterdAnimationEvent() => SetAnimationInProgress(true);
+
+        private void ExitedAnimationEvent()
+        {
+            if (_isClosed)
+                BlockDoor();
+            else
+                UnBlockDoor();
+            SetAnimationInProgress(false);
+        }
+
+        private void BlockDoor() => _lockedDoor.LockDoor();
+        private void UnBlockDoor() => _lockedDoor.UnlockDoor();
+    
+        private void SetAnimationInProgress(bool value) => _animationInProgress = value;
     }
 }
