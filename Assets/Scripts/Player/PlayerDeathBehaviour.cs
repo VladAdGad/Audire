@@ -90,16 +90,13 @@ namespace Player
 
         private void SetPlayerIsDie() => _isPlayerDie = true;
 
-        public void StartProcessOfDeath(float secondsBeforeDeath, string deathText)
-        {
+        public void StartProcessOfDeath(float secondsBeforeDeath, string deathText) =>
             StartCoroutine(secondsBeforeDeath == .0f
                 ? ProcessOfDeath(deathText)
                 : ProcessOfDeath(secondsBeforeDeath, deathText));
-        }
         
-        public void StartProcessOfDeath(string deathText, Image ghostImage, AudioSource screamSoundaudioSource)
-        {
+        
+        public void StartProcessOfDeath(string deathText, Image ghostImage, AudioSource screamSoundaudioSource) => 
             StartCoroutine(ProcessOfDeath(deathText, ghostImage, screamSoundaudioSource));
-        }
     }
 }
