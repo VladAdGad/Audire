@@ -2,8 +2,8 @@
 {
     public interface IButtonBehaviour
     {
-        void StartGame();
-        void Pause();
-        void Exit();
+        void OnGameStart();
+        void OnPause();
+        void OnExit();
     }
 }
