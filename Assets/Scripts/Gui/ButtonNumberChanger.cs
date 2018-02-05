@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,8 +7,9 @@ namespace Gui
 {
     public class ButtonNumberChanger : MonoBehaviour
     {
-        private static readonly IDictionary<string, string> NextNumber = NumbersWith(x => x + 1);
-//        private static readonly IDictionary<string, string> PreviousNumber = NumbersWith(x => x + 9);
+        private static readonly IDictionary<string, string> NextNumber = Enumerable
+            .Range(0, 10)
+            .ToDictionary(x => x.ToString(), x => (x + 1 % 10).ToString());
 
         private Text _text;
 
@@ -18,9 +18,5 @@ namespace Gui
             _text = GetComponentInChildren<Text>();
             GetComponent<Button>().onClick.AddListener(() => _text.text = NextNumber[_text.text]);
         }
-
-        private static IDictionary<string, string> NumbersWith(Func<int, int> func) => Enumerable
-            .Range(0, 10)
-            .ToDictionary(x => x.ToString(), x => (func(x) % 10).ToString());
     }
 }

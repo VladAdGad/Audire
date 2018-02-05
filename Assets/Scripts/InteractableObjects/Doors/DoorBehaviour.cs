@@ -15,13 +15,13 @@ namespace InteractableObjects.Doors
         [SerializeField] private AudioSource _openingDoorAudioSource;
 
         private Animator _animator;
-        protected bool DoorClosed = true;
+        protected bool IsDoorClosed = true;
 
         private void Start() => _animator = transform.parent.parent.GetComponent<Animator>();
 
-        public virtual void OnGazeEnter() => TooltipGuiSocket.Display(DoorClosed
-            ? $"{ToolTipOpenText} {ActivationButton}"
-            : $"{ToolTipCloseText} {ActivationButton}");
+        public virtual void OnGazeEnter() => TooltipGuiSocket.Display(AdequateText());
+
+        private string AdequateText() => IsDoorClosed ? $"{ToolTipOpenText} {ActivationButton}" : $"{ToolTipCloseText} {ActivationButton}";
 
         public void OnGazeExit() => TooltipGuiSocket.Flush();
 
@@ -29,7 +29,7 @@ namespace InteractableObjects.Doors
 
         public virtual void OnPress()
         {
-            if (DoorClosed)
+            if (IsDoorClosed)
                 OpenDoor();
             else
                 CloseDoor();
@@ -42,7 +42,7 @@ namespace InteractableObjects.Doors
             _animator.SetBool("open", true);
             _openingDoorAudioSource.Play();
 
-            DoorClosed = false;
+            IsDoorClosed = false;
         }
 
         private void CloseDoor()
@@ -52,12 +52,10 @@ namespace InteractableObjects.Doors
             _closingDoorAudioSource.Play();
             _animator.SetBool("open", false);
 
-            DoorClosed = true;
+            IsDoorClosed = true;
         }
 
-        public bool IsDoorClosed() => DoorClosed;
-        
-        public bool IsDoorOpen() => ! DoorClosed;
+        public bool IsDoorOpen() => ! IsDoorClosed;
 
         private bool IsDoorInMotion() => _openingDoorAudioSource.isPlaying || _closingDoorAudioSource.isPlaying;
 

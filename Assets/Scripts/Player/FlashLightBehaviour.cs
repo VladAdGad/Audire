@@ -6,7 +6,7 @@ namespace Player
     {
         private Light _spotLightComponent;
         private AudioSource _spotLightOnOffAudioSource;
-        private bool _stateSpotLight = false;
+        private bool _stateSpotLight;
 
         private void Start()
         {

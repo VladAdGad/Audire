@@ -6,9 +6,10 @@ namespace Gui.Menu
 {
     public class TextColorBehaviuor : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
-        private Text _text;
         [SerializeField] private Color _enterColor = Color.red;
         [SerializeField] private Color _exitColor = Color.white;
+        
+        private Text _text;
 
         private void Start()
         {
