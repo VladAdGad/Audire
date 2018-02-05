@@ -8,7 +8,7 @@ namespace Gui
     {
         [SerializeField] private Image _cursorImage;
 
-        public void OnActivate() => _cursorImage.enabled = true;
-        public void OnDeactivate() => _cursorImage.enabled = false;
+        public void Activate() => _cursorImage.enabled = true;
+        public void Deactivate() => _cursorImage.enabled = false;
     }
 }

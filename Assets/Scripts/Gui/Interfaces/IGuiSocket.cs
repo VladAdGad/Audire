@@ -2,7 +2,7 @@
 {
     public interface IGuiSocket
     {
-        void OnActivate();
-        void OnDeactivate();
+        void Activate();
+        void Deactivate();
     }
 }

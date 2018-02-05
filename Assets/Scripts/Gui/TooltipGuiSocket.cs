@@ -13,7 +13,7 @@ namespace Gui
         public void Display(string text) => _socketText.text = text;
         public void Flush() => _socketText.text = Empty;
 
-        public void OnActivate() => _socketText.enabled = true;
-        public void OnDeactivate() => _socketText.enabled = false;
+        public void Activate() => _socketText.enabled = true;
+        public void Deactivate() => _socketText.enabled = false;
     }
 }

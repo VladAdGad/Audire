@@ -19,7 +19,7 @@ namespace Gui
 
         public void Flush() => _image.enabled = false;
 
-        public void OnActivate() => enabled = true;
-        public void OnDeactivate() => enabled = false;
+        public void Activate() => enabled = true;
+        public void Deactivate() => enabled = false;
     }
 }
