@@ -9,7 +9,7 @@ namespace Gui
     {
         private static readonly IDictionary<string, string> NextNumber = Enumerable
             .Range(0, 10)
-            .ToDictionary(x => x.ToString(), x => (x + 1 % 10).ToString());
+            .ToDictionary(x => x.ToString(), x => ((x+1) % 10).ToString());
 
         private Text _text;
 

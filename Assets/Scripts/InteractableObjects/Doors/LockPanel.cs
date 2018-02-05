@@ -28,7 +28,6 @@ namespace InteractableObjects.Doors
         private static string RandomDigit() => Random.Range(0, 10).ToString();
 
         public KeyCode ActivationKeyCode() => _activationButton;
-
         public void OnPress()
         {
             PlayerBehaviour.PlayerInteractWith(_lockPanel.activeSelf);
