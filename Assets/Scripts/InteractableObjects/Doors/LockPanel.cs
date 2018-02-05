@@ -16,7 +16,6 @@ namespace InteractableObjects.Doors
 
         private PanelLockedDoor _doorToOpen;
         private IEnumerable<Button> _buttonsOnLockPanel;
-        private string _currentCode = "";
 
         private void Start()
         {
@@ -28,7 +27,8 @@ namespace InteractableObjects.Doors
 
         public void OnPress()
         {
-            ChangeStateSolveCode();
+            PlayerBehaviour.PlayerInteractWith(_lockPanel.activeSelf);
+            _lockPanel.SetActive(!_lockPanel.activeSelf);
 
             if (IsCodeCorrect())
             {
@@ -37,25 +37,13 @@ namespace InteractableObjects.Doors
                 _lockPanel.SetActive(false);
                 Destroy(this);
             }
-
-            _currentCode = "";
         }
 
-        private void ChangeStateSolveCode()
-        {
-            PlayerBehaviour.PlayerInteractWith(_lockPanel.activeSelf);
-            _lockPanel.SetActive(!_lockPanel.activeSelf);
-        }
-
-        private bool IsCodeCorrect()
-        {
-            foreach (Button currentButton in _buttonsOnLockPanel)
-            {
-                _currentCode += currentButton.GetComponentInChildren<Text>().text;
-            }
-
-            return _currentCode.Equals(_codeToUnlockDoor);
-        }
+        private bool IsCodeCorrect() => _buttonsOnLockPanel
+            .Select(button => button.GetComponentInChildren<Text>())
+            .Select(child => child.text)
+            .Aggregate((first, second) => first + second)
+            .Equals(_codeToUnlockDoor);
 
         private IEnumerable<Button> PreparedButtons()
         {
