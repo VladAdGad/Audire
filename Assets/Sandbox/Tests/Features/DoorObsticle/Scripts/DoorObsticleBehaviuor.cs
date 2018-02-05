@@ -25,7 +25,7 @@ namespace Assets.Sandbox.Tests.Features.DoorObsticle.Scripts
         private void Start()
         {
             _obsticleAnimator = GetComponent<Animator>();
-            SetAnimationInProgress(false);
+            _isAnimationInProgress = false;
             
             if (_isClosed) BlockDoor();
         }
@@ -38,7 +38,9 @@ namespace Assets.Sandbox.Tests.Features.DoorObsticle.Scripts
         private string LockedDoorTooltip() => _lockedDoor.IdDoorOpen() ? _whenDoorIsOpenTooltip : _onOpenTooltip;
 
         public void OnGazeExit() => _tooltipGuiSocket.Flush();
-        
+
+        public void UnlockObsticle() => _isBlockedByLock = false;
+
         private void ChangeMovingState()
         {
             if (_isAnimationInProgress || _isBlockedByLock || _lockedDoor.IdDoorOpen()) return;
@@ -48,7 +50,6 @@ namespace Assets.Sandbox.Tests.Features.DoorObsticle.Scripts
             else
                 StartClosingRotation();
         }
-
 
         private void StartOpeningRotation()
         {
@@ -62,7 +63,7 @@ namespace Assets.Sandbox.Tests.Features.DoorObsticle.Scripts
             _obsticleAnimator.Play("ObsticleRotationClose");
         }
 
-        private void EnterdAnimationEvent() => SetAnimationInProgress(true);
+        private void EnterdAnimationEvent() => _isAnimationInProgress = true;
 
         private void ExitedAnimationEvent()
         {
@@ -71,14 +72,10 @@ namespace Assets.Sandbox.Tests.Features.DoorObsticle.Scripts
             else
                 UnblockDoor();
             
-            SetAnimationInProgress(false);
+            _isAnimationInProgress = false;
         }
 
         private void BlockDoor() => _lockedDoor.LockDoor();
         private void UnblockDoor() => _lockedDoor.UnlockDoor();
-
-        public void UnlockObsticle() => _isBlockedByLock = false;
-
-        private void SetAnimationInProgress(bool value) => _isAnimationInProgress = value;
     }
 }

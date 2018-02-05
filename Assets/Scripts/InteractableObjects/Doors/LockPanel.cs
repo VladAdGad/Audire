@@ -21,7 +21,7 @@ namespace InteractableObjects.Doors
         private void Start()
         {
             _doorToOpen = gameObject.GetComponent<PanelLockedDoor>();
-            _buttonsOnLockPanel = GetButtons(_lockPanel.GetComponentsInChildren<Button>());
+            _buttonsOnLockPanel = PreparedButtons();
         }
 
         public KeyCode ActivationKeyCode() => _activationButton;
@@ -57,11 +57,11 @@ namespace InteractableObjects.Doors
             return _currentCode.Equals(_codeToUnlockDoor);
         }
 
-        private static IEnumerable<Button> GetButtons(IEnumerable<Button> b)
+        private IEnumerable<Button> PreparedButtons()
         {
             LinkedList<Button> buttons = new LinkedList<Button>();
 
-            foreach (Button button in b)
+            foreach (Button button in _lockPanel.GetComponentsInChildren<Button>())
             {
                 buttons.AddLast(button);
                 button.GetComponentInChildren<Text>().text = Random.Range(0, 10).ToString();
