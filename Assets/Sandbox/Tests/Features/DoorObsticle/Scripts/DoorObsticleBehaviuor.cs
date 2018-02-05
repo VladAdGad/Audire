@@ -23,7 +23,7 @@ namespace Assets.Sandbox.Tests.Features.DoorObsticle.Scripts
         {
             _obsticleAnimator = GetComponent<Animator>();
             
-            if (_isClosed) BlockDoor();
+            if (_isClosed) _lockedDoor.LockDoor();
         }
 
         public KeyCode ActivationKeyCode() => _activationKeyCode;
@@ -31,7 +31,7 @@ namespace Assets.Sandbox.Tests.Features.DoorObsticle.Scripts
 
         public void OnGazeEnter() => _tooltipGuiSocket.Display(BlockedDoorTooltip());
         private string BlockedDoorTooltip() => _isBlockedByLock ? _onClosedTooltip : LockedDoorTooltip();
-        private string LockedDoorTooltip() => _lockedDoor.IdDoorOpen() ? _whenDoorIsOpenTooltip : _onOpenTooltip;
+        private string LockedDoorTooltip() => _lockedDoor.IsDoorOpen() ? _whenDoorIsOpenTooltip : _onOpenTooltip;
 
         public void OnGazeExit() => _tooltipGuiSocket.Flush();
 
@@ -39,7 +39,7 @@ namespace Assets.Sandbox.Tests.Features.DoorObsticle.Scripts
 
         private void ChangeMovingState()
         {
-            if (_isBlockedByLock || _lockedDoor.IdDoorOpen()) return;
+            if (_isBlockedByLock || _lockedDoor.IsDoorOpen()) return;
         
             if (_isClosed)
                 StartOpeningRotation();
@@ -58,7 +58,5 @@ namespace Assets.Sandbox.Tests.Features.DoorObsticle.Scripts
             _isClosed = true;
             _obsticleAnimator.Play("ObsticleRotationClose");
         }
-
-        private void BlockDoor() => _lockedDoor.LockDoor();
     }
 }

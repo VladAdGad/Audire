@@ -17,7 +17,6 @@ namespace InteractableObjects.Doors
 
         public void UnlockDoor() => _doorLocked = false;
         public void LockDoor() => _doorLocked = true;
-        public bool IdDoorOpen() => !IsDoorClosed;
 
         public override void OnPress()
         {
