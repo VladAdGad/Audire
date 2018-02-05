@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using EventManagement.Interfaces;
 using Player;
 using UnityEngine;
@@ -29,7 +30,7 @@ namespace InteractableObjects.Doors
         {
             ChangeStateSolveCode();
 
-            if (IsCodeGood())
+            if (IsCodeCorrect())
             {
                 _doorToOpen.UnlockDoor();
                 _soundOnPickUpAudioSource.Play();
@@ -46,11 +47,11 @@ namespace InteractableObjects.Doors
             _lockPanel.SetActive(!_lockPanel.activeSelf);
         }
 
-        private bool IsCodeGood()
+        private bool IsCodeCorrect()
         {
-            foreach (Button curButton in _buttonsOnLockPanel)
+            foreach (Button currentButton in _buttonsOnLockPanel)
             {
-                _currentCode += curButton.GetComponentInChildren<Text>().text;
+                _currentCode += currentButton.GetComponentInChildren<Text>().text;
             }
 
             return _currentCode.Equals(_codeToUnlockDoor);

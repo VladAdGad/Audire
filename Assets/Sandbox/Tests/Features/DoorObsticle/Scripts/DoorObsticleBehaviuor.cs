@@ -33,7 +33,10 @@ namespace Assets.Sandbox.Tests.Features.DoorObsticle.Scripts
         public KeyCode ActivationKeyCode() => _activationKeyCode;
         public void OnPress() => ChangeMovingState();
 
-        public void OnGazeEnter() => _tooltipGuiSocket.Display(_isBlockedByLock ? _onClosedTooltip : (_lockedDoor.IdDoorOpen() ? _whenDoorIsOpenTooltip : _onOpenTooltip));
+        public void OnGazeEnter() => _tooltipGuiSocket.Display(BlockedDoorTooltip());
+        private string BlockedDoorTooltip() => _isBlockedByLock ? _onClosedTooltip : LockedDoorTooltip();
+        private string LockedDoorTooltip() => _lockedDoor.IdDoorOpen() ? _whenDoorIsOpenTooltip : _onOpenTooltip;
+
         public void OnGazeExit() => _tooltipGuiSocket.Flush();
         
         private void ChangeMovingState()
