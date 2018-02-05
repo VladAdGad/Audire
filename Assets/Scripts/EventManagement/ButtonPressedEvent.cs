@@ -11,9 +11,6 @@ namespace EventManagement
             _pressedButtonCode = keyCode;
         }
 
-        public KeyCode PressedButtonCode
-        {
-            get { return _pressedButtonCode; }
-        }
+        public KeyCode PressedButtonCode => _pressedButtonCode;
     }
 }

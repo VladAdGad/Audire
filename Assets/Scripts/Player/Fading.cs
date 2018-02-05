@@ -12,7 +12,7 @@ namespace Player
         [SerializeField] private float _fadeSpeed = 0.8f;
 
         // the texture's order in the draw hierarchy: a low number means it renders on top
-        private readonly int _drawDepth = -1000;
+        private const int _drawDepth = -1000;
 
         private float _alpha = 1.0f; // the texture's alpha value between 0 and 1
         private int _fadeDir = -1; // the direction to fade: in = -1 or out = 1
@@ -35,17 +35,11 @@ namespace Player
         public float BeginFade(int direction)
         {
             _fadeDir = direction;
-            return (_fadeSpeed);
+            return _fadeSpeed;
         }
 
-        public void StartFaiding()
-        {
-            gameObject.GetComponent<Fading>().BeginFade(1);
-        }
+        public void StartFaiding() => gameObject.GetComponent<Fading>().BeginFade(1);
 
-        private void OnValidate()
-        {
-            Assert.IsNotNull(_fadeOutTexture);
-        }
+        private void OnValidate() => Assert.IsNotNull(_fadeOutTexture);
     }
 }

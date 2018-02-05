@@ -16,10 +16,12 @@ namespace Player
 
         private void Update()
         {
-            if (!Input.GetKeyDown(KeyCode.F)) return;
-            _stateSpotLight = !_stateSpotLight;
-            _spotLightComponent.enabled = _stateSpotLight;
-            _spotLightOnOffAudioSource.Play();
+            if(Input.GetKeyDown(KeyCode.F))
+            {
+                _stateSpotLight = !_stateSpotLight;
+                _spotLightComponent.enabled = _stateSpotLight;
+                _spotLightOnOffAudioSource.Play();
+            }
         }
     }
 }

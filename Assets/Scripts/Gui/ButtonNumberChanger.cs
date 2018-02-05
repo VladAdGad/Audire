@@ -19,11 +19,8 @@ namespace Gui
             GetComponent<Button>().onClick.AddListener(() => _text.text = NextNumber[_text.text]);
         }
 
-        private static IDictionary<string, string> NumbersWith(Func<int, int> func)
-        {
-            return Enumerable
-                .Range(0, 10)
-                .ToDictionary(x => x.ToString(), x => (func(x) % 10).ToString());
-        }
+        private static IDictionary<string, string> NumbersWith(Func<int, int> func) => Enumerable
+            .Range(0, 10)
+            .ToDictionary(x => x.ToString(), x => (func(x) % 10).ToString());
     }
 }

@@ -9,15 +9,11 @@ namespace Gui.Menu
         [SerializeField] private AudioMixerSnapshot _unpaused;
         [SerializeField] private AudioMixerSnapshot _credits;
 
-        private void Start()
-        {
-            _credits.TransitionTo(.01f);
-        }
+        private void Start() => _credits.TransitionTo(.01f);
 
         private void Update()
         {
-            if (!Input.GetKeyDown(KeyCode.Escape)) return;
-            LoadMainLevelAfterCredits();
+            if (Input.GetKeyDown(KeyCode.Escape)) LoadMainLevelAfterCredits();
         }
 
         private void LoadMainLevelAfterCredits()

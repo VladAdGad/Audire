@@ -12,6 +12,7 @@ namespace InteractableObjects
         [SerializeField] private string _toolTipOff;
         [SerializeField] private KeyCode _activationButton = KeyCode.E;
         [SerializeField] private GameObject _lights;
+        
         private AudioSource _turningLapmSound;
         private bool _isLampOn = false;
 
@@ -56,9 +57,6 @@ namespace InteractableObjects
 
         private void PlaySound() => _turningLapmSound.Play();
 
-        private void OnValidate()
-        {
-            Assert.IsTrue(_activationButton != KeyCode.None);
-        }
+        private void OnValidate() => Assert.IsTrue(_activationButton != KeyCode.None);
     }
 }

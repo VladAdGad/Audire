@@ -67,7 +67,6 @@ namespace InteractableObjects.Doors
 
         private bool IsDoorInMotion() => _openingDoorAudioSource.isPlaying || _closingDoorAudioSource.isPlaying;
 
-        private void OnValidate() =>
-            Assert.AreNotEqual(_activationButton, KeyCode.None, "Door Actiation button must not be null.");
+        private void OnValidate() => Assert.AreNotEqual(_activationButton, KeyCode.None, "Door Actiation button must not be null.");
     }
 }

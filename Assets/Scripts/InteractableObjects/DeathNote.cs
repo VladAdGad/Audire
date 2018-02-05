@@ -17,10 +17,7 @@ namespace InteractableObjects
 
         private Action _callStartTriggersOnlyOnce;
 
-        private void Start()
-        {
-            _callStartTriggersOnlyOnce = CallOnlyOnce(StartTriggers);
-        }
+        private void Start() => _callStartTriggersOnlyOnce = CallOnlyOnce(StartTriggers);
 
         protected override void StopDisplaying()
         {
@@ -41,6 +38,7 @@ namespace InteractableObjects
         private static Action CallOnlyOnce(Action action)
         {
             ContextCallOnlyOnce context = new ContextCallOnlyOnce();
+            
             Action returnAction = () =>
             {
                 if (context.AlreadyCalled) return;

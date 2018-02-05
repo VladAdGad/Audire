@@ -56,15 +56,10 @@ namespace Triggers.TriggerableImplementations
 
         private void ResetProggress() => _nextKeyIndex = 0;
 
-
-        private void StopResetProgressCorutine() =>
-            Optional<Coroutine>
+        private void StopResetProgressCorutine() => Optional<Coroutine>
                 .Of(_squenceResetCorutine)
                 .IfPresent(StopCoroutine);
 
-        private void OnValidate()
-        {
-            Assert.IsTrue(_keySequence.Count > 0, "Piano Key Sequence must contain at least one key!");
-        }
+        private void OnValidate() => Assert.IsTrue(_keySequence.Count > 0, "Piano Key Sequence must contain at least one key!");
     }
 }

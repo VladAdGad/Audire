@@ -13,11 +13,13 @@ namespace InteractableObjects
         [Range(0f, 5f)] [SerializeField] private float _maxWaitTime;
         [SerializeField] private Material _material1;
         [SerializeField] private Material _material2;
+        
         private MeshRenderer _meshRenderer;
 
         private void Start()
         {
             _meshRenderer = GetComponent<MeshRenderer>();
+            
             if (_onStart)
             {
                 StartCoroutine(BlinkingLights());

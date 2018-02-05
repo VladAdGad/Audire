@@ -8,14 +8,8 @@ namespace Gui
     {
         [SerializeField] private string _hyperLink;
 
-        private void Awake()
-        {
-            GetComponent<Button>().onClick.AddListener(() => Application.OpenURL(_hyperLink));
-        }
+        private void Awake() => GetComponent<Button>().onClick.AddListener(() => Application.OpenURL(_hyperLink));
 
-        private void OnValidate()
-        {
-            Assert.IsNotNull(_hyperLink);
-        }
+        private void OnValidate() => Assert.IsNotNull(_hyperLink);
     }
 }

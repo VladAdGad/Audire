@@ -17,10 +17,7 @@ namespace InteractableObjects.Doors
         private Animator _animator;
         protected bool DoorClosed = true;
 
-        private void Start()
-        {
-            _animator = transform.parent.parent.GetComponent<Animator>();
-        }
+        private void Start() => _animator = transform.parent.parent.GetComponent<Animator>();
 
         public virtual void OnGazeEnter() => TooltipGuiSocket.Display(DoorClosed
             ? $"{ToolTipOpenText} {ActivationButton}"
@@ -58,16 +55,12 @@ namespace InteractableObjects.Doors
             DoorClosed = true;
         }
 
-        public bool IsDoorClosed()
-        {
-            return DoorClosed;
-        }
+        public bool IsDoorClosed() => DoorClosed;
+        
+        public bool IsDoorOpen() => ! DoorClosed;
 
         private bool IsDoorInMotion() => _openingDoorAudioSource.isPlaying || _closingDoorAudioSource.isPlaying;
 
-        private void OnValidate()
-        {
-            Assert.AreNotEqual(ActivationButton, KeyCode.None, "Door Actiation button must not be null.");
-        }
+        private void OnValidate() => Assert.AreNotEqual(ActivationButton, KeyCode.None, "Door Actiation button must not be null.");
     }
 }

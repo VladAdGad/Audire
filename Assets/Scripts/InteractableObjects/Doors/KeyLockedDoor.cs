@@ -26,7 +26,6 @@ namespace InteractableObjects.Doors
             base.OnPress();
         }
 
-        private void OnValidate() =>
-            Assert.AreNotEqual(ActivationButton, KeyCode.None, "Door Actiation button must not be null.");
+        private void OnValidate() => Assert.AreNotEqual(ActivationButton, KeyCode.None, "Door Actiation button must not be null.");
     }
 }
