@@ -20,8 +20,12 @@ namespace InteractableObjects.Doors
         private void Start()
         {
             _doorToOpen = gameObject.GetComponent<PanelLockedDoor>();
-            _buttonsOnLockPanel = PreparedButtons();
+            Buttons()
+                .ToList()
+                .ForEach(textComponent => textComponent.text = RandomDigit());
         }
+
+        private static string RandomDigit() => Random.Range(0, 10).ToString();
 
         public KeyCode ActivationKeyCode() => _activationButton;
 
@@ -39,23 +43,13 @@ namespace InteractableObjects.Doors
             }
         }
 
-        private bool IsCodeCorrect() => _buttonsOnLockPanel
-            .Select(button => button.GetComponentInChildren<Text>())
+        private bool IsCodeCorrect() => Buttons()
             .Select(child => child.text)
             .Aggregate((first, second) => first + second)
             .Equals(_codeToUnlockDoor);
 
-        private IEnumerable<Button> PreparedButtons()
-        {
-            LinkedList<Button> buttons = new LinkedList<Button>();
-
-            foreach (Button button in _lockPanel.GetComponentsInChildren<Button>())
-            {
-                buttons.AddLast(button);
-                button.GetComponentInChildren<Text>().text = Random.Range(0, 10).ToString();
-            }
-
-            return buttons;
-        }
+        private IEnumerable<Text> Buttons() => _lockPanel
+            .GetComponentsInChildren<Button>()
+            .Select(button => button.GetComponentInChildren<Text>());
     }
 }
