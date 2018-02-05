@@ -20,7 +20,7 @@ namespace InteractableObjects.Doors
         private void Start()
         {
             _doorToOpen = gameObject.GetComponent<PanelLockedDoor>();
-            Buttons()
+            Digits()
                 .ToList()
                 .ForEach(textComponent => textComponent.text = RandomDigit());
         }
@@ -43,12 +43,12 @@ namespace InteractableObjects.Doors
             }
         }
 
-        private bool IsCodeCorrect() => Buttons()
+        private bool IsCodeCorrect() => Digits()
             .Select(child => child.text)
             .Aggregate((first, second) => first + second)
             .Equals(_codeToUnlockDoor);
 
-        private IEnumerable<Text> Buttons() => _lockPanel
+        private IEnumerable<Text> Digits() => _lockPanel
             .GetComponentsInChildren<Button>()
             .Select(button => button.GetComponentInChildren<Text>());
     }
