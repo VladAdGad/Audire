@@ -19,9 +19,9 @@ namespace InteractableObjects.Doors
 
         private void Start() => _animator = transform.parent.parent.GetComponent<Animator>();
 
-        public virtual void OnGazeEnter() => TooltipGuiSocket.Display(AdequateText());
+        public virtual void OnGazeEnter() => TooltipGuiSocket.Display(DoorTooltip());
 
-        private string AdequateText() => IsDoorClosed ? $"{ToolTipOpenText} {ActivationButton}" : $"{ToolTipCloseText} {ActivationButton}";
+        private string DoorTooltip() => IsDoorClosed ? $"{ToolTipOpenText} {ActivationButton}" : $"{ToolTipCloseText} {ActivationButton}";
 
         public void OnGazeExit() => TooltipGuiSocket.Flush();
 
