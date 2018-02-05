@@ -12,20 +12,16 @@ namespace Assets.Sandbox.Tests.Features.DoorObsticle.Scripts
         [SerializeField] private string _onClosedTooltip;
         [SerializeField] private string _onOpenTooltip;
         [SerializeField] private string _whenDoorIsOpenTooltip;
-        
         [SerializeField] private KeyCode _activationKeyCode = KeyCode.E;
-
         [SerializeField] private KeyLockedDoor _lockedDoor;
         [SerializeField] private bool _isClosed = true;
         [SerializeField] private bool _isBlockedByLock;
 
         private Animator _obsticleAnimator;
-        private bool _isAnimationInProgress;
 
         private void Start()
         {
             _obsticleAnimator = GetComponent<Animator>();
-            _isAnimationInProgress = false;
             
             if (_isClosed) BlockDoor();
         }
@@ -43,7 +39,7 @@ namespace Assets.Sandbox.Tests.Features.DoorObsticle.Scripts
 
         private void ChangeMovingState()
         {
-            if (_isAnimationInProgress || _isBlockedByLock || _lockedDoor.IdDoorOpen()) return;
+            if (_isBlockedByLock || _lockedDoor.IdDoorOpen()) return;
         
             if (_isClosed)
                 StartOpeningRotation();
@@ -63,19 +59,6 @@ namespace Assets.Sandbox.Tests.Features.DoorObsticle.Scripts
             _obsticleAnimator.Play("ObsticleRotationClose");
         }
 
-        private void EnterdAnimationEvent() => _isAnimationInProgress = true;
-
-        private void ExitedAnimationEvent()
-        {
-            if (_isClosed)
-                BlockDoor();
-            else
-                UnblockDoor();
-            
-            _isAnimationInProgress = false;
-        }
-
         private void BlockDoor() => _lockedDoor.LockDoor();
-        private void UnblockDoor() => _lockedDoor.UnlockDoor();
     }
 }
