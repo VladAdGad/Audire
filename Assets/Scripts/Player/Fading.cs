@@ -12,7 +12,7 @@ namespace Player
         [SerializeField] private float _fadeSpeed = 0.8f;
 
         // the texture's order in the draw hierarchy: a low number means it renders on top
-        private readonly int _drawDepth = -1000;
+        private const int DrawDepth = -1000;
 
         private float _alpha = 1.0f; // the texture's alpha value between 0 and 1
         private int _fadeDir = -1; // the direction to fade: in = -1 or out = 1
@@ -26,7 +26,7 @@ namespace Player
 
             // set color of our GUI (in this case our texture). All color values remain the same & the Alpha is set to the alpha variable
             GUI.color = new Color(GUI.color.r, GUI.color.g, GUI.color.b, _alpha);
-            GUI.depth = _drawDepth; // make the black texture render on top (drawn last)
+            GUI.depth = DrawDepth; // make the black texture render on top (drawn last)
             // draw the texture to fit the entire screen area
             GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), _fadeOutTexture);
         }
@@ -35,17 +35,11 @@ namespace Player
         public float BeginFade(int direction)
         {
             _fadeDir = direction;
-            return (_fadeSpeed);
+            return _fadeSpeed;
         }
 
-        public void StartFaiding()
-        {
-            gameObject.GetComponent<Fading>().BeginFade(1);
-        }
+        public void StartFaiding() => gameObject.GetComponent<Fading>().BeginFade(1);
 
-        private void OnValidate()
-        {
-            Assert.IsNotNull(_fadeOutTexture);
-        }
+        private void OnValidate() => Assert.IsNotNull(_fadeOutTexture);
     }
 }

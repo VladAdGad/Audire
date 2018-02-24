@@ -16,14 +16,13 @@ namespace InteractableObjects
 
         private void StartEventImmediateDeath()
         {
-            if (_lockDoorBehaviour.IsDoorClosed()) return;
-            _playerDeathBehaviour.StartProcessOfDeath(_deathText, _ghostImage, _screamSoundaudioSource);
-            DestroyGameObject();
+            if(_lockDoorBehaviour.IsDoorOpen())
+            {
+                _playerDeathBehaviour.StartProcessOfDeath(_deathText, _ghostImage, _screamSoundaudioSource);
+                DestroyGameObject();
+            }
         }
 
-        private void DestroyGameObject()
-        {
-            Destroy(gameObject);
-        }
+        private void DestroyGameObject() => Destroy(gameObject);
     }
 }

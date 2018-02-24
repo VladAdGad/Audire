@@ -10,29 +10,15 @@ namespace Gui.Menu
 
         private void Update()
         {
-            if (!Input.GetKeyDown(KeyCode.Escape)) return;
-            Pause();
+            if (Input.GetKeyDown(KeyCode.Escape)) OnPause();
         }
 
-        public void StartGame()
-        {
-            LoadScene.LoadIndexScene(LoadScene.NextScene);
-        }
+        public void OnGameStart() => LoadScene.LoadIndexScene(LoadScene.NextScene);
 
-        public void Credits()
-        {
-            LoadScene.LoadIndexScene(LoadScene.IndexCreditsScene);
-        }
+        public void Credits() => LoadScene.LoadIndexScene(LoadScene.IndexCreditsScene);
 
-        public void Pause()
-        {
-            if (_pause == null) return;
-            _pause.PauseOrUnpause();
-        }
+        public void OnPause() => _pause?.PauseOrUnpause();
 
-        public void Exit()
-        {
-            Application.Quit();
-        }
+        public void OnExit() => Application.Quit();
     }
 }

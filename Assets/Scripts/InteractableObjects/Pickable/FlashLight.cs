@@ -28,23 +28,20 @@ namespace InteractableObjects.Pickable
 
         public void HotToInteractToolTip()
         {
-            if (!_flashlightTipCanvas.gameObject.activeSelf)
-            {
-                _flashlightTipCanvas.gameObject.SetActive(!_flashlightTipCanvas.gameObject.activeSelf);
-                PlayerBehaviour.PlayerInteractWith(false);
-            }
-            else
+            if(_flashlightTipCanvas.gameObject.activeSelf)
             {
                 _flashlightTipCanvas.gameObject.SetActive(!_flashlightTipCanvas.gameObject.activeSelf);
                 PlayerBehaviour.PlayerInteractWith(true);
                 Destroy(gameObject);
                 Destroy(_flashlightTipCanvas.gameObject);
             }
+            else
+            {
+                _flashlightTipCanvas.gameObject.SetActive(!_flashlightTipCanvas.gameObject.activeSelf);
+                PlayerBehaviour.PlayerInteractWith(false);
+            }
         }
 
-        private void OnValidate()
-        {
-            Assert.IsNotNull(_playerSpotLight);
-        }
+        private void OnValidate() => Assert.IsNotNull(_playerSpotLight);
     }
 }

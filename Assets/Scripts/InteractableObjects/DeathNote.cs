@@ -15,17 +15,14 @@ namespace InteractableObjects
         [SerializeField] private AudioTriggerable _triggerBreathPanicSound;
         [SerializeField] private DoorCloseTriggerable _triggerCloseDoor;
 
-        private Action _callStartTriggersOnlyOnce;
+        private OneTimeAction _oneTimeAction;
 
-        private void Start()
-        {
-            _callStartTriggersOnlyOnce = CallOnlyOnce(StartTriggers);
-        }
+        private void Start() => _oneTimeAction = new OneTimeAction(StartTriggers);
 
         protected override void StopDisplaying()
         {
             base.StopDisplaying();
-            _callStartTriggersOnlyOnce();
+            _oneTimeAction.Invoke();
         }
 
         private void StartTriggers()
@@ -36,19 +33,6 @@ namespace InteractableObjects
             _triggerCloseDoor.OnTrigger();
             _triggerKnockSound.OnTrigger();
             _triggerBreathPanicSound.OnTrigger();
-        }
-
-        private static Action CallOnlyOnce(Action action)
-        {
-            ContextCallOnlyOnce context = new ContextCallOnlyOnce();
-            Action returnAction = () =>
-            {
-                if (context.AlreadyCalled) return;
-                action();
-                context.AlreadyCalled = true;
-            };
-
-            return returnAction;
         }
     }
 }

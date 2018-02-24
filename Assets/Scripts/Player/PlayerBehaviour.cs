@@ -8,10 +8,7 @@ namespace Player
         private static GameObject _player;
         private static bool _stateInteract;
 
-        private void Start()
-        {
-            _player = GameObject.FindGameObjectWithTag("Player");
-        }
+        private void Start() => _player = GameObject.FindGameObjectWithTag("Player");
 
         public static void PlayerInteractWith(bool stateInteratcWith)
         {
@@ -27,6 +24,7 @@ namespace Player
                 _player.GetComponent<FirstPersonController>().GetMouseLook().SetCursorLock(statePause);
                 _player.GetComponent<FirstPersonController>().enabled = statePause;
             }
+            
             _player.GetComponent<PlayerEventBehaviour>().enabled = statePause;
         }
 

@@ -9,6 +9,7 @@ namespace Player
     {
         [SerializeField] private string _nameOfTheDeathAnimation = "deadAnimation";
         [SerializeField] private GameObject _deathCauseCanvas;
+        
         private const int WaitBeforeReloadSceneSeconds = 5;
         private const float WaitBeforeFaide = 1.5f;
         private const float WaitBeforDisableScreamer = 0.2f;
@@ -73,10 +74,7 @@ namespace Player
             LoadScene.ReloadScene();
         }
 
-        private void ShowTextOfDeathCause()
-        {
-            _deathText.enabled = true;
-        }
+        private void ShowTextOfDeathCause() => _deathText.enabled = true;
 
         private void StartFaiding()
         {
@@ -88,26 +86,17 @@ namespace Player
             _faidingImage.CrossFadeAlpha(1, 3, false);
         }
 
-        private void ChangeTextOfDeathCause(string deathCause)
-        {
-            _deathText.text = deathCause;
-        }
+        private void ChangeTextOfDeathCause(string deathCause) => _deathText.text = deathCause;
 
-        private void SetPlayerIsDie()
-        {
-            _isPlayerDie = true;
-        }
+        private void SetPlayerIsDie() => _isPlayerDie = true;
 
-        public void StartProcessOfDeath(float secondsBeforeDeath, string deathText)
-        {
-            StartCoroutine(secondsBeforeDeath != .0f
-                ? ProcessOfDeath(secondsBeforeDeath, deathText)
-                : ProcessOfDeath(deathText));
-        }
+        public void StartProcessOfDeath(float secondsBeforeDeath, string deathText) =>
+            StartCoroutine(secondsBeforeDeath == .0f
+                ? ProcessOfDeath(deathText)
+                : ProcessOfDeath(secondsBeforeDeath, deathText));
         
-        public void StartProcessOfDeath(string deathText, Image ghostImage, AudioSource screamSoundaudioSource)
-        {
+        
+        public void StartProcessOfDeath(string deathText, Image ghostImage, AudioSource screamSoundaudioSource) => 
             StartCoroutine(ProcessOfDeath(deathText, ghostImage, screamSoundaudioSource));
-        }
     }
 }

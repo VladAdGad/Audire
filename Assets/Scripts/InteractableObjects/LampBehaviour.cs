@@ -12,18 +12,19 @@ namespace InteractableObjects
         [SerializeField] private string _toolTipOff;
         [SerializeField] private KeyCode _activationButton = KeyCode.E;
         [SerializeField] private GameObject _lights;
-        private AudioSource _turningLapmSound;
-        private bool _isLampOn = false;
+        
+        private AudioSource _turningLampSound;
+        private bool _isLampOn;
 
         private void Start()
         {
-            _turningLapmSound = GetComponent<AudioSource>();
+            _turningLampSound = GetComponent<AudioSource>();
             _isLampOn = _lights.activeSelf;
         }
 
-        public void OnGazeEnter() => _tooltipGuiSocket.Display(!_lights.activeSelf
-            ? $"{_toolTipOn} {_activationButton}"
-            : $"{_toolTipOff} {_activationButton}");
+        public void OnGazeEnter() => _tooltipGuiSocket.Display(LampTooltip());
+
+        private string LampTooltip() => _lights.activeSelf ? $"{_toolTipOff} {_activationButton}" : $"{_toolTipOn} {_activationButton}";
 
         public void OnGazeExit() => _tooltipGuiSocket.Flush();
 
@@ -54,11 +55,8 @@ namespace InteractableObjects
 
         private void ChangeLampState() => _isLampOn = !_isLampOn;
 
-        private void PlaySound() => _turningLapmSound.Play();
+        private void PlaySound() => _turningLampSound.Play();
 
-        private void OnValidate()
-        {
-            Assert.IsTrue(_activationButton != KeyCode.None);
-        }
+        private void OnValidate() => Assert.IsTrue(_activationButton != KeyCode.None);
     }
 }

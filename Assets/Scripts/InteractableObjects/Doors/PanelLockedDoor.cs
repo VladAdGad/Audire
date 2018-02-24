@@ -12,7 +12,6 @@ namespace InteractableObjects.Doors
         [SerializeField] private string _toolTipText;
         [SerializeField] private string _lockStateTooltip;
         [SerializeField] private KeyCode _activationButton = KeyCode.E;
-
         [SerializeField] private AudioSource _openingDoorAudioSource;
         [SerializeField] private AudioSource _closingDoorAudioSource;
 
@@ -23,9 +22,8 @@ namespace InteractableObjects.Doors
 
         private void Start() => _animator = transform.parent.parent.GetComponent<Animator>();
 
-        public void OnGazeEnter() =>
-            _tooltipGuiSocket.Display(
-                _doorLocked ? $"{_lockStateTooltip} {_activationButton}" : $"{_toolTipText} {_activationButton}");
+        public void OnGazeEnter() => _tooltipGuiSocket.Display(LockedDoorTooltip());
+        private string LockedDoorTooltip() => _doorLocked ? $"{_lockStateTooltip} {_activationButton}" : $"{_toolTipText} {_activationButton}";
 
         public void OnGazeExit() => _tooltipGuiSocket.Flush();
 
@@ -67,7 +65,6 @@ namespace InteractableObjects.Doors
 
         private bool IsDoorInMotion() => _openingDoorAudioSource.isPlaying || _closingDoorAudioSource.isPlaying;
 
-        private void OnValidate() =>
-            Assert.AreNotEqual(_activationButton, KeyCode.None, "Door Actiation button must not be null.");
+        private void OnValidate() => Assert.AreNotEqual(_activationButton, KeyCode.None, "Door Actiation button must not be null.");
     }
 }

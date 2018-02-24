@@ -10,6 +10,7 @@ namespace Triggers.TriggerableImplementations
         [SerializeField] private DoorBehaviour _doorBehaviour;
 
         public override void TriggerEnter(Collider collider) => StartCoroutine(CloseOpenDoorWithDelay(_delay));
+        
         public override void TriggerExit(Collider collider)
         {
         }

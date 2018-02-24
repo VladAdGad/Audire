@@ -6,14 +6,8 @@ namespace Utilities
     {
         [SerializeField] private GameObject _gameObject;
         
-        public void Destroy()
-        {
-            Destroy(_gameObject);
-        }
+        public void Destroy() => Destroy(_gameObject);
 
-        public void DisableObject()
-        {
-            _gameObject.SetActive(false);
-        }
+        public void DisableObject() => _gameObject.SetActive(false);
     }
 }

@@ -335,7 +335,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &1846429790703290
 GameObject:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
@@ -541,6 +541,7 @@ Transform:
   m_LocalScale: {x: 1.149298, y: 1, z: 1}
   m_Children:
   - {fileID: 4888707253017458}
+  - {fileID: 4983858530624930}
   - {fileID: 4498865546891424}
   - {fileID: 4220561421257796}
   m_Father: {fileID: 0}
@@ -558,7 +559,7 @@ Transform:
   m_Children:
   - {fileID: 4391706694099234}
   m_Father: {fileID: 4177608370263476}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4273413247275738
 Transform:
@@ -612,10 +613,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4172233834420890}
-  - {fileID: 4983858530624930}
   - {fileID: 4899989401236400}
   m_Father: {fileID: 4177608370263476}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4499472043283348
 Transform:
@@ -755,7 +755,7 @@ Transform:
   - {fileID: 4273413247275738}
   - {fileID: 4307572777438760}
   m_Father: {fileID: 4498865546891424}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4929221135310512
 Transform:
@@ -795,7 +795,7 @@ Transform:
   m_Children:
   - {fileID: 4610404900328086}
   - {fileID: 4092654449250574}
-  m_Father: {fileID: 4498865546891424}
+  m_Father: {fileID: 4177608370263476}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4987242469620026
@@ -1599,10 +1599,10 @@ MonoBehaviour:
   _onClosedTooltip: To open this obsticle I need to unlock it first...
   _onOpenTooltip: To interact press E
   _whenDoorIsOpenTooltip: To move this obsticle I need to close the door
-  activationKeyCode: 101
+  _activationKeyCode: 101
   _lockedDoor: {fileID: 0}
-  _closed: 1
-  _blockedByLock: 1
+  _isClosed: 1
+  _isBlockedByLock: 1
 --- !u!114 &114907789501185096
 MonoBehaviour:
   m_ObjectHideFlags: 1

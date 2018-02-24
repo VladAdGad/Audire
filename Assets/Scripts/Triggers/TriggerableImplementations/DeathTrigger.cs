@@ -25,9 +25,6 @@ namespace Triggers.TriggerableImplementations
             }
         }
 
-        private void DestroyGameObject()
-        {
-            Destroy(gameObject);
-        }
+        private void DestroyGameObject() => Destroy(gameObject);
     }
 }

@@ -19,14 +19,8 @@ namespace SceneMenager
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + NextScene);
         }
 
-        public static void ReloadScene()
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
+        public static void ReloadScene() => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
-        public static void LoadIndexScene(int indexScene)
-        {
-            SceneManager.LoadScene(indexScene);
-        }
+        public static void LoadIndexScene(int indexScene) => SceneManager.LoadScene(indexScene);
     }
 }
