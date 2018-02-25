@@ -15,7 +15,7 @@ namespace InteractableObjects.Doors
         [SerializeField] private AudioSource _openingDoorAudioSource;
 
         private Animator _animator;
-        protected bool IsDoorClosed = true;
+        public bool IsDoorClosed { get; private set; } = true;
 
         private void Start() => _animator = transform.parent.parent.GetComponent<Animator>();
 
@@ -45,7 +45,7 @@ namespace InteractableObjects.Doors
             IsDoorClosed = false;
         }
 
-        private void CloseDoor()
+        public void CloseDoor()
         {
             if (IsDoorInMotion()) return;
 
@@ -55,7 +55,7 @@ namespace InteractableObjects.Doors
             IsDoorClosed = true;
         }
 
-        public bool IsDoorOpen() => ! IsDoorClosed;
+        public bool IsDoorOpen() => !IsDoorClosed;
 
         private bool IsDoorInMotion() => _openingDoorAudioSource.isPlaying || _closingDoorAudioSource.isPlaying;
 
